@@ -11,6 +11,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.TextComponent;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
 
@@ -47,6 +48,10 @@ public class AmberGetProcedure {
 							_player.getAdvancements().award(_adv, (String) _iterator.next());
 					}
 				}
+			} else {
+				if (entity instanceof Player _player && !_player.level.isClientSide())
+					_player.displayClientMessage(
+							new TextComponent("\u00A74This stone is occupied by another player, but you can choose another one."), (false));
 			}
 		}
 	}
