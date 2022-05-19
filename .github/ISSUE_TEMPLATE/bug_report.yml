@@ -24,6 +24,7 @@ body:
      label: Minecraft Version
      description: On which version of Minecraft is the mod installed?
      options:
+       - 1.19 (Development)
        - 1.18.2 (Main)
        - 1.17.1
        - 1.16.5 (LTS)

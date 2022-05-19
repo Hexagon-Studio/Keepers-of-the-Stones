@@ -14833,7 +14833,7 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
-    "currentGenerator": "forge-1.18.2",
+    "currentGenerator": "forge-1.19",
     "credits": "Created by Magicalexey, with the support of Chiffon Medal, FixEnd, as well as many other contributors.",
     "modElementsPackage": "power.keepeersofthestones",
     "lockBaseModFiles": false
