@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "lightning_stone",
     "customModelName": "Normal",
+    "customProperties": {},
+    "modelsMap": {},
     "name": "Lightning Stone",
     "rarity": "COMMON",
     "creativeTab": {

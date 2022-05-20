@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "redstone_bundle",
     "customModelName": "Normal",
+    "customProperties": {},
+    "modelsMap": {},
     "name": "Redstone Bundle",
     "rarity": "COMMON",
     "creativeTab": {

@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "wood_shield",
     "customModelName": "Normal",
+    "customProperties": {},
+    "modelsMap": {},
     "name": "Wooden Shield",
     "rarity": "COMMON",
     "creativeTab": {

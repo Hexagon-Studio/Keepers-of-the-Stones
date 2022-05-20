@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "cultivation",
     "customModelName": "Normal",
+    "customProperties": {},
+    "modelsMap": {},
     "name": "Cultivation",
     "rarity": "COMMON",
     "creativeTab": {

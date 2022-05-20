@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "energy_shield",
     "customModelName": "Normal",
+    "customProperties": {},
+    "modelsMap": {},
     "name": "Energy Shield",
     "rarity": "COMMON",
     "creativeTab": {

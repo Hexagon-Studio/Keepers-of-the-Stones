@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "vacuum_stone",
     "customModelName": "Normal",
+    "customProperties": {},
+    "modelsMap": {},
     "name": "Vacuum Stone",
     "rarity": "COMMON",
     "creativeTab": {

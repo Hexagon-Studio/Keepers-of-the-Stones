@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "destruction_power",
     "customModelName": "Normal",
+    "customProperties": {},
+    "modelsMap": {},
     "name": "Destruction Power",
     "rarity": "COMMON",
     "creativeTab": {

@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "increase_power",
     "customModelName": "Normal",
+    "customProperties": {},
+    "modelsMap": {},
     "name": "Increase Power",
     "rarity": "COMMON",
     "creativeTab": {

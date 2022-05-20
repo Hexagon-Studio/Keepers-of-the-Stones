@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "invisible",
     "customModelName": "Normal",
+    "customProperties": {},
+    "modelsMap": {},
     "name": "Shadow Invisible",
     "rarity": "COMMON",
     "creativeTab": {

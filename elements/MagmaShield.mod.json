@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "magma_shield",
     "customModelName": "Normal",
+    "customProperties": {},
+    "modelsMap": {},
     "name": "Magma Shield",
     "rarity": "COMMON",
     "creativeTab": {

@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "time_stop",
     "customModelName": "Normal",
+    "customProperties": {},
+    "modelsMap": {},
     "name": "Time Stop",
     "rarity": "COMMON",
     "creativeTab": {

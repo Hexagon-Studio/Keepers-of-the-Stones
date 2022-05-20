@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "amber_stone",
     "customModelName": "Normal",
+    "customProperties": {},
+    "modelsMap": {},
     "name": "Amber Stone",
     "rarity": "COMMON",
     "creativeTab": {

@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "light_stone",
     "customModelName": "Normal",
+    "customProperties": {},
+    "modelsMap": {},
     "name": "Light Stone",
     "rarity": "COMMON",
     "creativeTab": {

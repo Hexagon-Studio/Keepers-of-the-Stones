@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "checkpoint",
     "customModelName": "Normal",
+    "customProperties": {},
+    "modelsMap": {},
     "name": "Point",
     "rarity": "COMMON",
     "creativeTab": {

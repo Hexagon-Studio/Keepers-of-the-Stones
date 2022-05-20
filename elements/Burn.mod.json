@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "burn",
     "customModelName": "Normal",
+    "customProperties": {},
+    "modelsMap": {},
     "name": "Burn",
     "rarity": "COMMON",
     "creativeTab": {

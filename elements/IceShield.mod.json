@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "ice_shield",
     "customModelName": "Normal",
+    "customProperties": {},
+    "modelsMap": {},
     "name": "Ice Shield",
     "rarity": "COMMON",
     "creativeTab": {

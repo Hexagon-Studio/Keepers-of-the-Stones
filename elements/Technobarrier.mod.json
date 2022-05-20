@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "technobarrier",
     "customModelName": "Normal",
+    "customProperties": {},
+    "modelsMap": {},
     "name": "Technobarrier",
     "rarity": "COMMON",
     "creativeTab": {

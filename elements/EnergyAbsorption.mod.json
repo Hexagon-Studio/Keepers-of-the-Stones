@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "energy_absorption",
     "customModelName": "Normal",
+    "customProperties": {},
+    "modelsMap": {},
     "name": "Energy Absorption",
     "rarity": "COMMON",
     "creativeTab": {

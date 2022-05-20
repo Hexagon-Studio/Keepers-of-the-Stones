@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "snow_golem_create",
     "customModelName": "Normal",
+    "customProperties": {},
+    "modelsMap": {},
     "name": "Snow Golem Creator",
     "rarity": "COMMON",
     "creativeTab": {

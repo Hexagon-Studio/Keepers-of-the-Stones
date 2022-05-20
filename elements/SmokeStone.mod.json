@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "smoke_stone",
     "customModelName": "Normal",
+    "customProperties": {},
+    "modelsMap": {},
     "name": "Smoke Stone",
     "rarity": "COMMON",
     "creativeTab": {

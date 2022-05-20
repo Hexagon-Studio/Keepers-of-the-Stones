@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "lava_stone",
     "customModelName": "Normal",
+    "customProperties": {},
+    "modelsMap": {},
     "name": "Lava Stone",
     "rarity": "COMMON",
     "creativeTab": {

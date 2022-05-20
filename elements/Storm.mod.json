@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "storm",
     "customModelName": "Normal",
+    "customProperties": {},
+    "modelsMap": {},
     "name": "Storm",
     "rarity": "COMMON",
     "creativeTab": {

@@ -7,8 +7,8 @@
     "1.17.1-recommended": "1.4.1",
     "1.18.1-latest": "1.6.1",
     "1.18.1-recommended": "1.6.1",
-    "1.18.2-latest": "2.1.10",
-    "1.18.2-recommended": "2.1.10"
+    "1.18.2-latest": "2.1.11",
+    "1.18.2-recommended": "2.1.11"
   },
   "1.16.5": {
    "1.1.18": "
@@ -455,6 +455,10 @@ You can download the mod by following the link: https://www.curseforge.com/minec
 - Added a dark dimension - Oblivion
 - The feather of time has been replaced with the flint for portal to dinoera 
 - Now a flint and an element battery are required to craft flint for portal
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+"2.1.11": "
+- Added a warning that the stone is occupied by another player
+- Updated the mod logo
 You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones"
   }
 }

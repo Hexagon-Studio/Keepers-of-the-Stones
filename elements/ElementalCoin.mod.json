@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "elemental_coin",
     "customModelName": "Normal",
+    "customProperties": {},
+    "modelsMap": {},
     "name": "Elemental Coin",
     "rarity": "COMMON",
     "creativeTab": {

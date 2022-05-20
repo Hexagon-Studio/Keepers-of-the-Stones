@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "eclipse",
     "customModelName": "Normal",
+    "customProperties": {},
+    "modelsMap": {},
     "name": "Eclipse",
     "rarity": "COMMON",
     "creativeTab": {

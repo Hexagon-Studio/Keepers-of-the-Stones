@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "greenery_stone",
     "customModelName": "Normal",
+    "customProperties": {},
+    "modelsMap": {},
     "name": "Greenery Stone",
     "rarity": "COMMON",
     "creativeTab": {

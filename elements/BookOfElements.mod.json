@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "book_of_elements",
     "customModelName": "Normal",
+    "customProperties": {},
+    "modelsMap": {},
     "name": "Book Of Elements",
     "rarity": "COMMON",
     "creativeTab": {

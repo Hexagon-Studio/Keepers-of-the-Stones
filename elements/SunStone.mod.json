@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "sun_stone",
     "customModelName": "Normal",
+    "customProperties": {},
+    "modelsMap": {},
     "name": "Sun Stone",
     "rarity": "COMMON",
     "creativeTab": {

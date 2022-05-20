@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "coral_shield",
     "customModelName": "Normal",
+    "customProperties": {},
+    "modelsMap": {},
     "name": "Coral Shield",
     "rarity": "COMMON",
     "creativeTab": {

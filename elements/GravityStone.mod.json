@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "gravity_stone",
     "customModelName": "Normal",
+    "customProperties": {},
+    "modelsMap": {},
     "name": "Gravity Stone",
     "rarity": "COMMON",
     "creativeTab": {

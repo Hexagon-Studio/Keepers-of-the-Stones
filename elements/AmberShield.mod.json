@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "amber_shield",
     "customModelName": "Normal",
+    "customProperties": {},
+    "modelsMap": {},
     "name": "Amber Shield",
     "rarity": "COMMON",
     "creativeTab": {

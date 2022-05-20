@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "glow_create",
     "customModelName": "Normal",
+    "customProperties": {},
+    "modelsMap": {},
     "name": "Glow Create",
     "rarity": "COMMON",
     "creativeTab": {

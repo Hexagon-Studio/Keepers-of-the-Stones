@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "battery",
     "customModelName": "Normal",
+    "customProperties": {},
+    "modelsMap": {},
     "name": "Battery",
     "rarity": "COMMON",
     "creativeTab": {

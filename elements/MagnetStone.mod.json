@@ -5,6 +5,8 @@
     "renderType": 0,
     "texture": "magnet_stone",
     "customModelName": "Normal",
+    "customProperties": {},
+    "modelsMap": {},
     "name": "Magnet Stone",
     "rarity": "COMMON",
     "creativeTab": {
