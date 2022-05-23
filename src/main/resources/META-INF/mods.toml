@@ -1,16 +1,16 @@
 modLoader="javafml"
-loaderVersion="[37,)"
-license="All Rights Reserved"
+loaderVersion="[40,)"
+license="GNU General Public License version 3 (GPLv3)"
 
 [[mods]]
 modId="power"
-version="1.4.1"
+version="2.2.0.6"
 displayName="Keepers of the Stones"
-credits="Created by MagicalAlexey"
+credits="Created by MagicalAlexey, with the support of Chiffon Medal, FixEnd, 7ZLBeka, Superlexaan as well as many other contributors."
 displayURL="https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones"
 updateJSONURL="https://raw.githubusercontent.com/MagicalAlexey/Keepers-of-the-Stones/main/kos.json"
 logoFile="logo.png"
-authors="MagicalAlexey, KoshakMineDEV"
+authors="Hexagon Studio"
 description='''
 This mod will add new sources of energy to the world with which you can transform into masters of the elements.
 '''
@@ -18,7 +18,7 @@ This mod will add new sources of energy to the world with which you can transfor
 [[dependencies.power]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.17.1]"
+    versionRange="[1.18.2]"
     ordering="NONE"
     side="BOTH"
 

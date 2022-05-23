@@ -1,13 +1,16 @@
 {
-  "_fv": 24,
+  "_fv": 29,
   "_type": "biome",
   "definition": {
     "name": "Moon Land",
     "groundBlock": {
-      "value": "Blocks.STONE#3"
+      "value": "Blocks.CALCITE"
     },
     "undergroundBlock": {
-      "value": "Blocks.STONE#0"
+      "value": "Blocks.STONE#5"
+    },
+    "underwaterBlock": {
+      "value": "Blocks.CALCITE"
     },
     "airColor": {
       "value": -16777216,
@@ -48,15 +51,13 @@
     },
     "particlesProbability": 0.5,
     "biomeCategory": "NONE",
-    "parent": {
-      "value": "No parent"
-    },
     "rainingPossibility": 0.0,
     "temperature": 2.0,
     "baseHeight": 0.1,
-    "heightVariation": 0.2,
-    "biomeType": "WARM",
+    "heightVariation": 0.19999999999999998,
     "spawnBiome": false,
+    "spawnBiomeNether": false,
+    "spawnInCaves": false,
     "biomeWeight": 1,
     "biomeDictionaryTypes": [],
     "grassPerChunk": 0,
@@ -105,7 +106,8 @@
     "spawnEndCity": false,
     "spawnRuinedPortal": "NONE",
     "defaultFeatures": [
-      "Caves"
+      "Caves",
+      "AmethystGeodes"
     ],
     "spawnEntries": []
   }

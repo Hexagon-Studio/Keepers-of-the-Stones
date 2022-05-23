@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 29,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -90,6 +90,20 @@
           "height": 20,
           "name": "Horse",
           "x": 141,
+          "y": 116
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Sheep",
+          "onClick": {
+            "name": "SummonSheep"
+          },
+          "width": 51,
+          "height": 20,
+          "name": "Sheep",
+          "x": 204,
           "y": 116
         }
       }

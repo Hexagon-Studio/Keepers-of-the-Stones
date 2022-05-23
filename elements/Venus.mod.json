@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 29,
   "_type": "dimension",
   "definition": {
     "biomesInDimension": [
@@ -22,8 +22,8 @@
       "falpha": 0.0
     },
     "canRespawnHere": true,
-    "hasFog": false,
-    "isDark": false,
+    "hasFog": true,
+    "isDark": true,
     "doesWaterVaporize": true,
     "sleepResult": "ALLOW",
     "hasSkyLight": true,

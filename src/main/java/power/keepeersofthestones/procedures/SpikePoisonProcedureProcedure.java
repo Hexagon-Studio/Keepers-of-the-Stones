@@ -10,6 +10,6 @@ public class SpikePoisonProcedureProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity)
-			_entity.addEffect(new MobEffectInstance(MobEffects.POISON, 300, 1));
+			_entity.addEffect(new MobEffectInstance(MobEffects.POISON, 100, 2));
 	}
 }

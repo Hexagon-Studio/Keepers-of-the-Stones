@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 29,
   "_type": "tool",
   "definition": {
     "renderType": 0,
@@ -13,7 +13,7 @@
     "toolType": "Special",
     "harvestLevel": 1,
     "efficiency": 100.0,
-    "attackSpeed": 0.7999999999999999,
+    "attackSpeed": 1.0,
     "enchantability": 2,
     "damageVsEntity": 15.0,
     "usageCount": 5000,

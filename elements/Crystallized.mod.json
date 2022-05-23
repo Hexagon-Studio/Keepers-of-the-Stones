@@ -1,0 +1,46 @@
+{
+  "_fv": 29,
+  "_type": "dimension",
+  "definition": {
+    "biomesInDimension": [
+      {
+        "value": "CUSTOM:CrystallizedLands"
+      }
+    ],
+    "worldGenType": "Nether like gen",
+    "mainFillerBlock": {
+      "value": "Blocks.SANDSTONE#0"
+    },
+    "fluidBlock": {
+      "value": "Blocks.FLOWING_WATER"
+    },
+    "airColor": {
+      "value": -6750055,
+      "falpha": 0.0
+    },
+    "canRespawnHere": true,
+    "hasFog": true,
+    "isDark": false,
+    "doesWaterVaporize": false,
+    "sleepResult": "ALLOW",
+    "hasSkyLight": false,
+    "imitateOverworldBehaviour": false,
+    "portalFrame": {
+      "value": "Blocks.AMETHYST_BLOCK"
+    },
+    "portalParticles": {
+      "value": "GLOW"
+    },
+    "portalLuminance": 5,
+    "portalSound": {
+      "value": "block.portal.ambient"
+    },
+    "igniterName": "Crystallized Portal Igniter",
+    "igniterTab": {
+      "value": "CUSTOM:TechnologiesAndArtifacts"
+    },
+    "texture": "crystal_flint_and_steel",
+    "portalTexture": "crystallized_portal",
+    "enablePortal": true
+  }
+}

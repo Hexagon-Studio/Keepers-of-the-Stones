@@ -1,9 +1,9 @@
 {
-  "_fv": 24,
+  "_fv": 29,
   "_type": "rangeditem",
   "definition": {
     "renderType": 0,
-    "texture": "untitled_10-16-2021_01-32-37",
+    "texture": "magic_fireball",
     "customModelName": "Normal",
     "name": "Magic Fireball",
     "specialInfo": [],
@@ -21,8 +21,8 @@
     },
     "hasGlow": false,
     "animation": "bow",
-    "enableMeleeDamage": true,
-    "damageVsEntity": 8.0,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
     "onRangedItemUsed": {
       "name": "RechargeMagicFireball"
     },
@@ -30,17 +30,17 @@
     "bulletDamage": 8.0,
     "bulletKnockback": 2,
     "bulletParticles": false,
-    "bulletIgnitesFire": true,
+    "bulletIgnitesFire": false,
     "bulletItemTexture": {
       "value": "CUSTOM:MagicFireball"
     },
     "bulletModel": "Default",
-    "customBulletModelTexture": "untitled_10-16-2021_01-32-37.png",
-    "onBulletHitsPlayer": {
-      "name": "BurnProcedure"
-    },
+    "customBulletModelTexture": "",
     "onBulletHitsEntity": {
       "name": "BurnProcedure"
+    },
+    "onBulletFlyingTick": {
+      "name": "MagicFireballParticles"
     }
   }
 }

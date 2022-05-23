@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 29,
   "_type": "rangeditem",
   "definition": {
     "renderType": 0,
@@ -26,8 +26,8 @@
     "onRangedItemUsed": {
       "name": "RechargeMagicFireball"
     },
-    "bulletPower": 0.5,
-    "bulletDamage": 12.0,
+    "bulletPower": 1.1,
+    "bulletDamage": 8.0,
     "bulletKnockback": 2,
     "bulletParticles": false,
     "bulletIgnitesFire": false,

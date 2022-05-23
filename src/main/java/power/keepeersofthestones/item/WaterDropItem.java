@@ -4,6 +4,7 @@ package power.keepeersofthestones.item;
 import power.keepeersofthestones.procedures.WaterDropUseProcedure;
 
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
@@ -19,7 +20,11 @@ import com.google.common.collect.ImmutableMultimap;
 public class WaterDropItem extends Item {
 	public WaterDropItem() {
 		super(new Item.Properties().tab(null).stacksTo(1).fireResistant().rarity(Rarity.COMMON));
-		setRegistryName("water_drop");
+	}
+
+	@Override
+	public UseAnim getUseAnimation(ItemStack itemstack) {
+		return UseAnim.EAT;
 	}
 
 	@Override
@@ -44,6 +49,6 @@ public class WaterDropItem extends Item {
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
 		if (selected)
-			WaterDropUseProcedure.execute(entity);
+			WaterDropUseProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity);
 	}
 }

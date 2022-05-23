@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "power:book_of_elements"
+    },
+    "title": {
+      "translate": "advancements.maximum_power.title"
+    },
+    "description": {
+      "translate": "advancements.maximum_power.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "maximum_power": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 25000,
+    "loot": [
+      "power:entities/reward_coins"
+    ]
+  },
+  "parent": "power:power_up"
+}

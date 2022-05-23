@@ -5,6 +5,7 @@ import power.keepeersofthestones.world.inventory.CultivationGUIMenu;
 import power.keepeersofthestones.procedures.GetWheatProcedure;
 import power.keepeersofthestones.procedures.GetWaterLilyProcedure;
 import power.keepeersofthestones.procedures.GetVineProcedure;
+import power.keepeersofthestones.procedures.GetSugarCaneProcedure;
 import power.keepeersofthestones.procedures.GetSpruceSaplingProcedure;
 import power.keepeersofthestones.procedures.GetPumpkinProcedure;
 import power.keepeersofthestones.procedures.GetPotatoProcedure;
@@ -15,10 +16,11 @@ import power.keepeersofthestones.procedures.GetDarkSaplingProcedure;
 import power.keepeersofthestones.procedures.GetCarrotProcedure;
 import power.keepeersofthestones.procedures.GetBirchSaplingProcedure;
 import power.keepeersofthestones.procedures.GetBeetrootProcedure;
+import power.keepeersofthestones.procedures.GetBambooProcedure;
 import power.keepeersofthestones.procedures.GetAcaciaSaplingProcedure;
 import power.keepeersofthestones.PowerMod;
 
-import net.minecraftforge.fmllegacy.network.NetworkEvent;
+import net.minecraftforge.network.NetworkEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -130,6 +132,14 @@ public class CultivationGUIButtonMessage {
 		if (buttonID == 13) {
 
 			GetPumpkinProcedure.execute(entity);
+		}
+		if (buttonID == 14) {
+
+			GetSugarCaneProcedure.execute(entity);
+		}
+		if (buttonID == 15) {
+
+			GetBambooProcedure.execute(entity);
 		}
 	}
 

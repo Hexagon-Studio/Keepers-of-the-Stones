@@ -1,0 +1,11 @@
+{
+  "_fv": 29,
+  "_type": "tab",
+  "definition": {
+    "name": "Technologies & Artifacts",
+    "icon": {
+      "value": "CUSTOM:BookOfElements"
+    },
+    "showSearch": false
+  }
+}

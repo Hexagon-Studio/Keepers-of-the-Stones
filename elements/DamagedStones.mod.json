@@ -1,0 +1,11 @@
+{
+  "_fv": 29,
+  "_type": "tab",
+  "definition": {
+    "name": "Damaged Stones",
+    "icon": {
+      "value": "CUSTOM:DamagedFireStone"
+    },
+    "showSearch": false
+  }
+}

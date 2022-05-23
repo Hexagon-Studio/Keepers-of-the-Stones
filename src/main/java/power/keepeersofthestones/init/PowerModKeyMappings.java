@@ -10,11 +10,11 @@ import power.keepeersofthestones.PowerMod;
 
 import org.lwjgl.glfw.GLFW;
 
-import net.minecraftforge.fmlclient.registry.ClientRegistry;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.InputEvent;
+import net.minecraftforge.client.ClientRegistry;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.client.Minecraft;
@@ -23,7 +23,7 @@ import net.minecraft.client.KeyMapping;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class PowerModKeyMappings {
 	public static final KeyMapping DETRANSFORM_KEY = new KeyMapping("key.power.detransform_key", GLFW.GLFW_KEY_U, "key.categories.stones");
-	public static final KeyMapping SPECIAL_ABILITY_KEY = new KeyMapping("key.power.special_ability_key", GLFW.GLFW_KEY_R, "key.categories.stone");
+	public static final KeyMapping SPECIAL_ABILITY_KEY = new KeyMapping("key.power.special_ability_key", GLFW.GLFW_KEY_R, "key.categories.stones");
 
 	@SubscribeEvent
 	public static void registerKeyBindings(FMLClientSetupEvent event) {

@@ -22,25 +22,23 @@ import com.google.common.collect.ImmutableMultimap;
 public class MoonAxeItem extends Item {
 	public MoonAxeItem() {
 		super(new Item.Properties().tab(null).durability(5000).fireResistant());
-		setRegistryName("moon_axe");
 	}
 
 	@Override
 	public float getDestroySpeed(ItemStack itemstack, BlockState blockstate) {
-		return List.of(PowerModBlocks.MOON_STONES_BLOCK, PowerModBlocks.UNMULTIPLICATION_MOON_STONES_BLOCK).contains(blockstate.getBlock())
-				? 100f
-				: 1;
+		return List.of(PowerModBlocks.MOON_STONES_BLOCK.get(), PowerModBlocks.UNMULTIPLICATION_MOON_STONES_BLOCK.get())
+				.contains(blockstate.getBlock()) ? 100f : 1;
 	}
 
 	@Override
-	public boolean mineBlock(ItemStack stack, Level world, BlockState state, BlockPos pos, LivingEntity entity) {
-		stack.hurtAndBreak(1, entity, i -> i.broadcastBreakEvent(EquipmentSlot.MAINHAND));
+	public boolean mineBlock(ItemStack itemstack, Level world, BlockState blockstate, BlockPos pos, LivingEntity entity) {
+		itemstack.hurtAndBreak(1, entity, i -> i.broadcastBreakEvent(EquipmentSlot.MAINHAND));
 		return true;
 	}
 
 	@Override
-	public boolean hurtEnemy(ItemStack stack, LivingEntity entity, LivingEntity sourceentity) {
-		stack.hurtAndBreak(2, sourceentity, i -> i.broadcastBreakEvent(EquipmentSlot.MAINHAND));
+	public boolean hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
+		itemstack.hurtAndBreak(2, entity, i -> i.broadcastBreakEvent(EquipmentSlot.MAINHAND));
 		return true;
 	}
 
@@ -57,7 +55,7 @@ public class MoonAxeItem extends Item {
 			builder.put(Attributes.ATTACK_DAMAGE,
 					new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Tool modifier", 13f, AttributeModifier.Operation.ADDITION));
 			builder.put(Attributes.ATTACK_SPEED,
-					new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Tool modifier", -3.2000000000000001, AttributeModifier.Operation.ADDITION));
+					new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Tool modifier", -3, AttributeModifier.Operation.ADDITION));
 			return builder.build();
 		}
 		return super.getDefaultAttributeModifiers(equipmentSlot);

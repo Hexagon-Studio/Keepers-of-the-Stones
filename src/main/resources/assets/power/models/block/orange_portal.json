@@ -1,0 +1,8 @@
+{
+  "parent": "power:custom/portal",
+  "textures": {
+    "all": "power:blocks/orange_portal",
+    "particle": "power:blocks/orange_portal",
+    "0": "power:blocks/orange_portal"
+  }
+}

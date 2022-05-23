@@ -1,0 +1,98 @@
+{
+  "_fv": 29,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:EmptyBattery"
+      },
+      {
+        "value": "CUSTOM:FireBattery"
+      },
+      {
+        "value": "CUSTOM:AirBattery"
+      },
+      {
+        "value": "CUSTOM:EarthBattery"
+      },
+      {
+        "value": "CUSTOM:WaterBattery"
+      },
+      {
+        "value": "CUSTOM:EnergyBattery"
+      },
+      {
+        "value": "CUSTOM:IceBattery"
+      },
+      {
+        "value": "CUSTOM:LightningBattery"
+      },
+      {
+        "value": "CUSTOM:SoundBattery"
+      },
+      {
+        "value": "CUSTOM:CrystalBattery"
+      },
+      {
+        "value": "CUSTOM:LavaBattery"
+      },
+      {
+        "value": "CUSTOM:TornadoBattery"
+      },
+      {
+        "value": "CUSTOM:OceanBattery"
+      },
+      {
+        "value": "CUSTOM:RainBattery"
+      },
+      {
+        "value": "CUSTOM:GreeneryBattery"
+      },
+      {
+        "value": "CUSTOM:AnimalsBattery"
+      },
+      {
+        "value": "CUSTOM:MetalBattery"
+      },
+      {
+        "value": "CUSTOM:LightBattery"
+      },
+      {
+        "value": "CUSTOM:ShadowBattery"
+      },
+      {
+        "value": "CUSTOM:VacuumBattery"
+      },
+      {
+        "value": "CUSTOM:SunBattery"
+      },
+      {
+        "value": "CUSTOM:MoonBattery"
+      },
+      {
+        "value": "CUSTOM:SpaceBattery"
+      },
+      {
+        "value": "CUSTOM:BloodBattery"
+      },
+      {
+        "value": "CUSTOM:TimeBattery"
+      },
+      {
+        "value": "CUSTOM:TechnologyBattery"
+      },
+      {
+        "value": "CUSTOM:TeleportationBattery"
+      },
+      {
+        "value": "CUSTOM:ExplosionBattery"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "battery",
+    "namespace": "mod"
+  }
+}

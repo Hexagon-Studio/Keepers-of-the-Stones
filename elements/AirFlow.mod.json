@@ -1,9 +1,9 @@
 {
-  "_fv": 24,
+  "_fv": 29,
   "_type": "rangeditem",
   "definition": {
     "renderType": 0,
-    "texture": "sds",
+    "texture": "air_flow",
     "customModelName": "Normal",
     "name": "Air Flow",
     "specialInfo": [],
@@ -27,8 +27,8 @@
       "name": "RechargeMagicFireball"
     },
     "bulletPower": 1.1,
-    "bulletDamage": 12.0,
-    "bulletKnockback": 20,
+    "bulletDamage": 4.0,
+    "bulletKnockback": 15,
     "bulletParticles": true,
     "bulletIgnitesFire": false,
     "bulletItemTexture": {

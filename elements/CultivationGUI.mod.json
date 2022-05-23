@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 29,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -216,6 +216,34 @@
           "height": 20,
           "name": "Pumpkin",
           "x": 114,
+          "y": 143
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Sugar Cane",
+          "onClick": {
+            "name": "GetSugarCane"
+          },
+          "width": 77,
+          "height": 20,
+          "name": "Sugar Cane",
+          "x": 195,
+          "y": 143
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Bamboo",
+          "onClick": {
+            "name": "GetBamboo"
+          },
+          "width": 77,
+          "height": 20,
+          "name": "Bamboo",
+          "x": 276,
           "y": 143
         }
       }

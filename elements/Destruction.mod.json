@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 29,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -14,10 +14,10 @@
       "value": "No creative tab entry"
     },
     "armorTextureFile": "destruction_",
-    "helmetName": "Destruction Шлем",
-    "bodyName": "Destruction Кираса",
-    "leggingsName": "Destruction Поножи",
-    "bootsName": "Destruction Ботинки",
+    "helmetName": "Destruction Helmet",
+    "bodyName": "Destruction Chestplate",
+    "leggingsName": "Destruction Leggings",
+    "bootsName": "Destruction Boots",
     "helmetSpecialInfo": [],
     "bodySpecialInfo": [],
     "leggingsSpecialInfo": [],

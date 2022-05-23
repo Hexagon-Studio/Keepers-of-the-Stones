@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 29,
   "_type": "rangeditem",
   "definition": {
     "renderType": 0,
@@ -17,7 +17,7 @@
     "shootConstantly": false,
     "usageCount": 5000,
     "actionSound": {
-      "value": "block.glass.break"
+      "value": "block.amethyst_block.break"
     },
     "hasGlow": false,
     "animation": "bow",

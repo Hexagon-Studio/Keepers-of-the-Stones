@@ -5,6 +5,7 @@ import power.keepeersofthestones.procedures.LightingUseProcedure;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
@@ -15,7 +16,11 @@ import net.minecraft.world.InteractionHand;
 public class LightingItem extends Item {
 	public LightingItem() {
 		super(new Item.Properties().tab(null).stacksTo(1).fireResistant().rarity(Rarity.COMMON));
-		setRegistryName("lighting");
+	}
+
+	@Override
+	public UseAnim getUseAnimation(ItemStack itemstack) {
+		return UseAnim.EAT;
 	}
 
 	@Override
@@ -36,7 +41,7 @@ public class LightingItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		LightingUseProcedure.execute(world, entity);
+		LightingUseProcedure.execute(entity, itemstack);
 		return ar;
 	}
 }

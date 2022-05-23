@@ -1,0 +1,61 @@
+{
+  "_fv": 29,
+  "_type": "dimension",
+  "definition": {
+    "biomesInDimension": [
+      {
+        "value": "CUSTOM:JurassicJungle"
+      },
+      {
+        "value": "CUSTOM:JurassicSwamp"
+      },
+      {
+        "value": "CUSTOM:TriassicDesert"
+      },
+      {
+        "value": "CUSTOM:TriassicPlains"
+      },
+      {
+        "value": "CUSTOM:CretaceousTaiga"
+      },
+      {
+        "value": "CUSTOM:CretaceousPineForest"
+      }
+    ],
+    "worldGenType": "Normal world gen",
+    "mainFillerBlock": {
+      "value": "Blocks.STONE#0"
+    },
+    "fluidBlock": {
+      "value": "Blocks.FLOWING_WATER"
+    },
+    "airColor": {
+      "value": -3342337,
+      "falpha": 0.0
+    },
+    "canRespawnHere": true,
+    "hasFog": false,
+    "isDark": true,
+    "doesWaterVaporize": false,
+    "sleepResult": "ALLOW",
+    "hasSkyLight": true,
+    "imitateOverworldBehaviour": true,
+    "portalFrame": {
+      "value": "Blocks.BONE_BLOCK"
+    },
+    "portalParticles": {
+      "value": "WHITE_ASH"
+    },
+    "portalLuminance": 5,
+    "portalSound": {
+      "value": "block.portal.ambient"
+    },
+    "igniterName": "Dinoera Portal Igniter",
+    "igniterTab": {
+      "value": "CUSTOM:TechnologiesAndArtifacts"
+    },
+    "texture": "dinoera_flint_and_steel",
+    "portalTexture": "dinoera_portal",
+    "enablePortal": true
+  }
+}

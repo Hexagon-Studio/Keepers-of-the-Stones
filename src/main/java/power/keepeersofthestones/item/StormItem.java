@@ -5,6 +5,7 @@ import power.keepeersofthestones.procedures.StormUseProcedure;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
@@ -15,7 +16,11 @@ import net.minecraft.world.InteractionHand;
 public class StormItem extends Item {
 	public StormItem() {
 		super(new Item.Properties().tab(null).stacksTo(64).rarity(Rarity.COMMON));
-		setRegistryName("storm");
+	}
+
+	@Override
+	public UseAnim getUseAnimation(ItemStack itemstack) {
+		return UseAnim.EAT;
 	}
 
 	@Override

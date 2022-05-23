@@ -26,7 +26,6 @@ import com.google.common.collect.ImmutableMultimap;
 public class AirFlowItem extends Item {
 	public AirFlowItem() {
 		super(new Item.Properties().tab(null).durability(5000));
-		setRegistryName("air_flow");
 	}
 
 	@Override
@@ -66,7 +65,7 @@ public class AirFlowItem extends Item {
 			double y = entity.getY();
 			double z = entity.getZ();
 			if (true) {
-				AirFlowEntity entityarrow = AirFlowEntity.shoot(world, entity, world.getRandom(), 1.1f, 12, 20);
+				AirFlowEntity entityarrow = AirFlowEntity.shoot(world, entity, world.getRandom(), 1.1f, 4, 15);
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
 

@@ -1,9 +1,9 @@
 {
-  "_fv": 24,
+  "_fv": 29,
   "_type": "potioneffect",
   "definition": {
     "effectName": "Recharge",
-    "icon": "tornado_stone.png",
+    "icon": "recharge_tornado_stone.png",
     "color": {
       "value": -10066432,
       "falpha": 0.0

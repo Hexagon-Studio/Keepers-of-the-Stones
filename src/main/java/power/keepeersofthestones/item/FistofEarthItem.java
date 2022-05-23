@@ -1,12 +1,16 @@
 
 package power.keepeersofthestones.item;
 
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.Item;
+import power.keepeersofthestones.procedures.DestroyRocksProcedure;
 
-public class FistofEarthItem extends SwordItem {
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.ShovelItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.InteractionResult;
+
+public class FistofEarthItem extends ShovelItem {
 	public FistofEarthItem() {
 		super(new Tier() {
 			public int getUses() {
@@ -32,7 +36,14 @@ public class FistofEarthItem extends SwordItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.EMPTY;
 			}
-		}, 3, -3.8f, new Item.Properties().tab(null).fireResistant());
-		setRegistryName("fistof_earth");
+		}, 1, -2.7999999999999998f, new Item.Properties().tab(null).fireResistant());
+	}
+
+	@Override
+	public InteractionResult useOn(UseOnContext context) {
+		InteractionResult retval = super.useOn(context);
+		DestroyRocksProcedure.execute(context.getLevel(), context.getClickedPos().getX(), context.getClickedPos().getY(),
+				context.getClickedPos().getZ(), context.getPlayer());
+		return retval;
 	}
 }

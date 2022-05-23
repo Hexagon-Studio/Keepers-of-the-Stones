@@ -4,7 +4,7 @@ import power.keepeersofthestones.world.inventory.ChoiseMagicStoneGUIMenu;
 import power.keepeersofthestones.network.PowerModVariables;
 import power.keepeersofthestones.init.PowerModGameRules;
 
-import net.minecraftforge.fmllegacy.network.NetworkHooks;
+import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
@@ -30,8 +30,7 @@ import io.netty.buffer.Unpooled;
 public class JoinPlayerInTheWorldProcedure {
 	@SubscribeEvent
 	public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
-		Entity entity = event.getPlayer();
-		execute(event, entity.level, entity.getX(), entity.getY(), entity.getZ(), entity);
+		execute(event, event.getPlayer().level, event.getPlayer().getX(), event.getPlayer().getY(), event.getPlayer().getZ(), event.getPlayer());
 	}
 
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -46,7 +45,7 @@ public class JoinPlayerInTheWorldProcedure {
 					.orElse(new PowerModVariables.PlayerVariables())).selected) {
 				{
 					if (entity instanceof ServerPlayer _ent) {
-						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
+						BlockPos _bpos = new BlockPos(x, y, z);
 						NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
@@ -61,6 +60,16 @@ public class JoinPlayerInTheWorldProcedure {
 					}
 				}
 			}
+		}
+		if (PowerModVariables.MapVariables.get(world).cosmos_stone) {
+			PowerModVariables.MapVariables.get(world).cosmos_stone = false;
+			PowerModVariables.MapVariables.get(world).syncData(world);
+			PowerModVariables.WorldVariables.get(world).space_stone = true;
+			PowerModVariables.WorldVariables.get(world).syncData(world);
+			if (entity instanceof Player _player && !_player.level.isClientSide())
+				_player.displayClientMessage(
+						new TextComponent("Attention! The space stone has had its identifier changed, use the /give command to give it back."),
+						(false));
 		}
 	}
 }

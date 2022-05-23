@@ -1,0 +1,34 @@
+{
+  "_fv": 29,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "blue_knife",
+    "customModelName": "Normal",
+    "name": "Blue Knife",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "No creative tab entry"
+    },
+    "toolType": "Special",
+    "harvestLevel": 1,
+    "efficiency": 45.0,
+    "attackSpeed": 1.7000000000000002,
+    "enchantability": 2,
+    "damageVsEntity": 14.0,
+    "usageCount": 5000,
+    "blocksAffected": [
+      {
+        "value": "CUSTOM:BluePortal"
+      },
+      {
+        "value": "CUSTOM:OrangePortal"
+      }
+    ],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

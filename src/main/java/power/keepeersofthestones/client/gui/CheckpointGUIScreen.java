@@ -15,10 +15,13 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.Minecraft;
 
+import java.util.HashMap;
+
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class CheckpointGUIScreen extends AbstractContainerScreen<CheckpointGUIMenu> {
+	private final static HashMap<String, Object> guistate = CheckpointGUIMenu.guistate;
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
@@ -34,7 +37,7 @@ public class CheckpointGUIScreen extends AbstractContainerScreen<CheckpointGUIMe
 		this.imageHeight = 166;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/checkpoint_gui.png");
+	private static final ResourceLocation texture = new ResourceLocation("power:textures/screens/checkpoint_gui.png");
 
 	@Override
 	public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {
@@ -70,6 +73,7 @@ public class CheckpointGUIScreen extends AbstractContainerScreen<CheckpointGUIMe
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
 		this.font.draw(poseStack, "Returning to the last point", 15, 7, -12829636);
+		this.font.draw(poseStack, "Time travel", 60, 79, -12829636);
 	}
 
 	@Override
@@ -92,6 +96,18 @@ public class CheckpointGUIScreen extends AbstractContainerScreen<CheckpointGUIMe
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new CheckpointGUIButtonMessage(1, x, y, z));
 				CheckpointGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
+			}
+		}));
+		this.addRenderableWidget(new Button(this.leftPos + 24, this.topPos + 97, 126, 20, new TextComponent("Return to the past"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new CheckpointGUIButtonMessage(2, x, y, z));
+				CheckpointGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
+			}
+		}));
+		this.addRenderableWidget(new Button(this.leftPos + 24, this.topPos + 124, 134, 20, new TextComponent("Return to the present"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new CheckpointGUIButtonMessage(3, x, y, z));
+				CheckpointGUIButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		}));
 	}

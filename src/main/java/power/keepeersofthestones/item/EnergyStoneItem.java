@@ -2,23 +2,26 @@
 package power.keepeersofthestones.item;
 
 import power.keepeersofthestones.procedures.EnergyStoneUseProcedure;
-import power.keepeersofthestones.procedures.EnergyStaffUseProcedure;
 import power.keepeersofthestones.init.PowerModTabs;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 
 public class EnergyStoneItem extends Item {
 	public EnergyStoneItem() {
-		super(new Item.Properties().tab(PowerModTabs.TAB_BASIC_GROUP).durability(10).fireResistant().rarity(Rarity.COMMON));
-		setRegistryName("energy_stone");
+		super(new Item.Properties().tab(PowerModTabs.TAB_MIDDLE_GROUP).durability(10).fireResistant().rarity(Rarity.COMMON));
+	}
+
+	@Override
+	public UseAnim getUseAnimation(ItemStack itemstack) {
+		return UseAnim.EAT;
 	}
 
 	@Override
@@ -41,12 +44,5 @@ public class EnergyStoneItem extends Item {
 
 		EnergyStoneUseProcedure.execute(entity);
 		return ar;
-	}
-
-	@Override
-	public boolean hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
-		boolean retval = super.hurtEnemy(itemstack, entity, sourceentity);
-		EnergyStaffUseProcedure.execute(entity.level, entity, sourceentity, itemstack);
-		return retval;
 	}
 }

@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 29,
   "_type": "tool",
   "definition": {
     "renderType": 0,
@@ -10,10 +10,10 @@
     "creativeTab": {
       "value": "No creative tab entry"
     },
-    "toolType": "Sword",
+    "toolType": "Spade",
     "harvestLevel": 1,
     "efficiency": 4.0,
-    "attackSpeed": 0.19999999999999998,
+    "attackSpeed": 1.2000000000000002,
     "enchantability": 2,
     "damageVsEntity": 12.0,
     "usageCount": 5000,
@@ -22,6 +22,9 @@
     "repairItems": [],
     "immuneToFire": true,
     "stayInGridWhenCrafting": false,
-    "damageOnCrafting": false
+    "damageOnCrafting": false,
+    "onRightClickedOnBlock": {
+      "name": "DestroyRocks"
+    }
   }
 }

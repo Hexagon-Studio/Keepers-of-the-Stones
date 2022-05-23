@@ -15,10 +15,13 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.Minecraft;
 
+import java.util.HashMap;
+
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class SpawnAnimalsGUIScreen extends AbstractContainerScreen<SpawnAnimalsGUIMenu> {
+	private final static HashMap<String, Object> guistate = SpawnAnimalsGUIMenu.guistate;
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
@@ -34,7 +37,7 @@ public class SpawnAnimalsGUIScreen extends AbstractContainerScreen<SpawnAnimalsG
 		this.imageHeight = 166;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/spawn_animals_gui.png");
+	private static final ResourceLocation texture = new ResourceLocation("power:textures/screens/spawn_animals_gui.png");
 
 	@Override
 	public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {
@@ -110,6 +113,12 @@ public class SpawnAnimalsGUIScreen extends AbstractContainerScreen<SpawnAnimalsG
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new SpawnAnimalsGUIButtonMessage(4, x, y, z));
 				SpawnAnimalsGUIButtonMessage.handleButtonAction(entity, 4, x, y, z);
+			}
+		}));
+		this.addRenderableWidget(new Button(this.leftPos + 78, this.topPos + 79, 51, 20, new TextComponent("Sheep"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new SpawnAnimalsGUIButtonMessage(5, x, y, z));
+				SpawnAnimalsGUIButtonMessage.handleButtonAction(entity, 5, x, y, z);
 			}
 		}));
 	}

@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 29,
   "_type": "tool",
   "definition": {
     "renderType": 0,
@@ -10,12 +10,12 @@
     "creativeTab": {
       "value": "No creative tab entry"
     },
-    "toolType": "Sword",
+    "toolType": "Pickaxe",
     "harvestLevel": 1,
     "efficiency": 4.0,
-    "attackSpeed": 0.15,
+    "attackSpeed": 1.0,
     "enchantability": 2,
-    "damageVsEntity": 15.0,
+    "damageVsEntity": 14.0,
     "usageCount": 5000,
     "blocksAffected": [],
     "hasGlow": false,
@@ -23,6 +23,9 @@
     "immuneToFire": true,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
+    "onRightClickedOnBlock": {
+      "name": "DestroyRocks"
+    },
     "onEntityHitWith": {
       "name": "BurnProcedure"
     }

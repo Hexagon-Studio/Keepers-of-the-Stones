@@ -1,0 +1,8 @@
+{
+  "_fv": 29,
+  "_type": "command",
+  "definition": {
+    "commandName": "planet",
+    "permissionLevel": "4"
+  }
+}

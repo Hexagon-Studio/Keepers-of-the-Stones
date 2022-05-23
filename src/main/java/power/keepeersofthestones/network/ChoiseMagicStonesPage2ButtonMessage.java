@@ -3,15 +3,21 @@ package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.ChoiseMagicStonesPage2Menu;
 import power.keepeersofthestones.procedures.TimeGetProcedure;
+import power.keepeersofthestones.procedures.TeleportationGetProcedure;
+import power.keepeersofthestones.procedures.TechnologyGetProcedure;
+import power.keepeersofthestones.procedures.SpaceGetProcedure;
 import power.keepeersofthestones.procedures.PreviousPageGUIChoiceStonesProcedure;
+import power.keepeersofthestones.procedures.NextToPage3Procedure;
 import power.keepeersofthestones.procedures.MoonGetProcedure;
+import power.keepeersofthestones.procedures.MistGetProcedure;
+import power.keepeersofthestones.procedures.ExplosionGetProcedure;
 import power.keepeersofthestones.procedures.DestructionGetProcedure;
 import power.keepeersofthestones.procedures.CreationGetProcedure;
-import power.keepeersofthestones.procedures.CosmosGetProcedure;
 import power.keepeersofthestones.procedures.BloodGetProcedure;
+import power.keepeersofthestones.procedures.AmberGetProcedure;
 import power.keepeersofthestones.PowerMod;
 
-import net.minecraftforge.fmllegacy.network.NetworkEvent;
+import net.minecraftforge.network.NetworkEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -74,7 +80,7 @@ public class ChoiseMagicStonesPage2ButtonMessage {
 		}
 		if (buttonID == 1) {
 
-			CreationGetProcedure.execute(world, entity);
+			AmberGetProcedure.execute(world, entity);
 		}
 		if (buttonID == 2) {
 
@@ -82,7 +88,7 @@ public class ChoiseMagicStonesPage2ButtonMessage {
 		}
 		if (buttonID == 3) {
 
-			CosmosGetProcedure.execute(world, entity);
+			SpaceGetProcedure.execute(world, entity);
 		}
 		if (buttonID == 4) {
 
@@ -92,9 +98,33 @@ public class ChoiseMagicStonesPage2ButtonMessage {
 
 			TimeGetProcedure.execute(world, entity);
 		}
+		if (buttonID == 6) {
+
+			TechnologyGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 7) {
+
+			ExplosionGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 8) {
+
+			TeleportationGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 9) {
+
+			CreationGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 10) {
+
+			MistGetProcedure.execute(world, entity);
+		}
 		if (buttonID == 13) {
 
 			PreviousPageGUIChoiceStonesProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 21) {
+
+			NextToPage3Procedure.execute(world, x, y, z, entity);
 		}
 	}
 

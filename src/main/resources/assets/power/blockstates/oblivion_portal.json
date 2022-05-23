@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "power:block/oblivion_portal_ew"
+    },
+    "axis=x": {
+      "model": "power:block/oblivion_portal_ns"
+    }
+  }
+}

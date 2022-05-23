@@ -1,9 +1,9 @@
 {
-  "_fv": 24,
+  "_fv": 29,
   "_type": "potioneffect",
   "definition": {
     "effectName": "Recharge",
-    "icon": "fire_stone.png",
+    "icon": "recharge_fire_stone.png",
     "color": {
       "value": -65536,
       "falpha": 0.0

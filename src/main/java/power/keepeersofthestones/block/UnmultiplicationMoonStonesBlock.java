@@ -4,6 +4,8 @@ package power.keepeersofthestones.block;
 import power.keepeersofthestones.procedures.MultiplicationMoonStoneProcedure;
 import power.keepeersofthestones.procedures.EntityOnMoonstonesProcedure;
 
+import org.checkerframework.checker.units.qual.s;
+
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.FluidState;
@@ -27,7 +29,6 @@ public class UnmultiplicationMoonStonesBlock extends Block {
 	public UnmultiplicationMoonStonesBlock() {
 		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(0.5f, 10f).lightLevel(s -> 7).requiresCorrectToolForDrops()
 				.friction(0.5f));
-		setRegistryName("unmultiplication_moon_stones_block");
 	}
 
 	@Override
@@ -37,7 +38,7 @@ public class UnmultiplicationMoonStonesBlock extends Block {
 
 	@Override
 	public boolean canHarvestBlock(BlockState state, BlockGetter world, BlockPos pos, Player player) {
-		if (player.getInventory().getSelected().getItem()instanceof TieredItem tieredItem)
+		if (player.getInventory().getSelected().getItem() instanceof TieredItem tieredItem)
 			return tieredItem.getTier().getLevel() >= 0;
 		return false;
 	}
@@ -51,8 +52,8 @@ public class UnmultiplicationMoonStonesBlock extends Block {
 	}
 
 	@Override
-	public boolean removedByPlayer(BlockState blockstate, Level world, BlockPos pos, Player entity, boolean willHarvest, FluidState fluid) {
-		boolean retval = super.removedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
+	public boolean onDestroyedByPlayer(BlockState blockstate, Level world, BlockPos pos, Player entity, boolean willHarvest, FluidState fluid) {
+		boolean retval = super.onDestroyedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
 		MultiplicationMoonStoneProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), entity);
 		return retval;
 	}

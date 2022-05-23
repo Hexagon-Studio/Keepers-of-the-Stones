@@ -3,13 +3,14 @@ package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.world.inventory.SpawnAnimalsGUIMenu;
 import power.keepeersofthestones.procedures.SummonWolfProcedure;
+import power.keepeersofthestones.procedures.SummonSheepProcedure;
 import power.keepeersofthestones.procedures.SummonHorseProcedure;
 import power.keepeersofthestones.procedures.SummonCowProcedure;
 import power.keepeersofthestones.procedures.SummonChickenProcedure;
 import power.keepeersofthestones.procedures.SummonCatProcedure;
 import power.keepeersofthestones.PowerMod;
 
-import net.minecraftforge.fmllegacy.network.NetworkEvent;
+import net.minecraftforge.network.NetworkEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -85,6 +86,10 @@ public class SpawnAnimalsGUIButtonMessage {
 		if (buttonID == 4) {
 
 			SummonHorseProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 5) {
+
+			SummonSheepProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

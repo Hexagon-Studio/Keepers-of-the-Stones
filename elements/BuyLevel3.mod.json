@@ -1,0 +1,77 @@
+{
+  "_fv": 29,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 400,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "To buy, put the required number of coins in the slot (16)",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "To buy, put the required number of coins in the slot (16)",
+          "x": 60,
+          "y": 44
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:ElementalCoin"
+          },
+          "color": {
+            "value": -52,
+            "falpha": 0.0
+          },
+          "id": 1,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #1",
+          "x": 204,
+          "y": 71
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "elemental_coin.png",
+          "use1Xscale": false,
+          "name": "elemental_coin.png",
+          "x": 186,
+          "y": 71
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Buy",
+          "onClick": {
+            "name": "UpdateToLevel3"
+          },
+          "width": 40,
+          "height": 20,
+          "name": "Buy",
+          "x": 231,
+          "y": 71
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

@@ -1,9 +1,9 @@
 {
-  "_fv": 24,
+  "_fv": 29,
   "_type": "potioneffect",
   "definition": {
     "effectName": "Master of Energy",
-    "icon": "image0.png",
+    "icon": "energy_master.png",
     "color": {
       "value": -52,
       "falpha": 0.0

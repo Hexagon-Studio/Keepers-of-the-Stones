@@ -1,5 +1,5 @@
 {
-  "_fv": 24,
+  "_fv": 29,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -40,15 +40,15 @@
       {
         "type": "button",
         "data": {
-          "text": " Creation",
+          "text": " Amber",
           "onClick": {
-            "name": "CreationGet"
+            "name": "AmberGet"
           },
           "width": 56,
           "height": 20,
-          "name": " Creation",
-          "x": 51,
-          "y": 80
+          "name": " Amber",
+          "x": 141,
+          "y": 161
         }
       },
       {
@@ -62,21 +62,21 @@
           "height": 20,
           "name": " Destruct",
           "x": 51,
-          "y": 107
+          "y": 134
         }
       },
       {
         "type": "button",
         "data": {
-          "text": " Cosmos",
+          "text": "Space",
           "onClick": {
-            "name": "CosmosGet"
+            "name": "SpaceGet"
           },
           "width": 56,
           "height": 20,
-          "name": " Cosmos",
+          "name": "Space",
           "x": 51,
-          "y": 134
+          "y": 80
         }
       },
       {
@@ -103,62 +103,77 @@
           "width": 56,
           "height": 20,
           "name": "Time",
-          "x": 150,
+          "x": 141,
           "y": 53
         }
       },
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "Tech",
+          "onClick": {
+            "name": "TechnologyGet"
+          },
           "width": 56,
           "height": 20,
-          "name": " ",
-          "x": 150,
+          "name": "Tech",
+          "x": 141,
           "y": 80
         }
       },
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "Explosion",
+          "onClick": {
+            "name": "ExplosionGet"
+          },
           "width": 56,
           "height": 20,
-          "name": " ",
-          "x": 150,
-          "y": 107
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": " ",
-          "width": 56,
-          "height": 20,
-          "name": " ",
-          "x": 150,
+          "name": "Explosion",
+          "x": 141,
           "y": 134
         }
       },
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "TP",
+          "onClick": {
+            "name": "TeleportationGet"
+          },
           "width": 56,
           "height": 20,
-          "name": " ",
-          "x": 150,
-          "y": 161
+          "name": "TP",
+          "x": 141,
+          "y": 107
         }
       },
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "Creation",
+          "onClick": {
+            "name": "CreationGet"
+          },
           "width": 56,
           "height": 20,
-          "name": " ",
-          "x": 249,
+          "name": "Creation",
+          "x": 51,
+          "y": 107
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Mist",
+          "onClick": {
+            "name": "MistGet"
+          },
+          "width": 56,
+          "height": 20,
+          "name": "Mist",
+          "x": 240,
           "y": 53
         }
       },
@@ -169,7 +184,7 @@
           "width": 56,
           "height": 20,
           "name": " ",
-          "x": 249,
+          "x": 240,
           "y": 80
         }
       },
@@ -180,7 +195,7 @@
           "width": 56,
           "height": 20,
           "name": " ",
-          "x": 249,
+          "x": 240,
           "y": 107
         }
       },
@@ -211,31 +226,11 @@
       {
         "type": "image",
         "data": {
-          "image": "creation_master.png",
-          "use1Xscale": false,
-          "name": "creation_master.png",
-          "x": 33,
-          "y": 80
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "destruction_master.png",
-          "use1Xscale": false,
-          "name": "destruction_master.png",
-          "x": 33,
-          "y": 107
-        }
-      },
-      {
-        "type": "image",
-        "data": {
           "image": "cosmos_master.png",
           "use1Xscale": false,
           "name": "cosmos_master.png",
           "x": 33,
-          "y": 134
+          "y": 80
         }
       },
       {
@@ -254,7 +249,191 @@
           "image": "time_master.png",
           "use1Xscale": false,
           "name": "time_master.png",
-          "x": 132,
+          "x": 123,
+          "y": 53
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "technology_master.png",
+          "use1Xscale": false,
+          "name": "technology_master.png",
+          "x": 123,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "teleportation_master.png",
+          "use1Xscale": false,
+          "name": "teleportation_master.png",
+          "x": 123,
+          "y": 107
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "explosion_master.png",
+          "use1Xscale": false,
+          "name": "explosion_master.png",
+          "x": 123,
+          "y": 134
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": " ",
+          "width": 56,
+          "height": 20,
+          "name": " ",
+          "x": 240,
+          "y": 134
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": " ",
+          "width": 56,
+          "height": 20,
+          "name": " ",
+          "x": 240,
+          "y": 161
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": " ",
+          "width": 56,
+          "height": 20,
+          "name": " ",
+          "x": 339,
+          "y": 53
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": " ",
+          "width": 56,
+          "height": 20,
+          "name": " ",
+          "x": 339,
+          "y": 80
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": " ",
+          "width": 56,
+          "height": 20,
+          "name": " ",
+          "x": 339,
+          "y": 107
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "creation_master.png",
+          "use1Xscale": false,
+          "name": "creation_master.png",
+          "x": 33,
+          "y": 107
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "destruction_master.png",
+          "use1Xscale": false,
+          "name": "destruction_master.png",
+          "x": 33,
+          "y": 134
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": " ",
+          "width": 56,
+          "height": 20,
+          "name": " ",
+          "x": 339,
+          "y": 134
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": " ",
+          "width": 56,
+          "height": 20,
+          "name": " ",
+          "x": 339,
+          "y": 161
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Next page",
+          "onClick": {
+            "name": "NextToPage3"
+          },
+          "width": 72,
+          "height": 20,
+          "name": "Next page",
+          "x": 330,
+          "y": 188
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "2/3",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "2/3",
+          "x": 24,
+          "y": 26
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "amber_master.png",
+          "use1Xscale": false,
+          "name": "amber_master.png",
+          "x": 123,
+          "y": 161
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "space_master.png",
+          "use1Xscale": false,
+          "name": "space_master.png",
+          "x": 33,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "mist_master.png",
+          "use1Xscale": false,
+          "name": "mist_master.png",
+          "x": 222,
           "y": 53
         }
       }

@@ -1,7 +1,7 @@
 
 package power.keepeersofthestones.item;
 
-import power.keepeersofthestones.procedures.RechargeSunExplodeProcedure;
+import power.keepeersofthestones.procedures.RechargeMagicFireballProcedure;
 import power.keepeersofthestones.entity.MoonStonesEntity;
 
 import net.minecraft.world.level.Level;
@@ -19,7 +19,6 @@ import net.minecraft.server.level.ServerPlayer;
 public class MoonStonesItem extends Item {
 	public MoonStonesItem() {
 		super(new Item.Properties().tab(null).durability(100));
-		setRegistryName("moon_stones");
 	}
 
 	@Override
@@ -49,7 +48,7 @@ public class MoonStonesItem extends Item {
 				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				entityarrow.pickup = AbstractArrow.Pickup.DISALLOWED;
 
-				RechargeSunExplodeProcedure.execute(entity, itemstack);
+				RechargeMagicFireballProcedure.execute(entity, itemstack);
 			}
 		}
 	}

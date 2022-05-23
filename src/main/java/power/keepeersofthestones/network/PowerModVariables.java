@@ -2,8 +2,8 @@ package power.keepeersofthestones.network;
 
 import power.keepeersofthestones.PowerMod;
 
-import net.minecraftforge.fmllegacy.network.PacketDistributor;
-import net.minecraftforge.fmllegacy.network.NetworkEvent;
+import net.minecraftforge.network.PacketDistributor;
+import net.minecraftforge.network.NetworkEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -102,13 +102,7 @@ public class PowerModVariables {
 			clone.sun = original.sun;
 			clone.creation = original.creation;
 			clone.destruction = original.destruction;
-			clone.inferno_merger = original.inferno_merger;
-			clone.geyser_merger = original.geyser_merger;
-			clone.coal_merger = original.coal_merger;
-			clone.cloud_merger = original.cloud_merger;
-			clone.mountain_merger = original.mountain_merger;
-			clone.marsh_merger = original.marsh_merger;
-			clone.cosmos = original.cosmos;
+			clone.space = original.space;
 			clone.selected = original.selected;
 			clone.blood = original.blood;
 			clone.technology = original.technology;
@@ -116,8 +110,22 @@ public class PowerModVariables {
 			clone.spawnx = original.spawnx;
 			clone.spawny = original.spawny;
 			clone.spawnz = original.spawnz;
+			clone.battery = original.battery;
+			clone.teleportation = original.teleportation;
+			clone.explosion = original.explosion;
+			clone.amber = original.amber;
+			clone.magnet = original.magnet;
+			clone.mist = original.mist;
+			clone.power_level = original.power_level;
+			clone.water_power = original.water_power;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
+				clone.recharge_spell_sun = original.recharge_spell_sun;
+				clone.recharge_spell_moon = original.recharge_spell_moon;
+				clone.recharge_spell_blood = original.recharge_spell_blood;
+				clone.recharge_spell_energy = original.recharge_spell_energy;
+				clone.fog = original.fog;
+				clone.recharge_spell_mist = original.recharge_spell_mist;
 			}
 		}
 
@@ -171,7 +179,7 @@ public class PowerModVariables {
 		public boolean moon_stone = false;
 		public boolean creation_stone = false;
 		public boolean destruction_stone = false;
-		public boolean cosmos_stone = false;
+		public boolean space_stone = false;
 		public boolean blood_stone = false;
 		public boolean time_stone = false;
 
@@ -205,7 +213,7 @@ public class PowerModVariables {
 			moon_stone = nbt.getBoolean("moon_stone");
 			creation_stone = nbt.getBoolean("creation_stone");
 			destruction_stone = nbt.getBoolean("destruction_stone");
-			cosmos_stone = nbt.getBoolean("cosmos_stone");
+			space_stone = nbt.getBoolean("space_stone");
 			blood_stone = nbt.getBoolean("blood_stone");
 			time_stone = nbt.getBoolean("time_stone");
 		}
@@ -235,7 +243,7 @@ public class PowerModVariables {
 			nbt.putBoolean("moon_stone", moon_stone);
 			nbt.putBoolean("creation_stone", creation_stone);
 			nbt.putBoolean("destruction_stone", destruction_stone);
-			nbt.putBoolean("cosmos_stone", cosmos_stone);
+			nbt.putBoolean("space_stone", space_stone);
 			nbt.putBoolean("blood_stone", blood_stone);
 			nbt.putBoolean("time_stone", time_stone);
 			return nbt;
@@ -261,6 +269,20 @@ public class PowerModVariables {
 	public static class MapVariables extends SavedData {
 		public static final String DATA_NAME = "power_mapvars";
 		public boolean technology_stone = false;
+		public boolean teleportation_stone = false;
+		public boolean blue_portal = false;
+		public boolean orange_portal = false;
+		public double bposx = 0;
+		public double bposy = 0;
+		public double bposz = 0;
+		public double oposx = 0;
+		public double oposy = 0;
+		public double oposz = 0;
+		public boolean explosion_stone = false;
+		public boolean amber_stone = false;
+		public boolean cosmos_stone = false;
+		public boolean magnet_stone = false;
+		public boolean mist_stone = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -270,11 +292,39 @@ public class PowerModVariables {
 
 		public void read(CompoundTag nbt) {
 			technology_stone = nbt.getBoolean("technology_stone");
+			teleportation_stone = nbt.getBoolean("teleportation_stone");
+			blue_portal = nbt.getBoolean("blue_portal");
+			orange_portal = nbt.getBoolean("orange_portal");
+			bposx = nbt.getDouble("bposx");
+			bposy = nbt.getDouble("bposy");
+			bposz = nbt.getDouble("bposz");
+			oposx = nbt.getDouble("oposx");
+			oposy = nbt.getDouble("oposy");
+			oposz = nbt.getDouble("oposz");
+			explosion_stone = nbt.getBoolean("explosion_stone");
+			amber_stone = nbt.getBoolean("amber_stone");
+			cosmos_stone = nbt.getBoolean("cosmos_stone");
+			magnet_stone = nbt.getBoolean("magnet_stone");
+			mist_stone = nbt.getBoolean("mist_stone");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt) {
 			nbt.putBoolean("technology_stone", technology_stone);
+			nbt.putBoolean("teleportation_stone", teleportation_stone);
+			nbt.putBoolean("blue_portal", blue_portal);
+			nbt.putBoolean("orange_portal", orange_portal);
+			nbt.putDouble("bposx", bposx);
+			nbt.putDouble("bposy", bposy);
+			nbt.putDouble("bposz", bposz);
+			nbt.putDouble("oposx", oposx);
+			nbt.putDouble("oposy", oposy);
+			nbt.putDouble("oposz", oposz);
+			nbt.putBoolean("explosion_stone", explosion_stone);
+			nbt.putBoolean("amber_stone", amber_stone);
+			nbt.putBoolean("cosmos_stone", cosmos_stone);
+			nbt.putBoolean("magnet_stone", magnet_stone);
+			nbt.putBoolean("mist_stone", mist_stone);
 			return nbt;
 		}
 
@@ -388,13 +438,7 @@ public class PowerModVariables {
 		public boolean sun = false;
 		public boolean creation = false;
 		public boolean destruction = false;
-		public boolean inferno_merger = false;
-		public boolean geyser_merger = false;
-		public boolean coal_merger = false;
-		public boolean cloud_merger = false;
-		public boolean mountain_merger = false;
-		public boolean marsh_merger = false;
-		public boolean cosmos = false;
+		public boolean space = false;
 		public boolean selected = false;
 		public boolean blood = false;
 		public boolean technology = false;
@@ -402,6 +446,20 @@ public class PowerModVariables {
 		public double spawnx = 0.0;
 		public double spawny = 75.0;
 		public double spawnz = 0.0;
+		public boolean battery = false;
+		public boolean recharge_spell_sun = false;
+		public boolean recharge_spell_moon = false;
+		public boolean recharge_spell_blood = false;
+		public boolean recharge_spell_energy = false;
+		public boolean teleportation = false;
+		public boolean explosion = false;
+		public boolean amber = false;
+		public boolean fog = false;
+		public boolean magnet = false;
+		public boolean mist = false;
+		public double power_level = 1.0;
+		public boolean water_power = false;
+		public boolean recharge_spell_mist = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -434,13 +492,7 @@ public class PowerModVariables {
 			nbt.putBoolean("sun", sun);
 			nbt.putBoolean("creation", creation);
 			nbt.putBoolean("destruction", destruction);
-			nbt.putBoolean("inferno_merger", inferno_merger);
-			nbt.putBoolean("geyser_merger", geyser_merger);
-			nbt.putBoolean("coal_merger", coal_merger);
-			nbt.putBoolean("cloud_merger", cloud_merger);
-			nbt.putBoolean("mountain_merger", mountain_merger);
-			nbt.putBoolean("marsh_merger", marsh_merger);
-			nbt.putBoolean("cosmos", cosmos);
+			nbt.putBoolean("space", space);
 			nbt.putBoolean("selected", selected);
 			nbt.putBoolean("blood", blood);
 			nbt.putBoolean("technology", technology);
@@ -448,6 +500,20 @@ public class PowerModVariables {
 			nbt.putDouble("spawnx", spawnx);
 			nbt.putDouble("spawny", spawny);
 			nbt.putDouble("spawnz", spawnz);
+			nbt.putBoolean("battery", battery);
+			nbt.putBoolean("recharge_spell_sun", recharge_spell_sun);
+			nbt.putBoolean("recharge_spell_moon", recharge_spell_moon);
+			nbt.putBoolean("recharge_spell_blood", recharge_spell_blood);
+			nbt.putBoolean("recharge_spell_energy", recharge_spell_energy);
+			nbt.putBoolean("teleportation", teleportation);
+			nbt.putBoolean("explosion", explosion);
+			nbt.putBoolean("amber", amber);
+			nbt.putBoolean("fog", fog);
+			nbt.putBoolean("magnet", magnet);
+			nbt.putBoolean("mist", mist);
+			nbt.putDouble("power_level", power_level);
+			nbt.putBoolean("water_power", water_power);
+			nbt.putBoolean("recharge_spell_mist", recharge_spell_mist);
 			return nbt;
 		}
 
@@ -477,13 +543,7 @@ public class PowerModVariables {
 			sun = nbt.getBoolean("sun");
 			creation = nbt.getBoolean("creation");
 			destruction = nbt.getBoolean("destruction");
-			inferno_merger = nbt.getBoolean("inferno_merger");
-			geyser_merger = nbt.getBoolean("geyser_merger");
-			coal_merger = nbt.getBoolean("coal_merger");
-			cloud_merger = nbt.getBoolean("cloud_merger");
-			mountain_merger = nbt.getBoolean("mountain_merger");
-			marsh_merger = nbt.getBoolean("marsh_merger");
-			cosmos = nbt.getBoolean("cosmos");
+			space = nbt.getBoolean("space");
 			selected = nbt.getBoolean("selected");
 			blood = nbt.getBoolean("blood");
 			technology = nbt.getBoolean("technology");
@@ -491,6 +551,20 @@ public class PowerModVariables {
 			spawnx = nbt.getDouble("spawnx");
 			spawny = nbt.getDouble("spawny");
 			spawnz = nbt.getDouble("spawnz");
+			battery = nbt.getBoolean("battery");
+			recharge_spell_sun = nbt.getBoolean("recharge_spell_sun");
+			recharge_spell_moon = nbt.getBoolean("recharge_spell_moon");
+			recharge_spell_blood = nbt.getBoolean("recharge_spell_blood");
+			recharge_spell_energy = nbt.getBoolean("recharge_spell_energy");
+			teleportation = nbt.getBoolean("teleportation");
+			explosion = nbt.getBoolean("explosion");
+			amber = nbt.getBoolean("amber");
+			fog = nbt.getBoolean("fog");
+			magnet = nbt.getBoolean("magnet");
+			mist = nbt.getBoolean("mist");
+			power_level = nbt.getDouble("power_level");
+			water_power = nbt.getBoolean("water_power");
+			recharge_spell_mist = nbt.getBoolean("recharge_spell_mist");
 		}
 	}
 
@@ -540,13 +614,7 @@ public class PowerModVariables {
 					variables.sun = message.data.sun;
 					variables.creation = message.data.creation;
 					variables.destruction = message.data.destruction;
-					variables.inferno_merger = message.data.inferno_merger;
-					variables.geyser_merger = message.data.geyser_merger;
-					variables.coal_merger = message.data.coal_merger;
-					variables.cloud_merger = message.data.cloud_merger;
-					variables.mountain_merger = message.data.mountain_merger;
-					variables.marsh_merger = message.data.marsh_merger;
-					variables.cosmos = message.data.cosmos;
+					variables.space = message.data.space;
 					variables.selected = message.data.selected;
 					variables.blood = message.data.blood;
 					variables.technology = message.data.technology;
@@ -554,6 +622,20 @@ public class PowerModVariables {
 					variables.spawnx = message.data.spawnx;
 					variables.spawny = message.data.spawny;
 					variables.spawnz = message.data.spawnz;
+					variables.battery = message.data.battery;
+					variables.recharge_spell_sun = message.data.recharge_spell_sun;
+					variables.recharge_spell_moon = message.data.recharge_spell_moon;
+					variables.recharge_spell_blood = message.data.recharge_spell_blood;
+					variables.recharge_spell_energy = message.data.recharge_spell_energy;
+					variables.teleportation = message.data.teleportation;
+					variables.explosion = message.data.explosion;
+					variables.amber = message.data.amber;
+					variables.fog = message.data.fog;
+					variables.magnet = message.data.magnet;
+					variables.mist = message.data.mist;
+					variables.power_level = message.data.power_level;
+					variables.water_power = message.data.water_power;
+					variables.recharge_spell_mist = message.data.recharge_spell_mist;
 				}
 			});
 			context.setPacketHandled(true);

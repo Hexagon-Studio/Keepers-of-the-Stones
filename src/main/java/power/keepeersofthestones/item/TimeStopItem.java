@@ -5,6 +5,7 @@ import power.keepeersofthestones.procedures.TimeStopUseProcedure;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
@@ -15,7 +16,11 @@ import net.minecraft.world.InteractionHand;
 public class TimeStopItem extends Item {
 	public TimeStopItem() {
 		super(new Item.Properties().tab(null).stacksTo(1).fireResistant().rarity(Rarity.COMMON));
-		setRegistryName("time_stop");
+	}
+
+	@Override
+	public UseAnim getUseAnimation(ItemStack itemstack) {
+		return UseAnim.EAT;
 	}
 
 	@Override
@@ -36,7 +41,7 @@ public class TimeStopItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		TimeStopUseProcedure.execute(world, entity, itemstack);
+		TimeStopUseProcedure.execute(world, x, y, z, entity, itemstack);
 		return ar;
 	}
 }

@@ -15,10 +15,13 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.Minecraft;
 
+import java.util.HashMap;
+
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class CultivationGUIScreen extends AbstractContainerScreen<CultivationGUIMenu> {
+	private final static HashMap<String, Object> guistate = CultivationGUIMenu.guistate;
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
@@ -34,7 +37,7 @@ public class CultivationGUIScreen extends AbstractContainerScreen<CultivationGUI
 		this.imageHeight = 166;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/cultivation_gui.png");
+	private static final ResourceLocation texture = new ResourceLocation("power:textures/screens/cultivation_gui.png");
 
 	@Override
 	public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {
@@ -164,6 +167,18 @@ public class CultivationGUIScreen extends AbstractContainerScreen<CultivationGUI
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new CultivationGUIButtonMessage(13, x, y, z));
 				CultivationGUIButtonMessage.handleButtonAction(entity, 13, x, y, z);
+			}
+		}));
+		this.addRenderableWidget(new Button(this.leftPos + 169, this.topPos + 106, 77, 20, new TextComponent("Sugar Cane"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new CultivationGUIButtonMessage(14, x, y, z));
+				CultivationGUIButtonMessage.handleButtonAction(entity, 14, x, y, z);
+			}
+		}));
+		this.addRenderableWidget(new Button(this.leftPos + 250, this.topPos + 106, 77, 20, new TextComponent("Bamboo"), e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new CultivationGUIButtonMessage(15, x, y, z));
+				CultivationGUIButtonMessage.handleButtonAction(entity, 15, x, y, z);
 			}
 		}));
 	}

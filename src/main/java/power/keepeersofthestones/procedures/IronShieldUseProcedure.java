@@ -1,6 +1,5 @@
 package power.keepeersofthestones.procedures;
 
-import power.keepeersofthestones.network.PowerModVariables;
 import power.keepeersofthestones.init.PowerModItems;
 
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -24,15 +23,11 @@ public class IronShieldUseProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
-		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.IRON_SHIELD) {
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.IRON_SHIELD.get()) {
 			if (world.isClientSide())
 				Minecraft.getInstance().gameRenderer.displayItemActivation(itemstack);
-			{
-				Entity _ent = entity;
-				if (!_ent.level.isClientSide() && _ent.getServer() != null)
-					_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-							"item replace entity @s weapon.mainhand with air");
-			}
+			if (entity instanceof Player _player)
+				_player.getCooldowns().addCooldown(itemstack.getItem(), 600);
 			new Object() {
 				private int ticks = 0;
 				private float waitTicks;
@@ -58,7 +53,7 @@ public class IronShieldUseProcedure {
 						_level.getServer().getCommands()
 								.performCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "",
 										new TextComponent(""), _level.getServer(), null).withSuppressedOutput(),
-										"fill ~-2 ~1 ~-2 ~2 ~5 ~2 iron_block outline");
+										"fill ~-2 ~ ~-2 ~2 ~4 ~2 iron_block outline");
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
 			}.start(world, 3);
@@ -87,24 +82,10 @@ public class IronShieldUseProcedure {
 						_level.getServer().getCommands()
 								.performCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "",
 										new TextComponent(""), _level.getServer(), null).withSuppressedOutput(),
-										"fill ~-2 ~1 ~-2 ~2 ~5 ~2 air outline");
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new PowerModVariables.PlayerVariables())).metal) {
-						if (!(entity instanceof Player _playerHasItem
-								? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.IRON_SHIELD))
-								: false)) {
-							{
-								Entity _ent = entity;
-								if (!_ent.level.isClientSide() && _ent.getServer() != null)
-									_ent.getServer().getCommands().performCommand(
-											_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-											"give @s power:iron_shield{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
-							}
-						}
-					}
+										"fill ~-2 ~ ~-2 ~2 ~4 ~2 air outline");
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
-			}.start(world, 400);
+			}.start(world, 600);
 		}
 	}
 }

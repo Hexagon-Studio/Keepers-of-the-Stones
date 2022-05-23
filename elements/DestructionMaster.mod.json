@@ -1,8 +1,8 @@
 {
-  "_fv": 24,
+  "_fv": 29,
   "_type": "potioneffect",
   "definition": {
-    "effectName": "Destruction Master",
+    "effectName": "Master of Destruction",
     "icon": "destruction_master.png",
     "color": {
       "value": -13421773,

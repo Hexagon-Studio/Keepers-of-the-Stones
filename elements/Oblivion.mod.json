@@ -1,0 +1,52 @@
+{
+  "_fv": 29,
+  "_type": "dimension",
+  "definition": {
+    "biomesInDimension": [
+      {
+        "value": "CUSTOM:OblivionForest"
+      },
+      {
+        "value": "CUSTOM:OblivionDesert"
+      },
+      {
+        "value": "CUSTOM:OblivionPlains"
+      }
+    ],
+    "worldGenType": "Normal world gen",
+    "mainFillerBlock": {
+      "value": "Blocks.STONE#0"
+    },
+    "fluidBlock": {
+      "value": "Blocks.FLOWING_WATER"
+    },
+    "airColor": {
+      "value": -16764109,
+      "falpha": 0.0
+    },
+    "canRespawnHere": true,
+    "hasFog": true,
+    "isDark": true,
+    "doesWaterVaporize": false,
+    "sleepResult": "ALLOW",
+    "hasSkyLight": false,
+    "imitateOverworldBehaviour": true,
+    "portalFrame": {
+      "value": "Blocks.DEEPSLATE"
+    },
+    "portalParticles": {
+      "value": "SOUL"
+    },
+    "portalLuminance": 5,
+    "portalSound": {
+      "value": "block.portal.ambient"
+    },
+    "igniterName": "Oblivion Portal Igniter",
+    "igniterTab": {
+      "value": "CUSTOM:TechnologiesAndArtifacts"
+    },
+    "texture": "oblivion_flint_and_steel",
+    "portalTexture": "oblivion_portal",
+    "enablePortal": true
+  }
+}

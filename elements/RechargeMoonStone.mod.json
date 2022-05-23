@@ -1,9 +1,9 @@
 {
-  "_fv": 24,
+  "_fv": 29,
   "_type": "potioneffect",
   "definition": {
     "effectName": "Recharge",
-    "icon": "moon_stones.png",
+    "icon": "recharge_moon_stone.png",
     "color": {
       "value": -3355393,
       "falpha": 0.0

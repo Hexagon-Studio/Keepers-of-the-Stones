@@ -1,0 +1,263 @@
+{
+  "_fv": 29,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 256,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "book_of_elements_book.png",
+          "use1Xscale": true,
+          "name": "book_of_elements_book.png",
+          "x": -31,
+          "y": -7
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Levels",
+          "color": {
+            "value": -13421773,
+            "falpha": 0.0
+          },
+          "name": "Levels",
+          "x": 105,
+          "y": 8
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "4",
+          "onClick": {
+            "name": "OpenBuyLevel2"
+          },
+          "displayCondition": {
+            "name": "ReturnLevel1"
+          },
+          "width": 61,
+          "height": 20,
+          "name": "4",
+          "x": 125,
+          "y": 50
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Level 2",
+          "color": {
+            "value": -13421773,
+            "falpha": 0.0
+          },
+          "name": "Level 2",
+          "x": 50,
+          "y": 55
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "elemental_coin.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnLevel1"
+          },
+          "name": "elemental_coin.png",
+          "x": 100,
+          "y": 50
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Level 3",
+          "color": {
+            "value": -13421773,
+            "falpha": 0.0
+          },
+          "name": "Level 3",
+          "x": 50,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "elemental_coin.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnLevel2"
+          },
+          "name": "elemental_coin.png",
+          "x": 100,
+          "y": 80
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "16",
+          "onClick": {
+            "name": "OpenBuyLevel3"
+          },
+          "displayCondition": {
+            "name": "ReturnLevel2"
+          },
+          "width": 61,
+          "height": 20,
+          "name": "16",
+          "x": 125,
+          "y": 75
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Skills",
+          "color": {
+            "value": -13421773,
+            "falpha": 0.0
+          },
+          "name": "Skills",
+          "x": 303,
+          "y": 8
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Aqua Power",
+          "color": {
+            "value": -13421773,
+            "falpha": 0.0
+          },
+          "name": "Aqua Power",
+          "x": 240,
+          "y": 30
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "elemental_coin.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "NonWaterPower"
+          },
+          "name": "elemental_coin.png",
+          "x": 300,
+          "y": 25
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "12",
+          "onClick": {
+            "name": "OpenBuyAquaPower"
+          },
+          "displayCondition": {
+            "name": "NonWaterPower"
+          },
+          "width": 61,
+          "height": 20,
+          "name": "12",
+          "x": 325,
+          "y": 25
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "level_checked.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnLevel2"
+          },
+          "name": "level_checked.png",
+          "x": 150,
+          "y": 50
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "level_checked.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnLevel3"
+          },
+          "name": "level_checked.png",
+          "x": 150,
+          "y": 75
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "level_checked.png",
+          "use1Xscale": false,
+          "name": "level_checked.png",
+          "x": 350,
+          "y": 25
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "<",
+          "onClick": {
+            "name": "OpenBook"
+          },
+          "width": 30,
+          "height": 20,
+          "name": "<",
+          "x": 42,
+          "y": 206
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Level 1",
+          "color": {
+            "value": -13421773,
+            "falpha": 0.0
+          },
+          "name": "Level 1",
+          "x": 50,
+          "y": 30
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "level_checked.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnLevel1"
+          },
+          "name": "level_checked.png",
+          "x": 150,
+          "y": 25
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

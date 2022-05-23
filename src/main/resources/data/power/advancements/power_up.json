@@ -1,0 +1,29 @@
+{
+  "display": {
+    "background": "power:textures/screens/power_level_theme.png",
+    "icon": {
+      "item": "power:elemental_coin"
+    },
+    "title": {
+      "translate": "advancements.power_up.title"
+    },
+    "description": {
+      "translate": "advancements.power_up.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "power_up": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 1000,
+    "loot": [
+      "power:entities/reward_coins"
+    ]
+  }
+}
