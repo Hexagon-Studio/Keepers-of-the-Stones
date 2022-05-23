@@ -15,13 +15,10 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.Minecraft;
 
-import java.util.HashMap;
-
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class SpaceAtlasGUIScreen extends AbstractContainerScreen<SpaceAtlasGUIMenu> {
-	private final static HashMap<String, Object> guistate = SpaceAtlasGUIMenu.guistate;
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
@@ -50,8 +47,8 @@ public class SpaceAtlasGUIScreen extends AbstractContainerScreen<SpaceAtlasGUIMe
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/space_atlas.png"));
-		this.blit(ms, this.leftPos + 11, this.topPos + 130, 0, 0, 512, 256, 512, 256);
+		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/space_atlas.png"));
+		this.blit(ms, this.leftPos + 11, this.topPos + 130, 0, 0, 0, 0, 0, 0);
 
 		RenderSystem.disableBlend();
 	}

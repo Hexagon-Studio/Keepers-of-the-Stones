@@ -33,5 +33,6 @@ public class EnergyStaffItem extends SwordItem {
 				return Ingredient.EMPTY;
 			}
 		}, 3, -2.7999999999999998f, new Item.Properties().tab(null).fireResistant());
+		setRegistryName("energy_staff");
 	}
 }

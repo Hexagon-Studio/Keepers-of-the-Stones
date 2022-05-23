@@ -5,7 +5,6 @@ import power.keepeersofthestones.procedures.OpenRedstoneBundleProcedure;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
@@ -16,11 +15,7 @@ import net.minecraft.world.InteractionHand;
 public class RedstoneBundleItem extends Item {
 	public RedstoneBundleItem() {
 		super(new Item.Properties().tab(null).stacksTo(1).fireResistant().rarity(Rarity.COMMON));
-	}
-
-	@Override
-	public UseAnim getUseAnimation(ItemStack itemstack) {
-		return UseAnim.EAT;
+		setRegistryName("redstone_bundle");
 	}
 
 	@Override

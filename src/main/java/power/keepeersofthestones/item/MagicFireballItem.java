@@ -19,6 +19,7 @@ import net.minecraft.server.level.ServerPlayer;
 public class MagicFireballItem extends Item {
 	public MagicFireballItem() {
 		super(new Item.Properties().tab(null).durability(5000));
+		setRegistryName("magic_fireball");
 	}
 
 	@Override

@@ -19,7 +19,7 @@ public class LibraryBuildProcedure {
 		if (world instanceof ServerLevel _serverworld) {
 			StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("power", "library"));
 			if (template != null) {
-				template.placeInWorld(_serverworld, new BlockPos(x, y, z), new BlockPos(x, y, z),
+				template.placeInWorld(_serverworld, new BlockPos((int) x, (int) y, (int) z), new BlockPos((int) x, (int) y, (int) z),
 						new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random,
 						3);
 			}

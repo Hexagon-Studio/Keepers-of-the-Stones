@@ -1,6 +1,6 @@
 {
   "display": {
-    "background": "power:textures/screens/battery_adv_theme.png",
+    "background": "power:textures/battery_adv_theme.png",
     "icon": {
       "item": "power:battery_charger"
     },

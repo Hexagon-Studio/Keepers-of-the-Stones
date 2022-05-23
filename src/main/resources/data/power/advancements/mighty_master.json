@@ -1,6 +1,6 @@
 {
   "display": {
-    "background": "power:textures/screens/mighty_master_theme.png",
+    "background": "power:textures/mighty_master_theme.png",
     "icon": {
       "item": "power:fire_stone"
     },

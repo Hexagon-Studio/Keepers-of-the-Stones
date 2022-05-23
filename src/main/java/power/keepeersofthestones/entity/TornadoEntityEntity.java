@@ -5,8 +5,8 @@ import power.keepeersofthestones.procedures.TameTornadoProcedure;
 import power.keepeersofthestones.init.PowerModEntities;
 
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.network.PlayMessages;
-import net.minecraftforge.network.NetworkHooks;
+import net.minecraftforge.fmllegacy.network.NetworkHooks;
+import net.minecraftforge.fmllegacy.network.FMLPlayMessages;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.SpawnEggItem;
@@ -44,8 +44,8 @@ import net.minecraft.core.particles.ParticleTypes;
 import java.util.List;
 
 public class TornadoEntityEntity extends TamableAnimal {
-	public TornadoEntityEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(PowerModEntities.TORNADO_ENTITY.get(), world);
+	public TornadoEntityEntity(FMLPlayMessages.SpawnEntity packet, Level world) {
+		this(PowerModEntities.TORNADO_ENTITY, world);
 	}
 
 	public TornadoEntityEntity(EntityType<TornadoEntityEntity> type, Level world) {
@@ -173,7 +173,7 @@ public class TornadoEntityEntity extends TamableAnimal {
 
 	@Override
 	public AgeableMob getBreedOffspring(ServerLevel serverWorld, AgeableMob ageable) {
-		TornadoEntityEntity retval = PowerModEntities.TORNADO_ENTITY.get().create(serverWorld);
+		TornadoEntityEntity retval = PowerModEntities.TORNADO_ENTITY.create(serverWorld);
 		retval.finalizeSpawn(serverWorld, serverWorld.getCurrentDifficultyAt(retval.blockPosition()), MobSpawnType.BREEDING, null, null);
 		return retval;
 	}

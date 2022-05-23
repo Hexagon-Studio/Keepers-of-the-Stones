@@ -5,8 +5,8 @@ import power.keepeersofthestones.procedures.TameShadowProcedure;
 import power.keepeersofthestones.init.PowerModEntities;
 
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.network.PlayMessages;
-import net.minecraftforge.network.NetworkHooks;
+import net.minecraftforge.fmllegacy.network.NetworkHooks;
+import net.minecraftforge.fmllegacy.network.FMLPlayMessages;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.SpawnEggItem;
@@ -43,8 +43,8 @@ import net.minecraft.network.protocol.Packet;
 import java.util.List;
 
 public class ShadowEntity extends TamableAnimal {
-	public ShadowEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(PowerModEntities.SHADOW.get(), world);
+	public ShadowEntity(FMLPlayMessages.SpawnEntity packet, Level world) {
+		this(PowerModEntities.SHADOW, world);
 	}
 
 	public ShadowEntity(EntityType<ShadowEntity> type, Level world) {
@@ -152,7 +152,7 @@ public class ShadowEntity extends TamableAnimal {
 
 	@Override
 	public AgeableMob getBreedOffspring(ServerLevel serverWorld, AgeableMob ageable) {
-		ShadowEntity retval = PowerModEntities.SHADOW.get().create(serverWorld);
+		ShadowEntity retval = PowerModEntities.SHADOW.create(serverWorld);
 		retval.finalizeSpawn(serverWorld, serverWorld.getCurrentDifficultyAt(retval.blockPosition()), MobSpawnType.BREEDING, null, null);
 		return retval;
 	}

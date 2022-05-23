@@ -15,13 +15,10 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.Minecraft;
 
-import java.util.HashMap;
-
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class EBMistScreen extends AbstractContainerScreen<EBMistMenu> {
-	private final static HashMap<String, Object> guistate = EBMistMenu.guistate;
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
@@ -50,17 +47,17 @@ public class EBMistScreen extends AbstractContainerScreen<EBMistMenu> {
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/book_of_elements_book.png"));
-		this.blit(ms, this.leftPos + -244, this.topPos + -127, 0, 0, 512, 256, 512, 256);
+		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/book_of_elements_book.png"));
+		this.blit(ms, this.leftPos + -244, this.topPos + -127, 0, 0, 0, 0, 0, 0);
 
-		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/mist_stone.png"));
-		this.blit(ms, this.leftPos + -104, this.topPos + -109, 0, 0, 16, 16, 16, 16);
+		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/mist_stone.png"));
+		this.blit(ms, this.leftPos + -104, this.topPos + -109, 0, 0, -1, -1, -1, -1);
 
-		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/mist_master.png"));
-		this.blit(ms, this.leftPos + 93, this.topPos + -109, 0, 0, 16, 16, 16, 16);
+		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/mist_master.png"));
+		this.blit(ms, this.leftPos + 93, this.topPos + -109, 0, 0, -1, -1, -1, -1);
 
-		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/mist_element.png"));
-		this.blit(ms, this.leftPos + 71, this.topPos + -85, 0, 0, 53, 128, 53, 128);
+		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/mist_element.png"));
+		this.blit(ms, this.leftPos + 71, this.topPos + -85, 0, 0, 0, 0, 0, 0);
 
 		RenderSystem.disableBlend();
 	}

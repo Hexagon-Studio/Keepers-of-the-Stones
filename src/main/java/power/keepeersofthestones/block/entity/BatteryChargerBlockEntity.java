@@ -20,6 +20,7 @@ import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.network.Connection;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.Direction;
@@ -36,7 +37,7 @@ public class BatteryChargerBlockEntity extends RandomizableContainerBlockEntity 
 	private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
 
 	public BatteryChargerBlockEntity(BlockPos position, BlockState state) {
-		super(PowerModBlockEntities.BATTERY_CHARGER.get(), position, state);
+		super(PowerModBlockEntities.BATTERY_CHARGER, position, state);
 	}
 
 	@Override
@@ -48,21 +49,27 @@ public class BatteryChargerBlockEntity extends RandomizableContainerBlockEntity 
 	}
 
 	@Override
-	public void saveAdditional(CompoundTag compound) {
-		super.saveAdditional(compound);
+	public CompoundTag save(CompoundTag compound) {
+		super.save(compound);
 		if (!this.trySaveLootTable(compound)) {
 			ContainerHelper.saveAllItems(compound, this.stacks);
 		}
+		return compound;
 	}
 
 	@Override
 	public ClientboundBlockEntityDataPacket getUpdatePacket() {
-		return ClientboundBlockEntityDataPacket.create(this);
+		return new ClientboundBlockEntityDataPacket(this.worldPosition, 0, this.getUpdateTag());
 	}
 
 	@Override
 	public CompoundTag getUpdateTag() {
-		return this.saveWithFullMetadata();
+		return this.save(new CompoundTag());
+	}
+
+	@Override
+	public void onDataPacket(Connection net, ClientboundBlockEntityDataPacket pkt) {
+		this.load(pkt.getTag());
 	}
 
 	@Override

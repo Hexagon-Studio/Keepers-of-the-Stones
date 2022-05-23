@@ -7,6 +7,7 @@ import net.minecraft.world.effect.MobEffect;
 public class RechargeMagnetStoneMobEffect extends MobEffect {
 	public RechargeMagnetStoneMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -39220);
+		setRegistryName("recharge_magnet_stone");
 	}
 
 	@Override

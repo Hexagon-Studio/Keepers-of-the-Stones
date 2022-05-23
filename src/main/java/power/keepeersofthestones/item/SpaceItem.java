@@ -61,6 +61,7 @@ public abstract class SpaceItem extends ArmorItem {
 	public static class Helmet extends SpaceItem {
 		public Helmet() {
 			super(EquipmentSlot.HEAD, new Item.Properties().tab(null));
+			setRegistryName("space_helmet");
 		}
 
 		@Override
@@ -72,6 +73,7 @@ public abstract class SpaceItem extends ArmorItem {
 	public static class Chestplate extends SpaceItem {
 		public Chestplate() {
 			super(EquipmentSlot.CHEST, new Item.Properties().tab(null));
+			setRegistryName("space_chestplate");
 		}
 
 		@Override
@@ -83,6 +85,7 @@ public abstract class SpaceItem extends ArmorItem {
 	public static class Leggings extends SpaceItem {
 		public Leggings() {
 			super(EquipmentSlot.LEGS, new Item.Properties().tab(null));
+			setRegistryName("space_leggings");
 		}
 
 		@Override
@@ -94,6 +97,7 @@ public abstract class SpaceItem extends ArmorItem {
 	public static class Boots extends SpaceItem {
 		public Boots() {
 			super(EquipmentSlot.FEET, new Item.Properties().tab(null));
+			setRegistryName("space_boots");
 		}
 
 		@Override

@@ -1,25 +1,8 @@
 
 package power.keepeersofthestones.network;
 
-import power.keepeersofthestones.world.inventory.ChoiseMagicStonesPage3Menu;
-import power.keepeersofthestones.procedures.PreviousPage2Procedure;
-import power.keepeersofthestones.PowerMod;
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD) public class ChoiseMagicStonesPage3ButtonMessage {
 
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.core.BlockPos;
-
-import java.util.function.Supplier;
-import java.util.HashMap;
-
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class ChoiseMagicStonesPage3ButtonMessage {
 	private final int buttonID, x, y, z;
 
 	public ChoiseMagicStonesPage3ButtonMessage(FriendlyByteBuf buffer) {
@@ -51,6 +34,7 @@ public class ChoiseMagicStonesPage3ButtonMessage {
 			int x = message.x;
 			int y = message.y;
 			int z = message.z;
+
 			handleButtonAction(entity, buttonID, x, y, z);
 		});
 		context.setPacketHandled(true);
@@ -59,18 +43,21 @@ public class ChoiseMagicStonesPage3ButtonMessage {
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level;
 		HashMap guistate = ChoiseMagicStonesPage3Menu.guistate;
+
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
-		if (buttonID == 13) {
 
-			PreviousPage2Procedure.execute(world, x, y, z, entity);
-		}
+        	    	if (buttonID == 13) {
+    
+
+    PreviousPage2Procedure.execute(world,x,y,z,entity)
+;
+					}
 	}
 
-	@SubscribeEvent
-	public static void registerMessage(FMLCommonSetupEvent event) {
-		PowerMod.addNetworkMessage(ChoiseMagicStonesPage3ButtonMessage.class, ChoiseMagicStonesPage3ButtonMessage::buffer,
-				ChoiseMagicStonesPage3ButtonMessage::new, ChoiseMagicStonesPage3ButtonMessage::handler);
+	@SubscribeEvent public static void registerMessage(FMLCommonSetupEvent event) {
+		PowerMod.addNetworkMessage(ChoiseMagicStonesPage3ButtonMessage.class, ChoiseMagicStonesPage3ButtonMessage::buffer, ChoiseMagicStonesPage3ButtonMessage::new, ChoiseMagicStonesPage3ButtonMessage::handler);
 	}
+
 }

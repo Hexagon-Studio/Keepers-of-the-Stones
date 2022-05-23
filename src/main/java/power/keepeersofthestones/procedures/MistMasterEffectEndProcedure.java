@@ -24,8 +24,8 @@ public class MistMasterEffectEndProcedure {
 			return;
 		if (world instanceof Level _level) {
 			if (!_level.isClientSide()) {
-				_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:stone_deactivation")),
-						SoundSource.PLAYERS, 1, 1);
+				_level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+						ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:stone_deactivation")), SoundSource.PLAYERS, 1, 1);
 			} else {
 				_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:stone_deactivation")),
 						SoundSource.PLAYERS, 1, 1, false);
@@ -35,34 +35,34 @@ public class MistMasterEffectEndProcedure {
 			if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new PowerModVariables.PlayerVariables())).battery) {
 				if (entity instanceof Player _player) {
-					ItemStack _setstack = new ItemStack(PowerModItems.MIST_STONE.get());
+					ItemStack _setstack = new ItemStack(PowerModItems.MIST_STONE);
 					_setstack.setCount(1);
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
 			}
 		}
 		if (entity instanceof Player _player) {
-			ItemStack _stktoremove = new ItemStack(PowerModItems.KUNAI.get());
+			ItemStack _stktoremove = new ItemStack(PowerModItems.KUNAI);
 			_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 		}
 		if (entity instanceof Player _player) {
-			ItemStack _stktoremove = new ItemStack(PowerModItems.OBSCURITY.get());
+			ItemStack _stktoremove = new ItemStack(PowerModItems.OBSCURITY);
 			_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 		}
 		if (entity instanceof Player _player) {
-			ItemStack _stktoremove = new ItemStack(PowerModItems.MISTY_FAN.get());
+			ItemStack _stktoremove = new ItemStack(PowerModItems.MISTY_FAN);
 			_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 		}
 		if (entity instanceof Player _player) {
-			ItemStack _stktoremove = new ItemStack(PowerModItems.MIST_CHESTPLATE.get());
+			ItemStack _stktoremove = new ItemStack(PowerModItems.MIST_CHESTPLATE);
 			_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 		}
 		if (entity instanceof Player _player) {
-			ItemStack _stktoremove = new ItemStack(PowerModItems.MIST_LEGGINGS.get());
+			ItemStack _stktoremove = new ItemStack(PowerModItems.MIST_LEGGINGS);
 			_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 		}
 		if (entity instanceof Player _player) {
-			ItemStack _stktoremove = new ItemStack(PowerModItems.MIST_BOOTS.get());
+			ItemStack _stktoremove = new ItemStack(PowerModItems.MIST_BOOTS);
 			_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 		}
 		if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).amber) {
@@ -71,14 +71,14 @@ public class MistMasterEffectEndProcedure {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new PowerModVariables.PlayerVariables())).power_level == 2) {
 					if (entity instanceof LivingEntity _entity)
-						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RECHARGE_MIST_STONE.get(), 3600, 0, (false), (false)));
+						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RECHARGE_MIST_STONE, 3600, 0, (false), (false)));
 				} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new PowerModVariables.PlayerVariables())).power_level == 3) {
 					if (entity instanceof LivingEntity _entity)
-						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RECHARGE_MIST_STONE.get(), 2400, 0, (false), (false)));
+						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RECHARGE_MIST_STONE, 2400, 0, (false), (false)));
 				} else {
 					if (entity instanceof LivingEntity _entity)
-						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RECHARGE_MIST_STONE.get(), 6000, 0, (false), (false)));
+						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RECHARGE_MIST_STONE, 6000, 0, (false), (false)));
 				}
 			}
 		}

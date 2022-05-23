@@ -33,5 +33,6 @@ public class BoStaffItem extends SwordItem {
 				return Ingredient.EMPTY;
 			}
 		}, 3, -2.1f, new Item.Properties().tab(null).fireResistant());
+		setRegistryName("bo_staff");
 	}
 }

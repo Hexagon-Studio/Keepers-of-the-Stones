@@ -7,6 +7,7 @@ import net.minecraft.world.effect.MobEffect;
 public class RechargeAmberStoneMobEffect extends MobEffect {
 	public RechargeAmberStoneMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -26266);
+		setRegistryName("recharge_amber_stone");
 	}
 
 	@Override

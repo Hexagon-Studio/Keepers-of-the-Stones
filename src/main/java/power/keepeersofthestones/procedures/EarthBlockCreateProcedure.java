@@ -31,7 +31,7 @@ public class EarthBlockCreateProcedure {
 			}
 
 			private void run() {
-				world.setBlock(new BlockPos(x, y + 1, z), Blocks.DIRT.defaultBlockState(), 3);
+				world.setBlock(new BlockPos((int) x, (int) (y + 1), (int) z), Blocks.DIRT.defaultBlockState(), 3);
 				MinecraftForge.EVENT_BUS.unregister(this);
 			}
 		}.start(world, 3);

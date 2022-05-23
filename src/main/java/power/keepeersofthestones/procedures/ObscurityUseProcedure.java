@@ -20,7 +20,7 @@ public class ObscurityUseProcedure {
 	public static void execute(LevelAccessor world, Entity entity, Entity sourceentity, ItemStack itemstack) {
 		if (entity == null || sourceentity == null)
 			return;
-		if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.OBSCURITY.get()) {
+		if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.OBSCURITY) {
 			if (world.isClientSide())
 				Minecraft.getInstance().gameRenderer.displayItemActivation(itemstack);
 			if (sourceentity instanceof Player _player)
@@ -66,7 +66,7 @@ public class ObscurityUseProcedure {
 			if (!(sourceentity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new PowerModVariables.PlayerVariables())).recharge_spell_mist) {
 				if (entity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.FOG.get(), 200, 0, (false), (false)));
+					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.FOG, 200, 0, (false), (false)));
 			}
 		}
 	}

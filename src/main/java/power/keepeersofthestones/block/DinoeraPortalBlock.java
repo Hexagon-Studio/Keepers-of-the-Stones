@@ -4,8 +4,6 @@ package power.keepeersofthestones.block;
 import power.keepeersofthestones.world.teleporter.DinoeraTeleporter;
 import power.keepeersofthestones.world.teleporter.DinoeraPortalShape;
 
-import org.checkerframework.checker.units.qual.s;
-
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
@@ -35,6 +33,11 @@ public class DinoeraPortalBlock extends NetherPortalBlock {
 	public DinoeraPortalBlock() {
 		super(BlockBehaviour.Properties.of(Material.PORTAL).noCollission().randomTicks().strength(-1.0F).sound(SoundType.GLASS).lightLevel(s -> 5)
 				.noDrops());
+		setRegistryName("dinoera_portal");
+	}
+
+	@Override
+	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, Random random) {
 	}
 
 	@Override

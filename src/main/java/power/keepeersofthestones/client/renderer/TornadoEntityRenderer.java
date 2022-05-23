@@ -1,4 +1,3 @@
-
 package power.keepeersofthestones.client.renderer;
 
 import power.keepeersofthestones.entity.TornadoEntityEntity;
@@ -15,6 +14,6 @@ public class TornadoEntityRenderer extends MobRenderer<TornadoEntityEntity, Mode
 
 	@Override
 	public ResourceLocation getTextureLocation(TornadoEntityEntity entity) {
-		return new ResourceLocation("power:textures/entities/tornado.png");
+		return new ResourceLocation("power:textures/tornado.png");
 	}
 }

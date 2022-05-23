@@ -19,6 +19,7 @@ import net.minecraft.server.level.ServerPlayer;
 public class KunaiItem extends Item {
 	public KunaiItem() {
 		super(new Item.Properties().tab(null).durability(5000));
+		setRegistryName("kunai");
 	}
 
 	@Override

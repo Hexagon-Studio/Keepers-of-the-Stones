@@ -4,8 +4,6 @@ package power.keepeersofthestones.block;
 import power.keepeersofthestones.world.teleporter.OblivionTeleporter;
 import power.keepeersofthestones.world.teleporter.OblivionPortalShape;
 
-import org.checkerframework.checker.units.qual.s;
-
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
@@ -35,6 +33,11 @@ public class OblivionPortalBlock extends NetherPortalBlock {
 	public OblivionPortalBlock() {
 		super(BlockBehaviour.Properties.of(Material.PORTAL).noCollission().randomTicks().strength(-1.0F).sound(SoundType.GLASS).lightLevel(s -> 5)
 				.noDrops());
+		setRegistryName("oblivion_portal");
+	}
+
+	@Override
+	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, Random random) {
 	}
 
 	@Override

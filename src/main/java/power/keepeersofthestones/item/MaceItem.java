@@ -33,5 +33,6 @@ public class MaceItem extends PickaxeItem {
 				return Ingredient.EMPTY;
 			}
 		}, 1, -2.9000000000000001f, new Item.Properties().tab(null));
+		setRegistryName("mace");
 	}
 }

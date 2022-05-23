@@ -1,28 +1,8 @@
 
 package power.keepeersofthestones.network;
 
-import power.keepeersofthestones.world.inventory.BuildingGUIMenu;
-import power.keepeersofthestones.procedures.StreetlightBuildProcedure;
-import power.keepeersofthestones.procedures.LibraryBuildProcedure;
-import power.keepeersofthestones.procedures.ButcherShopBuildProcedure;
-import power.keepeersofthestones.procedures.BlacksmithBuildProcedure;
-import power.keepeersofthestones.PowerMod;
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD) public class BuildingGUIButtonMessage {
 
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.core.BlockPos;
-
-import java.util.function.Supplier;
-import java.util.HashMap;
-
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class BuildingGUIButtonMessage {
 	private final int buttonID, x, y, z;
 
 	public BuildingGUIButtonMessage(FriendlyByteBuf buffer) {
@@ -54,6 +34,7 @@ public class BuildingGUIButtonMessage {
 			int x = message.x;
 			int y = message.y;
 			int z = message.z;
+
 			handleButtonAction(entity, buttonID, x, y, z);
 		});
 		context.setPacketHandled(true);
@@ -62,30 +43,39 @@ public class BuildingGUIButtonMessage {
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level;
 		HashMap guistate = BuildingGUIMenu.guistate;
+
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
-		if (buttonID == 0) {
 
-			LibraryBuildProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 1) {
+        	    	if (buttonID == 0) {
+    
 
-			BlacksmithBuildProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 2) {
+    LibraryBuildProcedure.execute(world,x,y,z,entity)
+;
+					}
+        	    	if (buttonID == 1) {
+    
 
-			ButcherShopBuildProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 3) {
+    BlacksmithBuildProcedure.execute(world,x,y,z,entity)
+;
+					}
+        	    	if (buttonID == 2) {
+    
 
-			StreetlightBuildProcedure.execute(world, x, y, z, entity);
-		}
+    ButcherShopBuildProcedure.execute(world,x,y,z,entity)
+;
+					}
+        	    	if (buttonID == 3) {
+    
+
+    StreetlightBuildProcedure.execute(world,x,y,z,entity)
+;
+					}
 	}
 
-	@SubscribeEvent
-	public static void registerMessage(FMLCommonSetupEvent event) {
-		PowerMod.addNetworkMessage(BuildingGUIButtonMessage.class, BuildingGUIButtonMessage::buffer, BuildingGUIButtonMessage::new,
-				BuildingGUIButtonMessage::handler);
+	@SubscribeEvent public static void registerMessage(FMLCommonSetupEvent event) {
+		PowerMod.addNetworkMessage(BuildingGUIButtonMessage.class, BuildingGUIButtonMessage::buffer, BuildingGUIButtonMessage::new, BuildingGUIButtonMessage::handler);
 	}
+
 }

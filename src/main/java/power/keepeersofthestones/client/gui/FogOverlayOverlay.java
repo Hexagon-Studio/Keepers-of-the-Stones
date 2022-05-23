@@ -3,8 +3,6 @@ package power.keepeersofthestones.client.gui;
 
 import power.keepeersofthestones.procedures.FogOverlayOtobrazhatOvierlieiVIghrieProcedure;
 
-import org.checkerframework.checker.units.qual.h;
-
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
@@ -52,7 +50,7 @@ public class FogOverlayOverlay {
 					GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
 			RenderSystem.setShaderColor(1, 1, 1, 1);
 			if (FogOverlayOtobrazhatOvierlieiVIghrieProcedure.execute(entity)) {
-				RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/fog_ovelay.png"));
+				RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/fog_ovelay.png"));
 				Minecraft.getInstance().gui.blit(event.getMatrixStack(), 0, 0, 0, 0, w, h, w, h);
 			}
 			RenderSystem.depthMask(true);

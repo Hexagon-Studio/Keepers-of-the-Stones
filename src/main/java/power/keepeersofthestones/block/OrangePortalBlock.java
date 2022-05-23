@@ -54,6 +54,7 @@ public class OrangePortalBlock extends Block implements SimpleWaterloggedBlock
 		super(BlockBehaviour.Properties.of(Material.GLASS).sound(SoundType.GLASS).strength(90f, 10f).noCollission().noOcclusion()
 				.isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, false));
+		setRegistryName("orange_portal");
 	}
 
 	@Override
@@ -110,7 +111,7 @@ public class OrangePortalBlock extends Block implements SimpleWaterloggedBlock
 	public BlockState updateShape(BlockState state, Direction facing, BlockState facingState, LevelAccessor world, BlockPos currentPos,
 			BlockPos facingPos) {
 		if (state.getValue(WATERLOGGED)) {
-			world.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(world));
+			world.getLiquidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(world));
 		}
 		return super.updateShape(state, facing, facingState, world, currentPos, facingPos);
 	}
@@ -124,8 +125,8 @@ public class OrangePortalBlock extends Block implements SimpleWaterloggedBlock
 	}
 
 	@Override
-	public boolean onDestroyedByPlayer(BlockState blockstate, Level world, BlockPos pos, Player entity, boolean willHarvest, FluidState fluid) {
-		boolean retval = super.onDestroyedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
+	public boolean removedByPlayer(BlockState blockstate, Level world, BlockPos pos, Player entity, boolean willHarvest, FluidState fluid) {
+		boolean retval = super.removedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
 		RemoveOrangePortalProcedure.execute(world);
 		return retval;
 	}
@@ -147,6 +148,6 @@ public class OrangePortalBlock extends Block implements SimpleWaterloggedBlock
 
 	@OnlyIn(Dist.CLIENT)
 	public static void registerRenderLayer() {
-		ItemBlockRenderTypes.setRenderLayer(PowerModBlocks.ORANGE_PORTAL.get(), renderType -> renderType == RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(PowerModBlocks.ORANGE_PORTAL, renderType -> renderType == RenderType.cutout());
 	}
 }

@@ -19,6 +19,7 @@ import net.minecraft.server.level.ServerPlayer;
 public class AmberStreaksItem extends Item {
 	public AmberStreaksItem() {
 		super(new Item.Properties().tab(null).durability(100));
+		setRegistryName("amber_streaks");
 	}
 
 	@Override

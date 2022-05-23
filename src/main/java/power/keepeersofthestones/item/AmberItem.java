@@ -61,6 +61,7 @@ public abstract class AmberItem extends ArmorItem {
 	public static class Helmet extends AmberItem {
 		public Helmet() {
 			super(EquipmentSlot.HEAD, new Item.Properties().tab(null));
+			setRegistryName("amber_helmet");
 		}
 
 		@Override
@@ -72,6 +73,7 @@ public abstract class AmberItem extends ArmorItem {
 	public static class Chestplate extends AmberItem {
 		public Chestplate() {
 			super(EquipmentSlot.CHEST, new Item.Properties().tab(null));
+			setRegistryName("amber_chestplate");
 		}
 
 		@Override
@@ -83,6 +85,7 @@ public abstract class AmberItem extends ArmorItem {
 	public static class Leggings extends AmberItem {
 		public Leggings() {
 			super(EquipmentSlot.LEGS, new Item.Properties().tab(null));
+			setRegistryName("amber_leggings");
 		}
 
 		@Override
@@ -94,6 +97,7 @@ public abstract class AmberItem extends ArmorItem {
 	public static class Boots extends AmberItem {
 		public Boots() {
 			super(EquipmentSlot.FEET, new Item.Properties().tab(null));
+			setRegistryName("amber_boots");
 		}
 
 		@Override

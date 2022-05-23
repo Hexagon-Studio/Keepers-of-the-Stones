@@ -33,5 +33,6 @@ public class CutterSwordItem extends SwordItem {
 				return Ingredient.EMPTY;
 			}
 		}, 3, -2.8f, new Item.Properties().tab(null).fireResistant());
+		setRegistryName("cutter_sword");
 	}
 }

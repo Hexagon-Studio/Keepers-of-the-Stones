@@ -19,6 +19,7 @@ import net.minecraft.server.level.ServerPlayer;
 public class ExplosiveFlowItem extends Item {
 	public ExplosiveFlowItem() {
 		super(new Item.Properties().tab(null).durability(5000));
+		setRegistryName("explosive_flow");
 	}
 
 	@Override

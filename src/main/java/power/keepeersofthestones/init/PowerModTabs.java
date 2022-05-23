@@ -24,7 +24,7 @@ public class PowerModTabs {
 		TAB_BASIC_GROUP = new CreativeModeTab("tabbasic_group") {
 			@Override
 			public ItemStack makeIcon() {
-				return new ItemStack(PowerModItems.FIRE_STONE.get());
+				return new ItemStack(PowerModItems.FIRE_STONE);
 			}
 
 			@OnlyIn(Dist.CLIENT)
@@ -35,7 +35,7 @@ public class PowerModTabs {
 		TAB_ADDITIONAL_GROUP = new CreativeModeTab("tabadditional_group") {
 			@Override
 			public ItemStack makeIcon() {
-				return new ItemStack(PowerModItems.ICE_STONE.get());
+				return new ItemStack(PowerModItems.ICE_STONE);
 			}
 
 			@OnlyIn(Dist.CLIENT)
@@ -46,7 +46,7 @@ public class PowerModTabs {
 		TAB_MIDDLE_GROUP = new CreativeModeTab("tabmiddle_group") {
 			@Override
 			public ItemStack makeIcon() {
-				return new ItemStack(PowerModItems.GREENERY_STONE.get());
+				return new ItemStack(PowerModItems.GREENERY_STONE);
 			}
 
 			@OnlyIn(Dist.CLIENT)
@@ -57,7 +57,7 @@ public class PowerModTabs {
 		TAB_GREAT_GROUP = new CreativeModeTab("tabgreat_group") {
 			@Override
 			public ItemStack makeIcon() {
-				return new ItemStack(PowerModItems.SPACE_STONE.get());
+				return new ItemStack(PowerModItems.SPACE_STONE);
 			}
 
 			@OnlyIn(Dist.CLIENT)
@@ -68,7 +68,7 @@ public class PowerModTabs {
 		TAB_BATTERIES = new CreativeModeTab("tabbatteries") {
 			@Override
 			public ItemStack makeIcon() {
-				return new ItemStack(PowerModItems.EMPTY_BATTERY.get());
+				return new ItemStack(PowerModItems.EMPTY_BATTERY);
 			}
 
 			@OnlyIn(Dist.CLIENT)
@@ -79,7 +79,7 @@ public class PowerModTabs {
 		TAB_TECHNOLOGIES_AND_ARTIFACTS = new CreativeModeTab("tabtechnologies_and_artifacts") {
 			@Override
 			public ItemStack makeIcon() {
-				return new ItemStack(PowerModItems.BOOK_OF_ELEMENTS.get());
+				return new ItemStack(PowerModItems.BOOK_OF_ELEMENTS);
 			}
 
 			@OnlyIn(Dist.CLIENT)
@@ -90,7 +90,7 @@ public class PowerModTabs {
 		TAB_MAGIC_BOXES = new CreativeModeTab("tabmagic_boxes") {
 			@Override
 			public ItemStack makeIcon() {
-				return new ItemStack(PowerModBlocks.WOOD_MAGIC_BOX.get());
+				return new ItemStack(PowerModBlocks.WOOD_MAGIC_BOX);
 			}
 
 			@OnlyIn(Dist.CLIENT)
@@ -101,7 +101,7 @@ public class PowerModTabs {
 		TAB_DAMAGED_STONES = new CreativeModeTab("tabdamaged_stones") {
 			@Override
 			public ItemStack makeIcon() {
-				return new ItemStack(PowerModItems.DAMAGED_FIRE_STONE.get());
+				return new ItemStack(PowerModItems.DAMAGED_FIRE_STONE);
 			}
 
 			@OnlyIn(Dist.CLIENT)

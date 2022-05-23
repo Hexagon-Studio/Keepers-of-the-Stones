@@ -4,8 +4,8 @@ package power.keepeersofthestones.entity;
 import power.keepeersofthestones.init.PowerModEntities;
 
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.network.PlayMessages;
-import net.minecraftforge.network.NetworkHooks;
+import net.minecraftforge.fmllegacy.network.NetworkHooks;
+import net.minecraftforge.fmllegacy.network.FMLPlayMessages;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
@@ -51,12 +51,11 @@ public class TyrannosaurusRexEntity extends Monster {
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.CREATURE)
-					.add(new MobSpawnSettings.SpawnerData(PowerModEntities.TYRANNOSAURUS_REX.get(), 50, 1, 2));
+			event.getSpawns().getSpawner(MobCategory.CREATURE).add(new MobSpawnSettings.SpawnerData(PowerModEntities.TYRANNOSAURUS_REX, 50, 1, 2));
 	}
 
-	public TyrannosaurusRexEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(PowerModEntities.TYRANNOSAURUS_REX.get(), world);
+	public TyrannosaurusRexEntity(FMLPlayMessages.SpawnEntity packet, Level world) {
+		this(PowerModEntities.TYRANNOSAURUS_REX, world);
 	}
 
 	public TyrannosaurusRexEntity(EntityType<TyrannosaurusRexEntity> type, Level world) {
@@ -128,7 +127,7 @@ public class TyrannosaurusRexEntity extends Monster {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(PowerModEntities.TYRANNOSAURUS_REX.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+		SpawnPlacements.register(PowerModEntities.TYRANNOSAURUS_REX, SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
 				(entityType, world, reason, pos,
 						random) -> (world.getBlockState(pos.below()).getMaterial() == Material.GRASS && world.getRawBrightness(pos, 0) > 8));
 	}

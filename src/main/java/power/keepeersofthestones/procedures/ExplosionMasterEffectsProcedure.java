@@ -23,7 +23,7 @@ public class ExplosionMasterEffectsProcedure {
 		if (entity instanceof LivingEntity _entity)
 			_entity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 20, 0, (false), (false)));
 		if (!(entity instanceof Player _playerHasItem
-				? _playerHasItem.getInventory().contains(new ItemStack(PowerModBlocks.DETONATOR_TNT.get()))
+				? _playerHasItem.getInventory().contains(new ItemStack(PowerModBlocks.DETONATOR_TNT))
 				: false)) {
 			{
 				Entity _ent = entity;

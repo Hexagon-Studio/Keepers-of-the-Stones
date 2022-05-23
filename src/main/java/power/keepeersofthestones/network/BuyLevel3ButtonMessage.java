@@ -1,25 +1,8 @@
 
 package power.keepeersofthestones.network;
 
-import power.keepeersofthestones.world.inventory.BuyLevel3Menu;
-import power.keepeersofthestones.procedures.UpdateToLevel3Procedure;
-import power.keepeersofthestones.PowerMod;
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD) public class BuyLevel3ButtonMessage {
 
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.core.BlockPos;
-
-import java.util.function.Supplier;
-import java.util.HashMap;
-
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class BuyLevel3ButtonMessage {
 	private final int buttonID, x, y, z;
 
 	public BuyLevel3ButtonMessage(FriendlyByteBuf buffer) {
@@ -51,6 +34,7 @@ public class BuyLevel3ButtonMessage {
 			int x = message.x;
 			int y = message.y;
 			int z = message.z;
+
 			handleButtonAction(entity, buttonID, x, y, z);
 		});
 		context.setPacketHandled(true);
@@ -59,18 +43,21 @@ public class BuyLevel3ButtonMessage {
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level;
 		HashMap guistate = BuyLevel3Menu.guistate;
+
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
-		if (buttonID == 0) {
 
-			UpdateToLevel3Procedure.execute(world, x, y, z, entity);
-		}
+        	    	if (buttonID == 0) {
+    
+
+    UpdateToLevel3Procedure.execute(world,x,y,z,entity)
+;
+					}
 	}
 
-	@SubscribeEvent
-	public static void registerMessage(FMLCommonSetupEvent event) {
-		PowerMod.addNetworkMessage(BuyLevel3ButtonMessage.class, BuyLevel3ButtonMessage::buffer, BuyLevel3ButtonMessage::new,
-				BuyLevel3ButtonMessage::handler);
+	@SubscribeEvent public static void registerMessage(FMLCommonSetupEvent event) {
+		PowerMod.addNetworkMessage(BuyLevel3ButtonMessage.class, BuyLevel3ButtonMessage::buffer, BuyLevel3ButtonMessage::new, BuyLevel3ButtonMessage::handler);
 	}
+
 }

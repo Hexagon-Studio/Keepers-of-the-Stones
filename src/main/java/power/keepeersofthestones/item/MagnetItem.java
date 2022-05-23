@@ -61,6 +61,7 @@ public abstract class MagnetItem extends ArmorItem {
 	public static class Helmet extends MagnetItem {
 		public Helmet() {
 			super(EquipmentSlot.HEAD, new Item.Properties().tab(null));
+			setRegistryName("magnet_helmet");
 		}
 
 		@Override
@@ -72,6 +73,7 @@ public abstract class MagnetItem extends ArmorItem {
 	public static class Chestplate extends MagnetItem {
 		public Chestplate() {
 			super(EquipmentSlot.CHEST, new Item.Properties().tab(null));
+			setRegistryName("magnet_chestplate");
 		}
 
 		@Override
@@ -83,6 +85,7 @@ public abstract class MagnetItem extends ArmorItem {
 	public static class Leggings extends MagnetItem {
 		public Leggings() {
 			super(EquipmentSlot.LEGS, new Item.Properties().tab(null));
+			setRegistryName("magnet_leggings");
 		}
 
 		@Override
@@ -94,6 +97,7 @@ public abstract class MagnetItem extends ArmorItem {
 	public static class Boots extends MagnetItem {
 		public Boots() {
 			super(EquipmentSlot.FEET, new Item.Properties().tab(null));
+			setRegistryName("magnet_boots");
 		}
 
 		@Override

@@ -18,6 +18,7 @@ import java.util.Collections;
 public class CrystalShieldBlockBlock extends Block {
 	public CrystalShieldBlockBlock() {
 		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.AMETHYST).strength(1f, 10f));
+		setRegistryName("crystal_shield_block");
 	}
 
 	@Override

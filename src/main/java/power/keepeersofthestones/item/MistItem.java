@@ -61,6 +61,7 @@ public abstract class MistItem extends ArmorItem {
 	public static class Helmet extends MistItem {
 		public Helmet() {
 			super(EquipmentSlot.HEAD, new Item.Properties().tab(null));
+			setRegistryName("mist_helmet");
 		}
 
 		@Override
@@ -72,6 +73,7 @@ public abstract class MistItem extends ArmorItem {
 	public static class Chestplate extends MistItem {
 		public Chestplate() {
 			super(EquipmentSlot.CHEST, new Item.Properties().tab(null));
+			setRegistryName("mist_chestplate");
 		}
 
 		@Override
@@ -83,6 +85,7 @@ public abstract class MistItem extends ArmorItem {
 	public static class Leggings extends MistItem {
 		public Leggings() {
 			super(EquipmentSlot.LEGS, new Item.Properties().tab(null));
+			setRegistryName("mist_leggings");
 		}
 
 		@Override
@@ -94,6 +97,7 @@ public abstract class MistItem extends ArmorItem {
 	public static class Boots extends MistItem {
 		public Boots() {
 			super(EquipmentSlot.FEET, new Item.Properties().tab(null));
+			setRegistryName("mist_boots");
 		}
 
 		@Override

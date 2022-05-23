@@ -33,5 +33,6 @@ public class MistyFanItem extends SwordItem {
 				return Ingredient.EMPTY;
 			}
 		}, 3, -2.2999999999999998f, new Item.Properties().tab(null).fireResistant());
+		setRegistryName("misty_fan");
 	}
 }

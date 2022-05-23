@@ -53,7 +53,7 @@ import power.keepeersofthestones.world.inventory.BuyAquaPowerMenu;
 import power.keepeersofthestones.world.inventory.BuildingGUIMenu;
 import power.keepeersofthestones.world.inventory.BatteryCreateGUIMenu;
 
-import net.minecraftforge.network.IContainerFactory;
+import net.minecraftforge.fmllegacy.network.IContainerFactory;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.RegistryEvent;

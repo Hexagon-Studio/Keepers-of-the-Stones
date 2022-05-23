@@ -10,6 +10,7 @@ import net.minecraft.world.item.Item;
 public class ElementalCoinItem extends Item {
 	public ElementalCoinItem() {
 		super(new Item.Properties().tab(PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS).stacksTo(16).rarity(Rarity.COMMON));
+		setRegistryName("elemental_coin");
 	}
 
 	@Override

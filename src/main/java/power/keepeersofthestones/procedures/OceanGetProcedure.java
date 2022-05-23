@@ -24,7 +24,7 @@ public class OceanGetProcedure {
 		if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).selected) {
 			if (!PowerModVariables.WorldVariables.get(world).ocean_stone) {
 				if (entity instanceof Player _player) {
-					ItemStack _setstack = new ItemStack(PowerModItems.OCEAN_STONE.get());
+					ItemStack _setstack = new ItemStack(PowerModItems.OCEAN_STONE);
 					_setstack.setCount(1);
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}

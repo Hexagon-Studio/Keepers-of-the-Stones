@@ -24,7 +24,7 @@ public class RainGetProcedure {
 		if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).selected) {
 			if (!PowerModVariables.WorldVariables.get(world).rain_stone) {
 				if (entity instanceof Player _player) {
-					ItemStack _setstack = new ItemStack(PowerModItems.RAIN_STONE.get());
+					ItemStack _setstack = new ItemStack(PowerModItems.RAIN_STONE);
 					_setstack.setCount(1);
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}

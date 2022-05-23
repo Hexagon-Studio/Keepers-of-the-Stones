@@ -1,27 +1,8 @@
 
 package power.keepeersofthestones.network;
 
-import power.keepeersofthestones.world.inventory.SoundEmitateChoiceMenu;
-import power.keepeersofthestones.procedures.EmitateZombieProcedure;
-import power.keepeersofthestones.procedures.EmitateSkeletonProcedure;
-import power.keepeersofthestones.procedures.EmitateCreeperProcedure;
-import power.keepeersofthestones.PowerMod;
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD) public class SoundEmitateChoiceButtonMessage {
 
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.core.BlockPos;
-
-import java.util.function.Supplier;
-import java.util.HashMap;
-
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class SoundEmitateChoiceButtonMessage {
 	private final int buttonID, x, y, z;
 
 	public SoundEmitateChoiceButtonMessage(FriendlyByteBuf buffer) {
@@ -53,6 +34,7 @@ public class SoundEmitateChoiceButtonMessage {
 			int x = message.x;
 			int y = message.y;
 			int z = message.z;
+
 			handleButtonAction(entity, buttonID, x, y, z);
 		});
 		context.setPacketHandled(true);
@@ -61,26 +43,33 @@ public class SoundEmitateChoiceButtonMessage {
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level;
 		HashMap guistate = SoundEmitateChoiceMenu.guistate;
+
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
-		if (buttonID == 0) {
 
-			EmitateCreeperProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 1) {
+        	    	if (buttonID == 0) {
+    
 
-			EmitateZombieProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 2) {
+    EmitateCreeperProcedure.execute(world,x,y,z,entity)
+;
+					}
+        	    	if (buttonID == 1) {
+    
 
-			EmitateSkeletonProcedure.execute(world, x, y, z, entity);
-		}
+    EmitateZombieProcedure.execute(world,x,y,z,entity)
+;
+					}
+        	    	if (buttonID == 2) {
+    
+
+    EmitateSkeletonProcedure.execute(world,x,y,z,entity)
+;
+					}
 	}
 
-	@SubscribeEvent
-	public static void registerMessage(FMLCommonSetupEvent event) {
-		PowerMod.addNetworkMessage(SoundEmitateChoiceButtonMessage.class, SoundEmitateChoiceButtonMessage::buffer,
-				SoundEmitateChoiceButtonMessage::new, SoundEmitateChoiceButtonMessage::handler);
+	@SubscribeEvent public static void registerMessage(FMLCommonSetupEvent event) {
+		PowerMod.addNetworkMessage(SoundEmitateChoiceButtonMessage.class, SoundEmitateChoiceButtonMessage::buffer, SoundEmitateChoiceButtonMessage::new, SoundEmitateChoiceButtonMessage::handler);
 	}
+
 }

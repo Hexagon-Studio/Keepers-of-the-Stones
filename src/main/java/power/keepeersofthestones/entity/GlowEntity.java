@@ -5,8 +5,8 @@ import power.keepeersofthestones.procedures.TameGlowProcedure;
 import power.keepeersofthestones.init.PowerModEntities;
 
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.network.PlayMessages;
-import net.minecraftforge.network.NetworkHooks;
+import net.minecraftforge.fmllegacy.network.NetworkHooks;
+import net.minecraftforge.fmllegacy.network.FMLPlayMessages;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.SpawnEggItem;
@@ -44,8 +44,8 @@ import net.minecraft.core.particles.ParticleTypes;
 import java.util.List;
 
 public class GlowEntity extends TamableAnimal {
-	public GlowEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(PowerModEntities.GLOW.get(), world);
+	public GlowEntity(FMLPlayMessages.SpawnEntity packet, Level world) {
+		this(PowerModEntities.GLOW, world);
 	}
 
 	public GlowEntity(EntityType<GlowEntity> type, Level world) {
@@ -153,7 +153,7 @@ public class GlowEntity extends TamableAnimal {
 
 	@Override
 	public AgeableMob getBreedOffspring(ServerLevel serverWorld, AgeableMob ageable) {
-		GlowEntity retval = PowerModEntities.GLOW.get().create(serverWorld);
+		GlowEntity retval = PowerModEntities.GLOW.create(serverWorld);
 		retval.finalizeSpawn(serverWorld, serverWorld.getCurrentDifficultyAt(retval.blockPosition()), MobSpawnType.BREEDING, null, null);
 		return retval;
 	}

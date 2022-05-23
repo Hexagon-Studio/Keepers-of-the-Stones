@@ -13,21 +13,21 @@ public class ExplosionStoneUseProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.EXPLOSION_STONE.get()) {
-			if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(PowerModMobEffects.RECHARGE_EXPLOSION_STONE.get()) : false)) {
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.EXPLOSION_STONE) {
+			if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(PowerModMobEffects.RECHARGE_EXPLOSION_STONE) : false)) {
 				if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new PowerModVariables.PlayerVariables())).active) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new PowerModVariables.PlayerVariables())).power_level == 2) {
 						if (entity instanceof LivingEntity _entity)
-							_entity.addEffect(new MobEffectInstance(PowerModMobEffects.EXPLOSION_MASTER.get(), 18000, 0, (false), (false)));
+							_entity.addEffect(new MobEffectInstance(PowerModMobEffects.EXPLOSION_MASTER, 18000, 0, (false), (false)));
 					} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new PowerModVariables.PlayerVariables())).power_level >= 3) {
 						if (entity instanceof LivingEntity _entity)
-							_entity.addEffect(new MobEffectInstance(PowerModMobEffects.EXPLOSION_MASTER.get(), 24000, 0, (false), (false)));
+							_entity.addEffect(new MobEffectInstance(PowerModMobEffects.EXPLOSION_MASTER, 24000, 0, (false), (false)));
 					} else {
 						if (entity instanceof LivingEntity _entity)
-							_entity.addEffect(new MobEffectInstance(PowerModMobEffects.EXPLOSION_MASTER.get(), 12000, 0, (false), (false)));
+							_entity.addEffect(new MobEffectInstance(PowerModMobEffects.EXPLOSION_MASTER, 12000, 0, (false), (false)));
 					}
 				}
 			}

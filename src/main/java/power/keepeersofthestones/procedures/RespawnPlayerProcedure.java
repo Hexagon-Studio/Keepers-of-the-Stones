@@ -45,7 +45,7 @@ public class RespawnPlayerProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_FIRE_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_FIRE_STONE);
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -59,7 +59,7 @@ public class RespawnPlayerProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_AIR_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_AIR_STONE);
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -73,7 +73,7 @@ public class RespawnPlayerProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_WATER_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_WATER_STONE);
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -87,7 +87,7 @@ public class RespawnPlayerProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_EARTH_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_EARTH_STONE);
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -101,7 +101,7 @@ public class RespawnPlayerProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_ENERGY_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_ENERGY_STONE);
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -115,7 +115,7 @@ public class RespawnPlayerProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_ICE_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_ICE_STONE);
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -129,7 +129,7 @@ public class RespawnPlayerProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_LIGHTNING_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_LIGHTNING_STONE);
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -143,7 +143,7 @@ public class RespawnPlayerProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_SOUND_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_SOUND_STONE);
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -157,7 +157,7 @@ public class RespawnPlayerProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_CRYSTAL_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_CRYSTAL_STONE);
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -171,7 +171,7 @@ public class RespawnPlayerProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_LAVA_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_LAVA_STONE);
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -185,7 +185,7 @@ public class RespawnPlayerProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_RAIN_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_RAIN_STONE);
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -199,7 +199,7 @@ public class RespawnPlayerProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_TORNADO_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_TORNADO_STONE);
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -213,7 +213,7 @@ public class RespawnPlayerProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_OCEAN_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_OCEAN_STONE);
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -227,7 +227,7 @@ public class RespawnPlayerProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_GREENERY_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_GREENERY_STONE);
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -241,7 +241,7 @@ public class RespawnPlayerProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_ANIMALS_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_ANIMALS_STONE);
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -255,7 +255,7 @@ public class RespawnPlayerProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_METAL_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_METAL_STONE);
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -269,7 +269,7 @@ public class RespawnPlayerProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_LIGHT_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_LIGHT_STONE);
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -283,7 +283,7 @@ public class RespawnPlayerProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_SHADOW_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_SHADOW_STONE);
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -297,7 +297,7 @@ public class RespawnPlayerProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_VACUUM_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_VACUUM_STONE);
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -311,7 +311,7 @@ public class RespawnPlayerProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_MOON_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_MOON_STONE);
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -325,7 +325,7 @@ public class RespawnPlayerProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_SUN_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_SUN_STONE);
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -339,7 +339,7 @@ public class RespawnPlayerProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_CREATION_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_CREATION_STONE);
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -353,7 +353,7 @@ public class RespawnPlayerProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_DESTRUCTION_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_DESTRUCTION_STONE);
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -367,12 +367,12 @@ public class RespawnPlayerProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.MAGNET_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.MAGNET_STONE);
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 					if (entity instanceof LivingEntity _entity)
-						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RECHARGE_MAGNET_STONE.get(), 6000, 0, (false), (false)));
+						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RECHARGE_MAGNET_STONE, 6000, 0, (false), (false)));
 				} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new PowerModVariables.PlayerVariables())).space) {
 					{
@@ -383,7 +383,7 @@ public class RespawnPlayerProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_SPACE_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_SPACE_STONE);
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -397,7 +397,7 @@ public class RespawnPlayerProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_BLOOD_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_BLOOD_STONE);
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -412,7 +412,7 @@ public class RespawnPlayerProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_TECHNOLOGY_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_TECHNOLOGY_STONE);
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -427,7 +427,7 @@ public class RespawnPlayerProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_TIME_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_TIME_STONE);
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -442,7 +442,7 @@ public class RespawnPlayerProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_TELEPORTATION_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_TELEPORTATION_STONE);
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -457,7 +457,7 @@ public class RespawnPlayerProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_MIST_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_MIST_STONE);
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -671,7 +671,7 @@ public class RespawnPlayerProcedure {
 				});
 			}
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_AMBER_STONE.get());
+				ItemStack _setstack = new ItemStack(PowerModItems.DAMAGED_AMBER_STONE);
 				_setstack.setCount(1);
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}

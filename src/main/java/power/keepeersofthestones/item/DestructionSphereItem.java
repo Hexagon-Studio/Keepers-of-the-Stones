@@ -19,6 +19,7 @@ import net.minecraft.server.level.ServerPlayer;
 public class DestructionSphereItem extends Item {
 	public DestructionSphereItem() {
 		super(new Item.Properties().tab(null).durability(5000));
+		setRegistryName("destruction_sphere");
 	}
 
 	@Override

@@ -1,28 +1,8 @@
 
 package power.keepeersofthestones.network;
 
-import power.keepeersofthestones.world.inventory.RedstoneBundleGUIMenu;
-import power.keepeersofthestones.procedures.GetStickyPistonProcedure;
-import power.keepeersofthestones.procedures.GetRedstoneBlockProcedure;
-import power.keepeersofthestones.procedures.GetPistonProcedure;
-import power.keepeersofthestones.procedures.GetObserverProcedure;
-import power.keepeersofthestones.PowerMod;
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD) public class RedstoneBundleGUIButtonMessage {
 
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.core.BlockPos;
-
-import java.util.function.Supplier;
-import java.util.HashMap;
-
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class RedstoneBundleGUIButtonMessage {
 	private final int buttonID, x, y, z;
 
 	public RedstoneBundleGUIButtonMessage(FriendlyByteBuf buffer) {
@@ -54,6 +34,7 @@ public class RedstoneBundleGUIButtonMessage {
 			int x = message.x;
 			int y = message.y;
 			int z = message.z;
+
 			handleButtonAction(entity, buttonID, x, y, z);
 		});
 		context.setPacketHandled(true);
@@ -62,30 +43,39 @@ public class RedstoneBundleGUIButtonMessage {
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level;
 		HashMap guistate = RedstoneBundleGUIMenu.guistate;
+
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
-		if (buttonID == 0) {
 
-			GetPistonProcedure.execute(entity);
-		}
-		if (buttonID == 1) {
+        	    	if (buttonID == 0) {
+    
 
-			GetStickyPistonProcedure.execute(entity);
-		}
-		if (buttonID == 2) {
+    GetPistonProcedure.execute(entity)
+;
+					}
+        	    	if (buttonID == 1) {
+    
 
-			GetObserverProcedure.execute(entity);
-		}
-		if (buttonID == 3) {
+    GetStickyPistonProcedure.execute(entity)
+;
+					}
+        	    	if (buttonID == 2) {
+    
 
-			GetRedstoneBlockProcedure.execute(entity);
-		}
+    GetObserverProcedure.execute(entity)
+;
+					}
+        	    	if (buttonID == 3) {
+    
+
+    GetRedstoneBlockProcedure.execute(entity)
+;
+					}
 	}
 
-	@SubscribeEvent
-	public static void registerMessage(FMLCommonSetupEvent event) {
-		PowerMod.addNetworkMessage(RedstoneBundleGUIButtonMessage.class, RedstoneBundleGUIButtonMessage::buffer, RedstoneBundleGUIButtonMessage::new,
-				RedstoneBundleGUIButtonMessage::handler);
+	@SubscribeEvent public static void registerMessage(FMLCommonSetupEvent event) {
+		PowerMod.addNetworkMessage(RedstoneBundleGUIButtonMessage.class, RedstoneBundleGUIButtonMessage::buffer, RedstoneBundleGUIButtonMessage::new, RedstoneBundleGUIButtonMessage::handler);
 	}
+
 }

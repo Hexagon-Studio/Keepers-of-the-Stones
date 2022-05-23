@@ -3,8 +3,6 @@ package power.keepeersofthestones.block;
 
 import power.keepeersofthestones.init.PowerModBlocks;
 
-import org.checkerframework.checker.units.qual.s;
-
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
@@ -30,6 +28,7 @@ public class TechnobarrierBlockBlock extends Block {
 	public TechnobarrierBlockBlock() {
 		super(BlockBehaviour.Properties.of(Material.METAL).sound(SoundType.GLASS).strength(9999f, 1000f).lightLevel(s -> 7)
 				.requiresCorrectToolForDrops().noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		setRegistryName("technobarrier_block");
 	}
 
 	@Override
@@ -59,6 +58,6 @@ public class TechnobarrierBlockBlock extends Block {
 
 	@OnlyIn(Dist.CLIENT)
 	public static void registerRenderLayer() {
-		ItemBlockRenderTypes.setRenderLayer(PowerModBlocks.TECHNOBARRIER_BLOCK.get(), renderType -> renderType == RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(PowerModBlocks.TECHNOBARRIER_BLOCK, renderType -> renderType == RenderType.cutout());
 	}
 }

@@ -19,13 +19,10 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.Minecraft;
 
-import java.util.HashMap;
-
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 public class LevelsAndSkillsPageScreen extends AbstractContainerScreen<LevelsAndSkillsPageMenu> {
-	private final static HashMap<String, Object> guistate = LevelsAndSkillsPageMenu.guistate;
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
@@ -54,36 +51,36 @@ public class LevelsAndSkillsPageScreen extends AbstractContainerScreen<LevelsAnd
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/book_of_elements_book.png"));
-		this.blit(ms, this.leftPos + -244, this.topPos + -127, 0, 0, 512, 256, 512, 256);
+		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/book_of_elements_book.png"));
+		this.blit(ms, this.leftPos + -244, this.topPos + -127, 0, 0, 0, 0, 0, 0);
 
 		if (ReturnLevel1Procedure.execute(entity)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/elemental_coin.png"));
-			this.blit(ms, this.leftPos + -113, this.topPos + -70, 0, 0, 16, 16, 16, 16);
+			RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/elemental_coin.png"));
+			this.blit(ms, this.leftPos + -113, this.topPos + -70, 0, 0, -1, -1, -1, -1);
 		}
 		if (ReturnLevel2Procedure.execute(entity)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/elemental_coin.png"));
-			this.blit(ms, this.leftPos + -113, this.topPos + -40, 0, 0, 16, 16, 16, 16);
+			RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/elemental_coin.png"));
+			this.blit(ms, this.leftPos + -113, this.topPos + -40, 0, 0, -1, -1, -1, -1);
 		}
 		if (NonWaterPowerProcedure.execute(entity)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/elemental_coin.png"));
-			this.blit(ms, this.leftPos + 86, this.topPos + -95, 0, 0, 16, 16, 16, 16);
+			RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/elemental_coin.png"));
+			this.blit(ms, this.leftPos + 86, this.topPos + -95, 0, 0, -1, -1, -1, -1);
 		}
 		if (ReturnLevel2Procedure.execute(entity)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/level_checked.png"));
-			this.blit(ms, this.leftPos + -63, this.topPos + -70, 0, 0, 19, 18, 19, 18);
+			RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/level_checked.png"));
+			this.blit(ms, this.leftPos + -63, this.topPos + -70, 0, 0, -1, -1, -1, -1);
 		}
 		if (ReturnLevel3Procedure.execute(entity)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/level_checked.png"));
-			this.blit(ms, this.leftPos + -63, this.topPos + -45, 0, 0, 19, 18, 19, 18);
+			RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/level_checked.png"));
+			this.blit(ms, this.leftPos + -63, this.topPos + -45, 0, 0, -1, -1, -1, -1);
 		}
 
-		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/level_checked.png"));
-		this.blit(ms, this.leftPos + 136, this.topPos + -95, 0, 0, 19, 18, 19, 18);
+		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/level_checked.png"));
+		this.blit(ms, this.leftPos + 136, this.topPos + -95, 0, 0, -1, -1, -1, -1);
 
 		if (ReturnLevel1Procedure.execute(entity)) {
-			RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/level_checked.png"));
-			this.blit(ms, this.leftPos + -63, this.topPos + -95, 0, 0, 19, 18, 19, 18);
+			RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/level_checked.png"));
+			this.blit(ms, this.leftPos + -63, this.topPos + -95, 0, 0, -1, -1, -1, -1);
 		}
 		RenderSystem.disableBlend();
 	}

@@ -1,40 +1,8 @@
 
 package power.keepeersofthestones.network;
 
-import power.keepeersofthestones.world.inventory.CultivationGUIMenu;
-import power.keepeersofthestones.procedures.GetWheatProcedure;
-import power.keepeersofthestones.procedures.GetWaterLilyProcedure;
-import power.keepeersofthestones.procedures.GetVineProcedure;
-import power.keepeersofthestones.procedures.GetSugarCaneProcedure;
-import power.keepeersofthestones.procedures.GetSpruceSaplingProcedure;
-import power.keepeersofthestones.procedures.GetPumpkinProcedure;
-import power.keepeersofthestones.procedures.GetPotatoProcedure;
-import power.keepeersofthestones.procedures.GetOakSaplingProcedure;
-import power.keepeersofthestones.procedures.GetMelonProcedure;
-import power.keepeersofthestones.procedures.GetJungleSaplingProcedure;
-import power.keepeersofthestones.procedures.GetDarkSaplingProcedure;
-import power.keepeersofthestones.procedures.GetCarrotProcedure;
-import power.keepeersofthestones.procedures.GetBirchSaplingProcedure;
-import power.keepeersofthestones.procedures.GetBeetrootProcedure;
-import power.keepeersofthestones.procedures.GetBambooProcedure;
-import power.keepeersofthestones.procedures.GetAcaciaSaplingProcedure;
-import power.keepeersofthestones.PowerMod;
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD) public class CultivationGUIButtonMessage {
 
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.core.BlockPos;
-
-import java.util.function.Supplier;
-import java.util.HashMap;
-
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class CultivationGUIButtonMessage {
 	private final int buttonID, x, y, z;
 
 	public CultivationGUIButtonMessage(FriendlyByteBuf buffer) {
@@ -66,6 +34,7 @@ public class CultivationGUIButtonMessage {
 			int x = message.x;
 			int y = message.y;
 			int z = message.z;
+
 			handleButtonAction(entity, buttonID, x, y, z);
 		});
 		context.setPacketHandled(true);
@@ -74,78 +43,111 @@ public class CultivationGUIButtonMessage {
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level;
 		HashMap guistate = CultivationGUIMenu.guistate;
+
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
-		if (buttonID == 0) {
 
-			GetWaterLilyProcedure.execute(entity);
-		}
-		if (buttonID == 1) {
+        	    	if (buttonID == 0) {
+    
 
-			GetOakSaplingProcedure.execute(entity);
-		}
-		if (buttonID == 2) {
+    GetWaterLilyProcedure.execute(entity)
+;
+					}
+        	    	if (buttonID == 1) {
+    
 
-			GetVineProcedure.execute(entity);
-		}
-		if (buttonID == 3) {
+    GetOakSaplingProcedure.execute(entity)
+;
+					}
+        	    	if (buttonID == 2) {
+    
 
-			GetBirchSaplingProcedure.execute(entity);
-		}
-		if (buttonID == 4) {
+    GetVineProcedure.execute(entity)
+;
+					}
+        	    	if (buttonID == 3) {
+    
 
-			GetSpruceSaplingProcedure.execute(entity);
-		}
-		if (buttonID == 5) {
+    GetBirchSaplingProcedure.execute(entity)
+;
+					}
+        	    	if (buttonID == 4) {
+    
 
-			GetAcaciaSaplingProcedure.execute(entity);
-		}
-		if (buttonID == 6) {
+    GetSpruceSaplingProcedure.execute(entity)
+;
+					}
+        	    	if (buttonID == 5) {
+    
 
-			GetDarkSaplingProcedure.execute(entity);
-		}
-		if (buttonID == 7) {
+    GetAcaciaSaplingProcedure.execute(entity)
+;
+					}
+        	    	if (buttonID == 6) {
+    
 
-			GetJungleSaplingProcedure.execute(entity);
-		}
-		if (buttonID == 8) {
+    GetDarkSaplingProcedure.execute(entity)
+;
+					}
+        	    	if (buttonID == 7) {
+    
 
-			GetWheatProcedure.execute(entity);
-		}
-		if (buttonID == 9) {
+    GetJungleSaplingProcedure.execute(entity)
+;
+					}
+        	    	if (buttonID == 8) {
+    
 
-			GetPotatoProcedure.execute(entity);
-		}
-		if (buttonID == 10) {
+    GetWheatProcedure.execute(entity)
+;
+					}
+        	    	if (buttonID == 9) {
+    
 
-			GetCarrotProcedure.execute(entity);
-		}
-		if (buttonID == 11) {
+    GetPotatoProcedure.execute(entity)
+;
+					}
+        	    	if (buttonID == 10) {
+    
 
-			GetBeetrootProcedure.execute(entity);
-		}
-		if (buttonID == 12) {
+    GetCarrotProcedure.execute(entity)
+;
+					}
+        	    	if (buttonID == 11) {
+    
 
-			GetMelonProcedure.execute(entity);
-		}
-		if (buttonID == 13) {
+    GetBeetrootProcedure.execute(entity)
+;
+					}
+        	    	if (buttonID == 12) {
+    
 
-			GetPumpkinProcedure.execute(entity);
-		}
-		if (buttonID == 14) {
+    GetMelonProcedure.execute(entity)
+;
+					}
+        	    	if (buttonID == 13) {
+    
 
-			GetSugarCaneProcedure.execute(entity);
-		}
-		if (buttonID == 15) {
+    GetPumpkinProcedure.execute(entity)
+;
+					}
+        	    	if (buttonID == 14) {
+    
 
-			GetBambooProcedure.execute(entity);
-		}
+    GetSugarCaneProcedure.execute(entity)
+;
+					}
+        	    	if (buttonID == 15) {
+    
+
+    GetBambooProcedure.execute(entity)
+;
+					}
 	}
 
-	@SubscribeEvent
-	public static void registerMessage(FMLCommonSetupEvent event) {
-		PowerMod.addNetworkMessage(CultivationGUIButtonMessage.class, CultivationGUIButtonMessage::buffer, CultivationGUIButtonMessage::new,
-				CultivationGUIButtonMessage::handler);
+	@SubscribeEvent public static void registerMessage(FMLCommonSetupEvent event) {
+		PowerMod.addNetworkMessage(CultivationGUIButtonMessage.class, CultivationGUIButtonMessage::buffer, CultivationGUIButtonMessage::new, CultivationGUIButtonMessage::handler);
 	}
+
 }

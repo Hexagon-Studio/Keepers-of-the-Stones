@@ -24,7 +24,7 @@ public class TornadoGetProcedure {
 		if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).selected) {
 			if (!PowerModVariables.WorldVariables.get(world).tornado_stone) {
 				if (entity instanceof Player _player) {
-					ItemStack _setstack = new ItemStack(PowerModItems.TORNADO_STONE.get());
+					ItemStack _setstack = new ItemStack(PowerModItems.TORNADO_STONE);
 					_setstack.setCount(1);
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}

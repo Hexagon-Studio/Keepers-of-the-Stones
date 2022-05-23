@@ -13,8 +13,7 @@ public class LightningBatteryUseProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.LIGHTNING_BATTERY
-				.get()) {
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.LIGHTNING_BATTERY) {
 			if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).active) {
 				{
 					boolean _setval = true;
@@ -24,7 +23,7 @@ public class LightningBatteryUseProcedure {
 					});
 				}
 				if (entity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.LIGHTNING_MASTER.get(), 6000, 0, (false), (false)));
+					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.LIGHTNING_MASTER, 6000, 0, (false), (false)));
 			}
 		}
 	}

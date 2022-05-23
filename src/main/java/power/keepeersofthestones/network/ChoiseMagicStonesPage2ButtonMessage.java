@@ -1,37 +1,8 @@
 
 package power.keepeersofthestones.network;
 
-import power.keepeersofthestones.world.inventory.ChoiseMagicStonesPage2Menu;
-import power.keepeersofthestones.procedures.TimeGetProcedure;
-import power.keepeersofthestones.procedures.TeleportationGetProcedure;
-import power.keepeersofthestones.procedures.TechnologyGetProcedure;
-import power.keepeersofthestones.procedures.SpaceGetProcedure;
-import power.keepeersofthestones.procedures.PreviousPageGUIChoiceStonesProcedure;
-import power.keepeersofthestones.procedures.NextToPage3Procedure;
-import power.keepeersofthestones.procedures.MoonGetProcedure;
-import power.keepeersofthestones.procedures.MistGetProcedure;
-import power.keepeersofthestones.procedures.ExplosionGetProcedure;
-import power.keepeersofthestones.procedures.DestructionGetProcedure;
-import power.keepeersofthestones.procedures.CreationGetProcedure;
-import power.keepeersofthestones.procedures.BloodGetProcedure;
-import power.keepeersofthestones.procedures.AmberGetProcedure;
-import power.keepeersofthestones.PowerMod;
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD) public class ChoiseMagicStonesPage2ButtonMessage {
 
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.core.BlockPos;
-
-import java.util.function.Supplier;
-import java.util.HashMap;
-
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class ChoiseMagicStonesPage2ButtonMessage {
 	private final int buttonID, x, y, z;
 
 	public ChoiseMagicStonesPage2ButtonMessage(FriendlyByteBuf buffer) {
@@ -63,6 +34,7 @@ public class ChoiseMagicStonesPage2ButtonMessage {
 			int x = message.x;
 			int y = message.y;
 			int z = message.z;
+
 			handleButtonAction(entity, buttonID, x, y, z);
 		});
 		context.setPacketHandled(true);
@@ -71,66 +43,93 @@ public class ChoiseMagicStonesPage2ButtonMessage {
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level;
 		HashMap guistate = ChoiseMagicStonesPage2Menu.guistate;
+
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
-		if (buttonID == 0) {
 
-			MoonGetProcedure.execute(world, entity);
-		}
-		if (buttonID == 1) {
+        	    	if (buttonID == 0) {
+    
 
-			AmberGetProcedure.execute(world, entity);
-		}
-		if (buttonID == 2) {
+    MoonGetProcedure.execute(world,entity)
+;
+					}
+        	    	if (buttonID == 1) {
+    
 
-			DestructionGetProcedure.execute(world, entity);
-		}
-		if (buttonID == 3) {
+    AmberGetProcedure.execute(world,entity)
+;
+					}
+        	    	if (buttonID == 2) {
+    
 
-			SpaceGetProcedure.execute(world, entity);
-		}
-		if (buttonID == 4) {
+    DestructionGetProcedure.execute(world,entity)
+;
+					}
+        	    	if (buttonID == 3) {
+    
 
-			BloodGetProcedure.execute(world, entity);
-		}
-		if (buttonID == 5) {
+    SpaceGetProcedure.execute(world,entity)
+;
+					}
+        	    	if (buttonID == 4) {
+    
 
-			TimeGetProcedure.execute(world, entity);
-		}
-		if (buttonID == 6) {
+    BloodGetProcedure.execute(world,entity)
+;
+					}
+        	    	if (buttonID == 5) {
+    
 
-			TechnologyGetProcedure.execute(world, entity);
-		}
-		if (buttonID == 7) {
+    TimeGetProcedure.execute(world,entity)
+;
+					}
+        	    	if (buttonID == 6) {
+    
 
-			ExplosionGetProcedure.execute(world, entity);
-		}
-		if (buttonID == 8) {
+    TechnologyGetProcedure.execute(world,entity)
+;
+					}
+        	    	if (buttonID == 7) {
+    
 
-			TeleportationGetProcedure.execute(world, entity);
-		}
-		if (buttonID == 9) {
+    ExplosionGetProcedure.execute(world,entity)
+;
+					}
+        	    	if (buttonID == 8) {
+    
 
-			CreationGetProcedure.execute(world, entity);
-		}
-		if (buttonID == 10) {
+    TeleportationGetProcedure.execute(world,entity)
+;
+					}
+        	    	if (buttonID == 9) {
+    
 
-			MistGetProcedure.execute(world, entity);
-		}
-		if (buttonID == 13) {
+    CreationGetProcedure.execute(world,entity)
+;
+					}
+        	    	if (buttonID == 10) {
+    
 
-			PreviousPageGUIChoiceStonesProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 21) {
+    MistGetProcedure.execute(world,entity)
+;
+					}
+        	    	if (buttonID == 13) {
+    
 
-			NextToPage3Procedure.execute(world, x, y, z, entity);
-		}
+    PreviousPageGUIChoiceStonesProcedure.execute(world,x,y,z,entity)
+;
+					}
+        	    	if (buttonID == 21) {
+    
+
+    NextToPage3Procedure.execute(world,x,y,z,entity)
+;
+					}
 	}
 
-	@SubscribeEvent
-	public static void registerMessage(FMLCommonSetupEvent event) {
-		PowerMod.addNetworkMessage(ChoiseMagicStonesPage2ButtonMessage.class, ChoiseMagicStonesPage2ButtonMessage::buffer,
-				ChoiseMagicStonesPage2ButtonMessage::new, ChoiseMagicStonesPage2ButtonMessage::handler);
+	@SubscribeEvent public static void registerMessage(FMLCommonSetupEvent event) {
+		PowerMod.addNetworkMessage(ChoiseMagicStonesPage2ButtonMessage.class, ChoiseMagicStonesPage2ButtonMessage::buffer, ChoiseMagicStonesPage2ButtonMessage::new, ChoiseMagicStonesPage2ButtonMessage::handler);
 	}
+
 }

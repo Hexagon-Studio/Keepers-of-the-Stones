@@ -25,8 +25,8 @@ public class ExplosionMasterEffectEndProcedure {
 			return;
 		if (world instanceof Level _level) {
 			if (!_level.isClientSide()) {
-				_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:stone_deactivation")),
-						SoundSource.PLAYERS, 1, 1);
+				_level.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+						ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:stone_deactivation")), SoundSource.PLAYERS, 1, 1);
 			} else {
 				_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:stone_deactivation")),
 						SoundSource.PLAYERS, 1, 1, false);
@@ -36,38 +36,38 @@ public class ExplosionMasterEffectEndProcedure {
 			if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new PowerModVariables.PlayerVariables())).battery) {
 				if (entity instanceof Player _player) {
-					ItemStack _setstack = new ItemStack(PowerModItems.EXPLOSION_STONE.get());
+					ItemStack _setstack = new ItemStack(PowerModItems.EXPLOSION_STONE);
 					_setstack.setCount(1);
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
 			}
 		}
 		if (entity instanceof Player _player) {
-			ItemStack _stktoremove = new ItemStack(PowerModItems.MACE.get());
+			ItemStack _stktoremove = new ItemStack(PowerModItems.MACE);
 			_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 		}
 		if (entity instanceof Player _player) {
-			ItemStack _stktoremove = new ItemStack(PowerModItems.EXPLOSIVE_FLOW.get());
+			ItemStack _stktoremove = new ItemStack(PowerModItems.EXPLOSIVE_FLOW);
 			_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 		}
 		if (entity instanceof Player _player) {
-			ItemStack _stktoremove = new ItemStack(PowerModBlocks.DETONATOR_TNT.get());
+			ItemStack _stktoremove = new ItemStack(PowerModBlocks.DETONATOR_TNT);
 			_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 		}
 		if (entity instanceof Player _player) {
-			ItemStack _stktoremove = new ItemStack(PowerModItems.EXPLODE_HELMET.get());
+			ItemStack _stktoremove = new ItemStack(PowerModItems.EXPLODE_HELMET);
 			_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 		}
 		if (entity instanceof Player _player) {
-			ItemStack _stktoremove = new ItemStack(PowerModItems.EXPLODE_CHESTPLATE.get());
+			ItemStack _stktoremove = new ItemStack(PowerModItems.EXPLODE_CHESTPLATE);
 			_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 		}
 		if (entity instanceof Player _player) {
-			ItemStack _stktoremove = new ItemStack(PowerModItems.EXPLODE_LEGGINGS.get());
+			ItemStack _stktoremove = new ItemStack(PowerModItems.EXPLODE_LEGGINGS);
 			_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 		}
 		if (entity instanceof Player _player) {
-			ItemStack _stktoremove = new ItemStack(PowerModItems.EXPLODE_BOOTS.get());
+			ItemStack _stktoremove = new ItemStack(PowerModItems.EXPLODE_BOOTS);
 			_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 		}
 		if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).amber) {
@@ -76,14 +76,14 @@ public class ExplosionMasterEffectEndProcedure {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new PowerModVariables.PlayerVariables())).power_level == 2) {
 					if (entity instanceof LivingEntity _entity)
-						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RECHARGE_EXPLOSION_STONE.get(), 3600, 0, (false), (false)));
+						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RECHARGE_EXPLOSION_STONE, 3600, 0, (false), (false)));
 				} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new PowerModVariables.PlayerVariables())).power_level >= 3) {
 					if (entity instanceof LivingEntity _entity)
-						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RECHARGE_EXPLOSION_STONE.get(), 2400, 0, (false), (false)));
+						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RECHARGE_EXPLOSION_STONE, 2400, 0, (false), (false)));
 				} else {
 					if (entity instanceof LivingEntity _entity)
-						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RECHARGE_EXPLOSION_STONE.get(), 6000, 0, (false), (false)));
+						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RECHARGE_EXPLOSION_STONE, 6000, 0, (false), (false)));
 				}
 			}
 		}

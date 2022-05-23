@@ -15,6 +15,7 @@ import net.minecraft.core.BlockPos;
 public class OblivionItem extends Item {
 	public OblivionItem() {
 		super(new Item.Properties().tab(PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS).durability(64));
+		setRegistryName("oblivion");
 	}
 
 	@Override

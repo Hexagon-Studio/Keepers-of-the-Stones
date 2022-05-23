@@ -19,6 +19,7 @@ import net.minecraft.server.level.ServerPlayer;
 public class GoldenCrossbowItem extends Item {
 	public GoldenCrossbowItem() {
 		super(new Item.Properties().tab(null).durability(5000));
+		setRegistryName("golden_crossbow");
 	}
 
 	@Override

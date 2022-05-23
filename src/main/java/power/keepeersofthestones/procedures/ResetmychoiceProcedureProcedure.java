@@ -5,7 +5,7 @@ import power.keepeersofthestones.network.PowerModVariables;
 import power.keepeersofthestones.init.PowerModItems;
 import power.keepeersofthestones.init.PowerModGameRules;
 
-import net.minecraftforge.network.NetworkHooks;
+import net.minecraftforge.fmllegacy.network.NetworkHooks;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
@@ -32,7 +32,7 @@ public class ResetmychoiceProcedureProcedure {
 					.orElse(new PowerModVariables.PlayerVariables())).selected) {
 				{
 					if (entity instanceof ServerPlayer _ent) {
-						BlockPos _bpos = new BlockPos(x, y, z);
+						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
 						NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
@@ -47,7 +47,7 @@ public class ResetmychoiceProcedureProcedure {
 					}
 				}
 			}
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.FIRE_STONE.get()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.FIRE_STONE) {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -65,7 +65,7 @@ public class ResetmychoiceProcedureProcedure {
 				}
 				{
 					if (entity instanceof ServerPlayer _ent) {
-						BlockPos _bpos = new BlockPos(x, y, z);
+						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
 						NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
@@ -80,7 +80,7 @@ public class ResetmychoiceProcedureProcedure {
 					}
 				}
 			}
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.AIR_STONE.get()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.AIR_STONE) {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -98,7 +98,7 @@ public class ResetmychoiceProcedureProcedure {
 				}
 				{
 					if (entity instanceof ServerPlayer _ent) {
-						BlockPos _bpos = new BlockPos(x, y, z);
+						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
 						NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
@@ -113,7 +113,7 @@ public class ResetmychoiceProcedureProcedure {
 					}
 				}
 			}
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.WATER_STONE.get()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.WATER_STONE) {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -131,7 +131,7 @@ public class ResetmychoiceProcedureProcedure {
 				}
 				{
 					if (entity instanceof ServerPlayer _ent) {
-						BlockPos _bpos = new BlockPos(x, y, z);
+						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
 						NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
@@ -146,7 +146,7 @@ public class ResetmychoiceProcedureProcedure {
 					}
 				}
 			}
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.EARTH_STONE.get()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.EARTH_STONE) {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -164,7 +164,7 @@ public class ResetmychoiceProcedureProcedure {
 				}
 				{
 					if (entity instanceof ServerPlayer _ent) {
-						BlockPos _bpos = new BlockPos(x, y, z);
+						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
 						NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
@@ -179,8 +179,7 @@ public class ResetmychoiceProcedureProcedure {
 					}
 				}
 			}
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.ENERGY_STONE
-					.get()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.ENERGY_STONE) {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -198,7 +197,7 @@ public class ResetmychoiceProcedureProcedure {
 				}
 				{
 					if (entity instanceof ServerPlayer _ent) {
-						BlockPos _bpos = new BlockPos(x, y, z);
+						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
 						NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
@@ -213,7 +212,7 @@ public class ResetmychoiceProcedureProcedure {
 					}
 				}
 			}
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.ICE_STONE.get()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.ICE_STONE) {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -231,7 +230,7 @@ public class ResetmychoiceProcedureProcedure {
 				}
 				{
 					if (entity instanceof ServerPlayer _ent) {
-						BlockPos _bpos = new BlockPos(x, y, z);
+						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
 						NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
@@ -246,8 +245,7 @@ public class ResetmychoiceProcedureProcedure {
 					}
 				}
 			}
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.LIGHTNING_STONE
-					.get()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.LIGHTNING_STONE) {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -265,7 +263,7 @@ public class ResetmychoiceProcedureProcedure {
 				}
 				{
 					if (entity instanceof ServerPlayer _ent) {
-						BlockPos _bpos = new BlockPos(x, y, z);
+						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
 						NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
@@ -280,7 +278,7 @@ public class ResetmychoiceProcedureProcedure {
 					}
 				}
 			}
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.SOUND_STONE.get()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.SOUND_STONE) {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -298,7 +296,7 @@ public class ResetmychoiceProcedureProcedure {
 				}
 				{
 					if (entity instanceof ServerPlayer _ent) {
-						BlockPos _bpos = new BlockPos(x, y, z);
+						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
 						NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
@@ -313,8 +311,7 @@ public class ResetmychoiceProcedureProcedure {
 					}
 				}
 			}
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.CRYSTAL_STONE
-					.get()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.CRYSTAL_STONE) {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -332,7 +329,7 @@ public class ResetmychoiceProcedureProcedure {
 				}
 				{
 					if (entity instanceof ServerPlayer _ent) {
-						BlockPos _bpos = new BlockPos(x, y, z);
+						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
 						NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
@@ -347,7 +344,7 @@ public class ResetmychoiceProcedureProcedure {
 					}
 				}
 			}
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.LAVA_STONE.get()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.LAVA_STONE) {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -365,7 +362,7 @@ public class ResetmychoiceProcedureProcedure {
 				}
 				{
 					if (entity instanceof ServerPlayer _ent) {
-						BlockPos _bpos = new BlockPos(x, y, z);
+						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
 						NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
@@ -380,7 +377,7 @@ public class ResetmychoiceProcedureProcedure {
 					}
 				}
 			}
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.RAIN_STONE.get()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.RAIN_STONE) {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -398,7 +395,7 @@ public class ResetmychoiceProcedureProcedure {
 				}
 				{
 					if (entity instanceof ServerPlayer _ent) {
-						BlockPos _bpos = new BlockPos(x, y, z);
+						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
 						NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
@@ -413,8 +410,7 @@ public class ResetmychoiceProcedureProcedure {
 					}
 				}
 			}
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.TORNADO_STONE
-					.get()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.TORNADO_STONE) {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -432,7 +428,7 @@ public class ResetmychoiceProcedureProcedure {
 				}
 				{
 					if (entity instanceof ServerPlayer _ent) {
-						BlockPos _bpos = new BlockPos(x, y, z);
+						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
 						NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
@@ -447,7 +443,7 @@ public class ResetmychoiceProcedureProcedure {
 					}
 				}
 			}
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.OCEAN_STONE.get()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.OCEAN_STONE) {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -465,7 +461,7 @@ public class ResetmychoiceProcedureProcedure {
 				}
 				{
 					if (entity instanceof ServerPlayer _ent) {
-						BlockPos _bpos = new BlockPos(x, y, z);
+						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
 						NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
@@ -480,8 +476,7 @@ public class ResetmychoiceProcedureProcedure {
 					}
 				}
 			}
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.GREENERY_STONE
-					.get()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.GREENERY_STONE) {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -499,7 +494,7 @@ public class ResetmychoiceProcedureProcedure {
 				}
 				{
 					if (entity instanceof ServerPlayer _ent) {
-						BlockPos _bpos = new BlockPos(x, y, z);
+						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
 						NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
@@ -514,8 +509,7 @@ public class ResetmychoiceProcedureProcedure {
 					}
 				}
 			}
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.ANIMALS_STONE
-					.get()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.ANIMALS_STONE) {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -533,7 +527,7 @@ public class ResetmychoiceProcedureProcedure {
 				}
 				{
 					if (entity instanceof ServerPlayer _ent) {
-						BlockPos _bpos = new BlockPos(x, y, z);
+						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
 						NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
@@ -548,7 +542,7 @@ public class ResetmychoiceProcedureProcedure {
 					}
 				}
 			}
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.METAL_STONE.get()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.METAL_STONE) {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -566,7 +560,7 @@ public class ResetmychoiceProcedureProcedure {
 				}
 				{
 					if (entity instanceof ServerPlayer _ent) {
-						BlockPos _bpos = new BlockPos(x, y, z);
+						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
 						NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
@@ -581,7 +575,7 @@ public class ResetmychoiceProcedureProcedure {
 					}
 				}
 			}
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.LIGHT_STONE.get()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.LIGHT_STONE) {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -599,7 +593,7 @@ public class ResetmychoiceProcedureProcedure {
 				}
 				{
 					if (entity instanceof ServerPlayer _ent) {
-						BlockPos _bpos = new BlockPos(x, y, z);
+						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
 						NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
@@ -614,8 +608,7 @@ public class ResetmychoiceProcedureProcedure {
 					}
 				}
 			}
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.SHADOW_STONE
-					.get()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.SHADOW_STONE) {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -633,7 +626,7 @@ public class ResetmychoiceProcedureProcedure {
 				}
 				{
 					if (entity instanceof ServerPlayer _ent) {
-						BlockPos _bpos = new BlockPos(x, y, z);
+						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
 						NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
@@ -648,8 +641,7 @@ public class ResetmychoiceProcedureProcedure {
 					}
 				}
 			}
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.VACUUM_STONE
-					.get()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.VACUUM_STONE) {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -667,7 +659,7 @@ public class ResetmychoiceProcedureProcedure {
 				}
 				{
 					if (entity instanceof ServerPlayer _ent) {
-						BlockPos _bpos = new BlockPos(x, y, z);
+						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
 						NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
@@ -682,7 +674,7 @@ public class ResetmychoiceProcedureProcedure {
 					}
 				}
 			}
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.SUN_STONE.get()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.SUN_STONE) {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -700,7 +692,7 @@ public class ResetmychoiceProcedureProcedure {
 				}
 				{
 					if (entity instanceof ServerPlayer _ent) {
-						BlockPos _bpos = new BlockPos(x, y, z);
+						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
 						NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
@@ -715,7 +707,7 @@ public class ResetmychoiceProcedureProcedure {
 					}
 				}
 			}
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.MOON_STONE.get()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.MOON_STONE) {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -733,7 +725,7 @@ public class ResetmychoiceProcedureProcedure {
 				}
 				{
 					if (entity instanceof ServerPlayer _ent) {
-						BlockPos _bpos = new BlockPos(x, y, z);
+						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
 						NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
@@ -748,8 +740,7 @@ public class ResetmychoiceProcedureProcedure {
 					}
 				}
 			}
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.CREATION_STONE
-					.get()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.CREATION_STONE) {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -767,7 +758,7 @@ public class ResetmychoiceProcedureProcedure {
 				}
 				{
 					if (entity instanceof ServerPlayer _ent) {
-						BlockPos _bpos = new BlockPos(x, y, z);
+						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
 						NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
@@ -782,8 +773,7 @@ public class ResetmychoiceProcedureProcedure {
 					}
 				}
 			}
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.DESTRUCTION_STONE
-					.get()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.DESTRUCTION_STONE) {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -801,7 +791,7 @@ public class ResetmychoiceProcedureProcedure {
 				}
 				{
 					if (entity instanceof ServerPlayer _ent) {
-						BlockPos _bpos = new BlockPos(x, y, z);
+						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
 						NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
@@ -816,7 +806,7 @@ public class ResetmychoiceProcedureProcedure {
 					}
 				}
 			}
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.SPACE_STONE.get()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.SPACE_STONE) {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -834,7 +824,7 @@ public class ResetmychoiceProcedureProcedure {
 				}
 				{
 					if (entity instanceof ServerPlayer _ent) {
-						BlockPos _bpos = new BlockPos(x, y, z);
+						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
 						NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
@@ -849,7 +839,7 @@ public class ResetmychoiceProcedureProcedure {
 					}
 				}
 			}
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.BLOOD_STONE.get()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.BLOOD_STONE) {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -867,7 +857,7 @@ public class ResetmychoiceProcedureProcedure {
 				}
 				{
 					if (entity instanceof ServerPlayer _ent) {
-						BlockPos _bpos = new BlockPos(x, y, z);
+						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
 						NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
@@ -882,8 +872,7 @@ public class ResetmychoiceProcedureProcedure {
 					}
 				}
 			}
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.TECHNOLOGY_STONE
-					.get()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.TECHNOLOGY_STONE) {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -901,7 +890,7 @@ public class ResetmychoiceProcedureProcedure {
 				}
 				{
 					if (entity instanceof ServerPlayer _ent) {
-						BlockPos _bpos = new BlockPos(x, y, z);
+						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
 						NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
@@ -916,7 +905,7 @@ public class ResetmychoiceProcedureProcedure {
 					}
 				}
 			}
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.TIME_STONE.get()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.TIME_STONE) {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -934,7 +923,7 @@ public class ResetmychoiceProcedureProcedure {
 				}
 				{
 					if (entity instanceof ServerPlayer _ent) {
-						BlockPos _bpos = new BlockPos(x, y, z);
+						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
 						NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
@@ -949,8 +938,8 @@ public class ResetmychoiceProcedureProcedure {
 					}
 				}
 			}
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.TELEPORTATION_STONE
-					.get()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
+					.getItem() == PowerModItems.TELEPORTATION_STONE) {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -968,7 +957,7 @@ public class ResetmychoiceProcedureProcedure {
 				}
 				{
 					if (entity instanceof ServerPlayer _ent) {
-						BlockPos _bpos = new BlockPos(x, y, z);
+						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
 						NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
@@ -983,8 +972,7 @@ public class ResetmychoiceProcedureProcedure {
 					}
 				}
 			}
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.EXPLOSION_STONE
-					.get()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.EXPLOSION_STONE) {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -1002,7 +990,7 @@ public class ResetmychoiceProcedureProcedure {
 				}
 				{
 					if (entity instanceof ServerPlayer _ent) {
-						BlockPos _bpos = new BlockPos(x, y, z);
+						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
 						NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
@@ -1017,7 +1005,7 @@ public class ResetmychoiceProcedureProcedure {
 					}
 				}
 			}
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.AMBER_STONE.get()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.AMBER_STONE) {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -1035,7 +1023,7 @@ public class ResetmychoiceProcedureProcedure {
 				}
 				{
 					if (entity instanceof ServerPlayer _ent) {
-						BlockPos _bpos = new BlockPos(x, y, z);
+						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
 						NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
@@ -1050,7 +1038,7 @@ public class ResetmychoiceProcedureProcedure {
 					}
 				}
 			}
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.MIST_STONE.get()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.MIST_STONE) {
 				{
 					Entity _ent = entity;
 					if (!_ent.level.isClientSide() && _ent.getServer() != null)
@@ -1068,7 +1056,7 @@ public class ResetmychoiceProcedureProcedure {
 				}
 				{
 					if (entity instanceof ServerPlayer _ent) {
-						BlockPos _bpos = new BlockPos(x, y, z);
+						BlockPos _bpos = new BlockPos((int) x, (int) y, (int) z);
 						NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 							@Override
 							public Component getDisplayName() {

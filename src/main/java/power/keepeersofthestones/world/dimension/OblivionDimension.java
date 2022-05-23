@@ -1,6 +1,7 @@
 
 package power.keepeersofthestones.world.dimension;
 
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -28,12 +29,18 @@ public class OblivionDimension {
 		public static void registerFillerBlocks(FMLCommonSetupEvent event) {
 			Set<Block> replaceableBlocks = new HashSet<>();
 			replaceableBlocks.add(Blocks.STONE);
-			replaceableBlocks.add(Blocks.SOUL_SOIL);
-			replaceableBlocks.add(Blocks.DIRT);
-			replaceableBlocks.add(Blocks.GRASS_BLOCK);
-			replaceableBlocks.add(Blocks.DIRT);
-			replaceableBlocks.add(Blocks.GRASS_BLOCK);
-			replaceableBlocks.add(Blocks.DIRT);
+			replaceableBlocks.add(ForgeRegistries.BIOMES.getValue(new ResourceLocation("power:oblivion_desert")).getGenerationSettings()
+					.getSurfaceBuilder().get().config().getTopMaterial().getBlock());
+			replaceableBlocks.add(ForgeRegistries.BIOMES.getValue(new ResourceLocation("power:oblivion_desert")).getGenerationSettings()
+					.getSurfaceBuilder().get().config().getUnderMaterial().getBlock());
+			replaceableBlocks.add(ForgeRegistries.BIOMES.getValue(new ResourceLocation("power:oblivion_forest")).getGenerationSettings()
+					.getSurfaceBuilder().get().config().getTopMaterial().getBlock());
+			replaceableBlocks.add(ForgeRegistries.BIOMES.getValue(new ResourceLocation("power:oblivion_forest")).getGenerationSettings()
+					.getSurfaceBuilder().get().config().getUnderMaterial().getBlock());
+			replaceableBlocks.add(ForgeRegistries.BIOMES.getValue(new ResourceLocation("power:oblivion_plains")).getGenerationSettings()
+					.getSurfaceBuilder().get().config().getTopMaterial().getBlock());
+			replaceableBlocks.add(ForgeRegistries.BIOMES.getValue(new ResourceLocation("power:oblivion_plains")).getGenerationSettings()
+					.getSurfaceBuilder().get().config().getUnderMaterial().getBlock());
 			event.enqueueWork(() -> {
 				WorldCarver.CAVE.replaceableBlocks = new ImmutableSet.Builder<Block>().addAll(WorldCarver.CAVE.replaceableBlocks)
 						.addAll(replaceableBlocks).build();

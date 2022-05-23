@@ -6,7 +6,6 @@ import power.keepeersofthestones.init.PowerModTabs;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
@@ -17,11 +16,7 @@ import net.minecraft.world.InteractionHand;
 public class BookOfElementsItem extends Item {
 	public BookOfElementsItem() {
 		super(new Item.Properties().tab(PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS).stacksTo(1).fireResistant().rarity(Rarity.COMMON));
-	}
-
-	@Override
-	public UseAnim getUseAnimation(ItemStack itemstack) {
-		return UseAnim.EAT;
+		setRegistryName("book_of_elements");
 	}
 
 	@Override

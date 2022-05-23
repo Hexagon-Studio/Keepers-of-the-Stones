@@ -1,4 +1,3 @@
-
 package power.keepeersofthestones.client.renderer;
 
 import power.keepeersofthestones.entity.GlowEntity;
@@ -16,13 +15,13 @@ public class GlowRenderer extends MobRenderer<GlowEntity, Modelglow<GlowEntity>>
 		this.addLayer(new EyesLayer<GlowEntity, Modelglow<GlowEntity>>(this) {
 			@Override
 			public RenderType renderType() {
-				return RenderType.eyes(new ResourceLocation("power:textures/entities/glow.png"));
+				return RenderType.eyes(new ResourceLocation("power:textures/glow.png"));
 			}
 		});
 	}
 
 	@Override
 	public ResourceLocation getTextureLocation(GlowEntity entity) {
-		return new ResourceLocation("power:textures/entities/glow.png");
+		return new ResourceLocation("power:textures/glow.png");
 	}
 }

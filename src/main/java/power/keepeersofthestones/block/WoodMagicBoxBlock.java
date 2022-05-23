@@ -42,6 +42,7 @@ public class WoodMagicBoxBlock extends Block implements SimpleWaterloggedBlock
 		super(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(0.5f, 1000f).noOcclusion()
 				.isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, false));
+		setRegistryName("wood_magic_box");
 	}
 
 	@Override
@@ -80,7 +81,7 @@ public class WoodMagicBoxBlock extends Block implements SimpleWaterloggedBlock
 	public BlockState updateShape(BlockState state, Direction facing, BlockState facingState, LevelAccessor world, BlockPos currentPos,
 			BlockPos facingPos) {
 		if (state.getValue(WATERLOGGED)) {
-			world.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(world));
+			world.getLiquidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(world));
 		}
 		return super.updateShape(state, facing, facingState, world, currentPos, facingPos);
 	}
@@ -95,6 +96,6 @@ public class WoodMagicBoxBlock extends Block implements SimpleWaterloggedBlock
 
 	@OnlyIn(Dist.CLIENT)
 	public static void registerRenderLayer() {
-		ItemBlockRenderTypes.setRenderLayer(PowerModBlocks.WOOD_MAGIC_BOX.get(), renderType -> renderType == RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(PowerModBlocks.WOOD_MAGIC_BOX, renderType -> renderType == RenderType.cutout());
 	}
 }

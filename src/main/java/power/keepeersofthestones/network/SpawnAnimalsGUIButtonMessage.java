@@ -1,30 +1,8 @@
 
 package power.keepeersofthestones.network;
 
-import power.keepeersofthestones.world.inventory.SpawnAnimalsGUIMenu;
-import power.keepeersofthestones.procedures.SummonWolfProcedure;
-import power.keepeersofthestones.procedures.SummonSheepProcedure;
-import power.keepeersofthestones.procedures.SummonHorseProcedure;
-import power.keepeersofthestones.procedures.SummonCowProcedure;
-import power.keepeersofthestones.procedures.SummonChickenProcedure;
-import power.keepeersofthestones.procedures.SummonCatProcedure;
-import power.keepeersofthestones.PowerMod;
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD) public class SpawnAnimalsGUIButtonMessage {
 
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.core.BlockPos;
-
-import java.util.function.Supplier;
-import java.util.HashMap;
-
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class SpawnAnimalsGUIButtonMessage {
 	private final int buttonID, x, y, z;
 
 	public SpawnAnimalsGUIButtonMessage(FriendlyByteBuf buffer) {
@@ -56,6 +34,7 @@ public class SpawnAnimalsGUIButtonMessage {
 			int x = message.x;
 			int y = message.y;
 			int z = message.z;
+
 			handleButtonAction(entity, buttonID, x, y, z);
 		});
 		context.setPacketHandled(true);
@@ -64,38 +43,51 @@ public class SpawnAnimalsGUIButtonMessage {
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level;
 		HashMap guistate = SpawnAnimalsGUIMenu.guistate;
+
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
-		if (buttonID == 0) {
 
-			SummonWolfProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 1) {
+        	    	if (buttonID == 0) {
+    
 
-			SummonChickenProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 2) {
+    SummonWolfProcedure.execute(world,x,y,z,entity)
+;
+					}
+        	    	if (buttonID == 1) {
+    
 
-			SummonCowProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 3) {
+    SummonChickenProcedure.execute(world,x,y,z,entity)
+;
+					}
+        	    	if (buttonID == 2) {
+    
 
-			SummonCatProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 4) {
+    SummonCowProcedure.execute(world,x,y,z,entity)
+;
+					}
+        	    	if (buttonID == 3) {
+    
 
-			SummonHorseProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 5) {
+    SummonCatProcedure.execute(world,x,y,z,entity)
+;
+					}
+        	    	if (buttonID == 4) {
+    
 
-			SummonSheepProcedure.execute(world, x, y, z, entity);
-		}
+    SummonHorseProcedure.execute(world,x,y,z,entity)
+;
+					}
+        	    	if (buttonID == 5) {
+    
+
+    SummonSheepProcedure.execute(world,x,y,z,entity)
+;
+					}
 	}
 
-	@SubscribeEvent
-	public static void registerMessage(FMLCommonSetupEvent event) {
-		PowerMod.addNetworkMessage(SpawnAnimalsGUIButtonMessage.class, SpawnAnimalsGUIButtonMessage::buffer, SpawnAnimalsGUIButtonMessage::new,
-				SpawnAnimalsGUIButtonMessage::handler);
+	@SubscribeEvent public static void registerMessage(FMLCommonSetupEvent event) {
+		PowerMod.addNetworkMessage(SpawnAnimalsGUIButtonMessage.class, SpawnAnimalsGUIButtonMessage::buffer, SpawnAnimalsGUIButtonMessage::new, SpawnAnimalsGUIButtonMessage::handler);
 	}
+
 }

@@ -32,7 +32,7 @@ public class SetBlockMoonStoneProcedure {
 			}
 
 			private void run() {
-				world.setBlock(new BlockPos(x, y, z), PowerModBlocks.MOON_STONES_BLOCK.get().defaultBlockState(), 3);
+				world.setBlock(new BlockPos((int) x, (int) y, (int) z), PowerModBlocks.MOON_STONES_BLOCK.defaultBlockState(), 3);
 				MinecraftForge.EVENT_BUS.unregister(this);
 			}
 		}.start(world, 3);

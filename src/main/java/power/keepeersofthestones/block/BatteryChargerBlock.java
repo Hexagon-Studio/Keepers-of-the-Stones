@@ -6,7 +6,7 @@ import power.keepeersofthestones.procedures.BatteryCreateTickProcedure;
 import power.keepeersofthestones.init.PowerModBlocks;
 import power.keepeersofthestones.block.entity.BatteryChargerBlockEntity;
 
-import net.minecraftforge.network.NetworkHooks;
+import net.minecraftforge.fmllegacy.network.NetworkHooks;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
@@ -54,6 +54,7 @@ public class BatteryChargerBlock extends Block
 	public BatteryChargerBlock() {
 		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1f, 10f).noOcclusion()
 				.isRedstoneConductor((bs, br, bp) -> false));
+		setRegistryName("battery_charger");
 	}
 
 	@Override
@@ -83,7 +84,7 @@ public class BatteryChargerBlock extends Block
 	@Override
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
 		super.onPlace(blockstate, world, pos, oldState, moving);
-		world.scheduleTick(pos, this, 10);
+		world.getBlockTicks().scheduleTick(pos, this, 10);
 	}
 
 	@Override
@@ -94,7 +95,7 @@ public class BatteryChargerBlock extends Block
 		int z = pos.getZ();
 
 		BatteryCreateTickProcedure.execute(world, x, y, z);
-		world.scheduleTick(pos, this, 10);
+		world.getBlockTicks().scheduleTick(pos, this, 10);
 	}
 
 	@Override
@@ -162,6 +163,6 @@ public class BatteryChargerBlock extends Block
 
 	@OnlyIn(Dist.CLIENT)
 	public static void registerRenderLayer() {
-		ItemBlockRenderTypes.setRenderLayer(PowerModBlocks.BATTERY_CHARGER.get(), renderType -> renderType == RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(PowerModBlocks.BATTERY_CHARGER, renderType -> renderType == RenderType.cutout());
 	}
 }

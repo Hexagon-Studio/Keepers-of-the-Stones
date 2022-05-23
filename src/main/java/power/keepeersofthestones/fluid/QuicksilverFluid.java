@@ -17,8 +17,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
 
 public abstract class QuicksilverFluid extends ForgeFlowingFluid {
-	public static final ForgeFlowingFluid.Properties PROPERTIES = new ForgeFlowingFluid.Properties(PowerModFluids.QUICKSILVER,
-			PowerModFluids.FLOWING_QUICKSILVER,
+	public static final ForgeFlowingFluid.Properties PROPERTIES = new ForgeFlowingFluid.Properties(() -> PowerModFluids.QUICKSILVER,
+			() -> PowerModFluids.FLOWING_QUICKSILVER,
 			FluidAttributes.builder(new ResourceLocation("power:blocks/quick_silver_flow"), new ResourceLocation("power:blocks/quick_silver_flow"))
 
 					.density(100000).viscosity(100000).temperature(100)
@@ -27,7 +27,7 @@ public abstract class QuicksilverFluid extends ForgeFlowingFluid {
 
 			.tickRate(150).levelDecreasePerBlock(8).slopeFindDistance(16)
 
-			.block(() -> (LiquidBlock) PowerModBlocks.QUICKSILVER.get());
+			.block(() -> (LiquidBlock) PowerModBlocks.QUICKSILVER);
 
 	private QuicksilverFluid() {
 		super(PROPERTIES);
@@ -41,6 +41,7 @@ public abstract class QuicksilverFluid extends ForgeFlowingFluid {
 	public static class Source extends QuicksilverFluid {
 		public Source() {
 			super();
+			setRegistryName("quicksilver");
 		}
 
 		public int getAmount(FluidState state) {
@@ -55,6 +56,7 @@ public abstract class QuicksilverFluid extends ForgeFlowingFluid {
 	public static class Flowing extends QuicksilverFluid {
 		public Flowing() {
 			super();
+			setRegistryName("flowing_quicksilver");
 		}
 
 		protected void createFluidStateDefinition(StateDefinition.Builder<Fluid, FluidState> builder) {

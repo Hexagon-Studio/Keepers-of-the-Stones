@@ -44,6 +44,7 @@ public class ClusterBlockBlock extends Block implements SimpleWaterloggedBlock
 		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.AMETHYST_CLUSTER).strength(1f, 10f).noCollission().noOcclusion()
 				.isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, false));
+		setRegistryName("cluster_block");
 	}
 
 	@Override
@@ -76,7 +77,7 @@ public class ClusterBlockBlock extends Block implements SimpleWaterloggedBlock
 	public BlockState updateShape(BlockState state, Direction facing, BlockState facingState, LevelAccessor world, BlockPos currentPos,
 			BlockPos facingPos) {
 		if (state.getValue(WATERLOGGED)) {
-			world.scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(world));
+			world.getLiquidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickDelay(world));
 		}
 		return super.updateShape(state, facing, facingState, world, currentPos, facingPos);
 	}
@@ -109,6 +110,6 @@ public class ClusterBlockBlock extends Block implements SimpleWaterloggedBlock
 
 	@OnlyIn(Dist.CLIENT)
 	public static void registerRenderLayer() {
-		ItemBlockRenderTypes.setRenderLayer(PowerModBlocks.CLUSTER_BLOCK.get(), renderType -> renderType == RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(PowerModBlocks.CLUSTER_BLOCK, renderType -> renderType == RenderType.cutout());
 	}
 }

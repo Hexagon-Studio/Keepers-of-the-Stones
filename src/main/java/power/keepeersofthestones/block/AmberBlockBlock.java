@@ -27,6 +27,7 @@ import java.util.Collections;
 public class AmberBlockBlock extends Block {
 	public AmberBlockBlock() {
 		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1.5f, 100f).requiresCorrectToolForDrops());
+		setRegistryName("amber_block");
 	}
 
 	@Override
@@ -51,7 +52,7 @@ public class AmberBlockBlock extends Block {
 
 	@OnlyIn(Dist.CLIENT)
 	public static void registerRenderLayer() {
-		ItemBlockRenderTypes.setRenderLayer(PowerModBlocks.AMBER_BLOCK.get(), renderType -> renderType == RenderType.cutout());
+		ItemBlockRenderTypes.setRenderLayer(PowerModBlocks.AMBER_BLOCK, renderType -> renderType == RenderType.cutout());
 	}
 
 }

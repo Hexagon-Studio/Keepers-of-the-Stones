@@ -26,6 +26,7 @@ import com.google.common.collect.ImmutableMultimap;
 public class IceSpearItem extends Item {
 	public IceSpearItem() {
 		super(new Item.Properties().tab(null).durability(5000));
+		setRegistryName("ice_spear");
 	}
 
 	@Override
