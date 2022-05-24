@@ -1,0 +1,12 @@
+{
+  "_fv": 29,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Logic",
+    "displayName": "Does the stone break during rebirth?",
+    "description": "Can a stone break at death if it has been activated?",
+    "category": "PLAYER",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 0
+  }
+}

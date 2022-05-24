@@ -26,7 +26,9 @@
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
-    "specialInfo": [],
+    "specialInfo": [
+      "о"
+    ],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
@@ -38,6 +40,9 @@
     "isFood": false,
     "nutritionalValue": 0,
     "saturation": 0.30000001192092896,
+    "eatResultItem": {
+      "value": ""
+    },
     "isMeat": false,
     "isAlwaysEdible": false,
     "animation": "eat"

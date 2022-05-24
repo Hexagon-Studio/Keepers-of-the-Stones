@@ -9,7 +9,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
@@ -72,7 +72,7 @@ public class CheckPointTPScreen extends AbstractContainerScreen<CheckPointTPMenu
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Returning to the last point", 15, 7, -12829636);
+		this.font.draw(poseStack, new TranslatableComponent("Returning to the last point"), 15, 7, -12829636);
 	}
 
 	@Override
@@ -85,13 +85,13 @@ public class CheckPointTPScreen extends AbstractContainerScreen<CheckPointTPMenu
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 24, this.topPos + 25, 126, 20, new TextComponent("Checkpoint"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 24, this.topPos + 25, 126, 20, new TranslatableComponent("Checkpoint"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new CheckPointTPButtonMessage(0, x, y, z));
 				CheckPointTPButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 24, this.topPos + 106, 126, 20, new TextComponent("Set checkpoint"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 24, this.topPos + 106, 126, 20, new TranslatableComponent("Set checkpoint"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new CheckPointTPButtonMessage(1, x, y, z));
 				CheckPointTPButtonMessage.handleButtonAction(entity, 1, x, y, z);

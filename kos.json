@@ -1,8 +1,8 @@
 {
   "homepage": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
   "promos": {
-    "1.16.5-latest": "1.4.5",
-    "1.16.5-recommended": "1.4.5",
+    "1.16.5-latest": "2.1.11",
+    "1.16.5-recommended": "2.1.11",
     "1.17.1-latest": "1.4.1",
     "1.17.1-recommended": "1.4.1",
     "1.18.1-latest": "1.6.1",
@@ -76,6 +76,15 @@ You can download the mod by following the link: https://www.curseforge.com/minec
 - [Bugfix] Fixed a recharge bug that remained with some stones after the player went to bed with an activated stone
 - [Bugfix] Fixed a bug with infinite levitation when calling a tornado
 - [Bugfix] Fixed translations into Russian
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+ "2.0.2": "
+- Porting changes from the main branch of version 2.0.2
+- [Bugfix] Fixed a lot of bugs
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+ "2.1.11": "
+- Transfer of changes from the main branch of version 2.1.11
+- Some functions have been specially adapted for MC 1.16.5
+- [Bugfix] Fixed generation of Dinoera
 You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones"
   },
   "1.17.1": {

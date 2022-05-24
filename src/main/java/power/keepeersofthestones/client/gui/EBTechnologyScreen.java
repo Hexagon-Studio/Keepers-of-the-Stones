@@ -9,7 +9,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
@@ -81,9 +81,9 @@ public class EBTechnologyScreen extends AbstractContainerScreen<EBTechnologyMenu
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Class: Middle", -162, -85, -12829636);
-		this.font.draw(poseStack, "Element: Technology", -162, -67, -12829636);
-		this.font.draw(poseStack, "Force: Control", -162, -49, -12829636);
+		this.font.draw(poseStack, new TranslatableComponent("Class: Middle"), -162, -85, -12829636);
+		this.font.draw(poseStack, new TranslatableComponent("Element: Technology"), -162, -67, -12829636);
+		this.font.draw(poseStack, new TranslatableComponent("Force: Control"), -162, -49, -12829636);
 	}
 
 	@Override
@@ -96,7 +96,7 @@ public class EBTechnologyScreen extends AbstractContainerScreen<EBTechnologyMenu
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20, new TextComponent(">"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20, new TranslatableComponent(">"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new EBTechnologyButtonMessage(0, x, y, z));
 				EBTechnologyButtonMessage.handleButtonAction(entity, 0, x, y, z);

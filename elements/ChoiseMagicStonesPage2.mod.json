@@ -166,10 +166,13 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "Mist",
+          "onClick": {
+            "name": "MistGet"
+          },
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": "Mist",
           "x": 240,
           "y": 53
         }
@@ -422,6 +425,16 @@
           "name": "space_master.png",
           "x": 33,
           "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "mist_master.png",
+          "use1Xscale": false,
+          "name": "mist_master.png",
+          "x": 222,
+          "y": 53
         }
       }
     ],

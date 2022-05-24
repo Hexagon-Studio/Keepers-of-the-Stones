@@ -18,6 +18,7 @@ import power.keepeersofthestones.entity.SpikeEntity;
 import power.keepeersofthestones.entity.ShurikenEntity;
 import power.keepeersofthestones.entity.ShadowEntity;
 import power.keepeersofthestones.entity.ShadowBallEntity;
+import power.keepeersofthestones.entity.RaptorEntity;
 import power.keepeersofthestones.entity.RainBowEntity;
 import power.keepeersofthestones.entity.PortalBlastEntity;
 import power.keepeersofthestones.entity.PlasmaBallEntity;
@@ -26,6 +27,7 @@ import power.keepeersofthestones.entity.MoonStonesEntity;
 import power.keepeersofthestones.entity.MegawattEntity;
 import power.keepeersofthestones.entity.MagicFireballEntity;
 import power.keepeersofthestones.entity.LavaBallEntity;
+import power.keepeersofthestones.entity.KunaiEntity;
 import power.keepeersofthestones.entity.IceSpearEntity;
 import power.keepeersofthestones.entity.IceSharpEntity;
 import power.keepeersofthestones.entity.IceBallEntity;
@@ -61,6 +63,11 @@ public class PowerModEntities {
 	public static final RegistryObject<EntityType<TornadoEntityEntity>> TORNADO_ENTITY = register("tornado_entity",
 			EntityType.Builder.<TornadoEntityEntity>of(TornadoEntityEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(256).setUpdateInterval(3).setCustomClientFactory(TornadoEntityEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<TyrannosaurusRexEntity>> TYRANNOSAURUS_REX = register("tyrannosaurus_rex",
+			EntityType.Builder.<TyrannosaurusRexEntity>of(TyrannosaurusRexEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(256).setUpdateInterval(3).setCustomClientFactory(TyrannosaurusRexEntity::new)
+
+					.sized(1.5f, 2.5f));
 	public static final RegistryObject<EntityType<MagicFireballEntity>> MAGIC_FIREBALL = register("projectile_magic_fireball",
 			EntityType.Builder.<MagicFireballEntity>of(MagicFireballEntity::new, MobCategory.MISC).setCustomClientFactory(MagicFireballEntity::new)
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
@@ -169,14 +176,17 @@ public class PowerModEntities {
 			EntityType.Builder.<DestructionSphereEntity>of(DestructionSphereEntity::new, MobCategory.MISC)
 					.setCustomClientFactory(DestructionSphereEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<TyrannosaurusRexEntity>> TYRANNOSAURUS_REX = register("tyrannosaurus_rex",
-			EntityType.Builder.<TyrannosaurusRexEntity>of(TyrannosaurusRexEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true)
-					.setTrackingRange(256).setUpdateInterval(3).setCustomClientFactory(TyrannosaurusRexEntity::new)
-
-					.sized(0.5f, 1f));
 	public static final RegistryObject<EntityType<AmberStreaksEntity>> AMBER_STREAKS = register("projectile_amber_streaks",
 			EntityType.Builder.<AmberStreaksEntity>of(AmberStreaksEntity::new, MobCategory.MISC).setCustomClientFactory(AmberStreaksEntity::new)
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<KunaiEntity>> KUNAI = register("projectile_kunai",
+			EntityType.Builder.<KunaiEntity>of(KunaiEntity::new, MobCategory.MISC).setCustomClientFactory(KunaiEntity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<RaptorEntity>> RAPTOR = register("raptor",
+			EntityType.Builder.<RaptorEntity>of(RaptorEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(3).setCustomClientFactory(RaptorEntity::new)
+
+					.sized(1.2f, 2f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -186,17 +196,19 @@ public class PowerModEntities {
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
 			TornadoEntityEntity.init();
+			TyrannosaurusRexEntity.init();
 			GlowEntity.init();
 			ShadowEntity.init();
-			TyrannosaurusRexEntity.init();
+			RaptorEntity.init();
 		});
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(TORNADO_ENTITY.get(), TornadoEntityEntity.createAttributes().build());
+		event.put(TYRANNOSAURUS_REX.get(), TyrannosaurusRexEntity.createAttributes().build());
 		event.put(GLOW.get(), GlowEntity.createAttributes().build());
 		event.put(SHADOW.get(), ShadowEntity.createAttributes().build());
-		event.put(TYRANNOSAURUS_REX.get(), TyrannosaurusRexEntity.createAttributes().build());
+		event.put(RAPTOR.get(), RaptorEntity.createAttributes().build());
 	}
 }

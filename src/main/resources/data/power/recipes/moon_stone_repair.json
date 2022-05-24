@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "power:damaged_moon_stone"
+  },
+  "addition": {
+    "item": "minecraft:nether_star"
+  },
+  "result": {
+    "item": "power:moon_stone"
+  }
+}

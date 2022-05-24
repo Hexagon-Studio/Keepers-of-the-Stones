@@ -68,7 +68,7 @@ public class JurassicJungleBiome {
 		BiomeDefaultFeatures.addDefaultOres(biomeGenerationSettings);
 		BiomeDefaultFeatures.addExtraEmeralds(biomeGenerationSettings);
 		MobSpawnSettings.Builder mobSpawnInfo = new MobSpawnSettings.Builder();
-		mobSpawnInfo.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.CAVE_SPIDER, 20, 1, 2));
+		mobSpawnInfo.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.CAVE_SPIDER, 20, 1, 1));
 		return new Biome.BiomeBuilder().precipitation(Biome.Precipitation.RAIN).biomeCategory(Biome.BiomeCategory.JUNGLE).temperature(1.3f)
 				.downfall(0.9f).specialEffects(effects).mobSpawnSettings(mobSpawnInfo.build()).generationSettings(biomeGenerationSettings.build())
 				.build();

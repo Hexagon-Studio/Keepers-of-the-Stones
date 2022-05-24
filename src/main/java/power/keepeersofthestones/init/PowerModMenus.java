@@ -23,6 +23,7 @@ import power.keepeersofthestones.world.inventory.EBShadowMenu;
 import power.keepeersofthestones.world.inventory.EBRainMenu;
 import power.keepeersofthestones.world.inventory.EBOceanMenu;
 import power.keepeersofthestones.world.inventory.EBMoonMenu;
+import power.keepeersofthestones.world.inventory.EBMistMenu;
 import power.keepeersofthestones.world.inventory.EBMetalMenu;
 import power.keepeersofthestones.world.inventory.EBLightningMenu;
 import power.keepeersofthestones.world.inventory.EBLightMenu;
@@ -134,6 +135,7 @@ public class PowerModMenus {
 	public static final MenuType<BuyLevel3Menu> BUY_LEVEL_3 = register("buy_level_3", (id, inv, extraData) -> new BuyLevel3Menu(id, inv, extraData));
 	public static final MenuType<BuyAquaPowerMenu> BUY_AQUA_POWER = register("buy_aqua_power",
 			(id, inv, extraData) -> new BuyAquaPowerMenu(id, inv, extraData));
+	public static final MenuType<EBMistMenu> EB_MIST = register("eb_mist", (id, inv, extraData) -> new EBMistMenu(id, inv, extraData));
 
 	private static <T extends AbstractContainerMenu> MenuType<T> register(String registryname, IContainerFactory<T> containerFactory) {
 		MenuType<T> menuType = new MenuType<T>(containerFactory);

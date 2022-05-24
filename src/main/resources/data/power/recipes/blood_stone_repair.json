@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "power:damaged_blood_stone"
+  },
+  "addition": {
+    "item": "minecraft:nether_star"
+  },
+  "result": {
+    "item": "power:blood_stone"
+  }
+}

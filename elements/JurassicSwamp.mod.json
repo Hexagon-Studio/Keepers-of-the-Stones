@@ -113,8 +113,8 @@
         "entity": {
           "value": "EntitySlime"
         },
-        "minGroup": 2,
-        "maxGroup": 4,
+        "minGroup": 1,
+        "maxGroup": 1,
         "weight": 20,
         "spawnType": "monster"
       },
@@ -123,7 +123,7 @@
           "value": "EntityTurtle"
         },
         "minGroup": 1,
-        "maxGroup": 2,
+        "maxGroup": 1,
         "weight": 10,
         "spawnType": "creature"
       }

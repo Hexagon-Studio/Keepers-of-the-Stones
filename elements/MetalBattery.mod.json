@@ -27,7 +27,7 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [
-      "§7Metal"
+      "item.battery.metal"
     ],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",
@@ -40,6 +40,9 @@
     "isFood": false,
     "nutritionalValue": 0,
     "saturation": 0.30000001192092896,
+    "eatResultItem": {
+      "value": ""
+    },
     "isMeat": false,
     "isAlwaysEdible": false,
     "animation": "eat"

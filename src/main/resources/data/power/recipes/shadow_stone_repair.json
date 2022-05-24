@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "power:damaged_shadow_stone"
+  },
+  "addition": {
+    "item": "minecraft:nether_star"
+  },
+  "result": {
+    "item": "power:shadow_stone"
+  }
+}

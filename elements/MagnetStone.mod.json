@@ -31,9 +31,6 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onRightClickedInAir": {
-      "name": "MagnetStoneUse"
-    },
     "hasDispenseBehavior": false,
     "isFood": false,
     "nutritionalValue": 4,

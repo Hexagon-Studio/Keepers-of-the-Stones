@@ -1,0 +1,26 @@
+{
+  "_fv": 29,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Master of Mist",
+    "icon": "mist_master.png",
+    "color": {
+      "value": -13434778,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": true,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "MistMasterEffectStart"
+    },
+    "onActiveTick": {
+      "name": "MistMasterEffects"
+    },
+    "onExpired": {
+      "name": "MistMasterEffectEnd"
+    }
+  }
+}

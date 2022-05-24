@@ -10,7 +10,7 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 
 public class TyrannosaurusRexRenderer extends MobRenderer<TyrannosaurusRexEntity, Modeltyrannosaurus_rex<TyrannosaurusRexEntity>> {
 	public TyrannosaurusRexRenderer(EntityRendererProvider.Context context) {
-		super(context, new Modeltyrannosaurus_rex(context.bakeLayer(Modeltyrannosaurus_rex.LAYER_LOCATION)), 0.5f);
+		super(context, new Modeltyrannosaurus_rex(context.bakeLayer(Modeltyrannosaurus_rex.LAYER_LOCATION)), 1.5f);
 	}
 
 	@Override

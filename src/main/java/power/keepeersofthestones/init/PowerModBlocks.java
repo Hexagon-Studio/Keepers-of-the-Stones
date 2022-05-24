@@ -40,7 +40,15 @@ import net.minecraft.world.level.block.Block;
 
 public class PowerModBlocks {
 	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, PowerMod.MODID);
+	public static final RegistryObject<Block> QUICKSILVER = REGISTRY.register("quicksilver", () -> new QuicksilverBlock());
 	public static final RegistryObject<Block> BATTERY_CHARGER = REGISTRY.register("battery_charger", () -> new BatteryChargerBlock());
+	public static final RegistryObject<Block> DINOERA_PORTAL = REGISTRY.register("dinoera_portal", () -> new DinoeraPortalBlock());
+	public static final RegistryObject<Block> CRYSTALLIZED_PORTAL = REGISTRY.register("crystallized_portal", () -> new CrystallizedPortalBlock());
+	public static final RegistryObject<Block> OBLIVION_PORTAL = REGISTRY.register("oblivion_portal", () -> new OblivionPortalBlock());
+	public static final RegistryObject<Block> WOOD_MAGIC_BOX = REGISTRY.register("wood_magic_box", () -> new WoodMagicBoxBlock());
+	public static final RegistryObject<Block> STONE_MAGIC_BOX = REGISTRY.register("stone_magic_box", () -> new StoneMagicBoxBlock());
+	public static final RegistryObject<Block> IRON_MAGIC_BOX = REGISTRY.register("iron_magic_box", () -> new IronMagicBoxBlock());
+	public static final RegistryObject<Block> GOLD_MAGIC_BOX = REGISTRY.register("gold_magic_box", () -> new GoldMagicBoxBlock());
 	public static final RegistryObject<Block> ENERGY_BLOCK = REGISTRY.register("energy_block", () -> new EnergyBlockBlock());
 	public static final RegistryObject<Block> SOUND_BARRIER_BLOCK = REGISTRY.register("sound_barrier_block", () -> new SoundBarrierBlockBlock());
 	public static final RegistryObject<Block> CLUSTER_BLOCK = REGISTRY.register("cluster_block", () -> new ClusterBlockBlock());
@@ -54,31 +62,23 @@ public class PowerModBlocks {
 	public static final RegistryObject<Block> BLUE_PORTAL = REGISTRY.register("blue_portal", () -> new BluePortalBlock());
 	public static final RegistryObject<Block> ORANGE_PORTAL = REGISTRY.register("orange_portal", () -> new OrangePortalBlock());
 	public static final RegistryObject<Block> DETONATOR_TNT = REGISTRY.register("detonator_tnt", () -> new DetonatorTNTBlock());
-	public static final RegistryObject<Block> QUICKSILVER = REGISTRY.register("quicksilver", () -> new QuicksilverBlock());
-	public static final RegistryObject<Block> WOOD_MAGIC_BOX = REGISTRY.register("wood_magic_box", () -> new WoodMagicBoxBlock());
-	public static final RegistryObject<Block> STONE_MAGIC_BOX = REGISTRY.register("stone_magic_box", () -> new StoneMagicBoxBlock());
-	public static final RegistryObject<Block> IRON_MAGIC_BOX = REGISTRY.register("iron_magic_box", () -> new IronMagicBoxBlock());
-	public static final RegistryObject<Block> GOLD_MAGIC_BOX = REGISTRY.register("gold_magic_box", () -> new GoldMagicBoxBlock());
-	public static final RegistryObject<Block> DINOERA_PORTAL = REGISTRY.register("dinoera_portal", () -> new DinoeraPortalBlock());
 	public static final RegistryObject<Block> AMBER_BLOCK = REGISTRY.register("amber_block", () -> new AmberBlockBlock());
-	public static final RegistryObject<Block> CRYSTALLIZED_PORTAL = REGISTRY.register("crystallized_portal", () -> new CrystallizedPortalBlock());
-	public static final RegistryObject<Block> OBLIVION_PORTAL = REGISTRY.register("oblivion_portal", () -> new OblivionPortalBlock());
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ClientSideHandler {
 		@SubscribeEvent
 		public static void clientSetup(FMLClientSetupEvent event) {
 			BatteryChargerBlock.registerRenderLayer();
+			WoodMagicBoxBlock.registerRenderLayer();
+			StoneMagicBoxBlock.registerRenderLayer();
+			IronMagicBoxBlock.registerRenderLayer();
+			GoldMagicBoxBlock.registerRenderLayer();
 			ClusterBlockBlock.registerRenderLayer();
 			VacuumWebBlockBlock.registerRenderLayer();
 			BlackHoleBlockBlock.registerRenderLayer();
 			TechnobarrierBlockBlock.registerRenderLayer();
 			BluePortalBlock.registerRenderLayer();
 			OrangePortalBlock.registerRenderLayer();
-			WoodMagicBoxBlock.registerRenderLayer();
-			StoneMagicBoxBlock.registerRenderLayer();
-			IronMagicBoxBlock.registerRenderLayer();
-			GoldMagicBoxBlock.registerRenderLayer();
 			AmberBlockBlock.registerRenderLayer();
 		}
 	}

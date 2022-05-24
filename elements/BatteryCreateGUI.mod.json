@@ -13,12 +13,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Charging the battery",
+          "text": "gui.battery_charger.label",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Charging the battery",
+          "name": "gui.battery_charger.label",
           "x": 168,
           "y": 44
         }

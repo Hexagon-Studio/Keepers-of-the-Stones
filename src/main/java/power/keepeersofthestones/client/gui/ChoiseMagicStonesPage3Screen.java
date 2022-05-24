@@ -9,7 +9,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
@@ -72,8 +72,8 @@ public class ChoiseMagicStonesPage3Screen extends AbstractContainerScreen<Choise
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Choose a stone to get it", 127, 6, -12829636);
-		this.font.draw(poseStack, "3/3", 10, 6, -12829636);
+		this.font.draw(poseStack, new TranslatableComponent("Choose a stone to get it"), 127, 6, -12829636);
+		this.font.draw(poseStack, new TranslatableComponent("3/3"), 10, 6, -12829636);
 	}
 
 	@Override
@@ -86,53 +86,53 @@ public class ChoiseMagicStonesPage3Screen extends AbstractContainerScreen<Choise
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 33, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 33, 56, 20, new TranslatableComponent(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 127, this.topPos + 141, 56, 20, new TextComponent("  "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 127, this.topPos + 141, 56, 20, new TranslatableComponent("  "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 114, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 114, 56, 20, new TranslatableComponent(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 60, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 60, 56, 20, new TranslatableComponent(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 141, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 141, 56, 20, new TranslatableComponent(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 127, this.topPos + 33, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 127, this.topPos + 33, 56, 20, new TranslatableComponent(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 127, this.topPos + 60, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 127, this.topPos + 60, 56, 20, new TranslatableComponent(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 127, this.topPos + 114, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 127, this.topPos + 114, 56, 20, new TranslatableComponent(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 127, this.topPos + 87, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 127, this.topPos + 87, 56, 20, new TranslatableComponent(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 87, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 37, this.topPos + 87, 56, 20, new TranslatableComponent(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 226, this.topPos + 33, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 226, this.topPos + 33, 56, 20, new TranslatableComponent(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 226, this.topPos + 60, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 226, this.topPos + 60, 56, 20, new TranslatableComponent(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 226, this.topPos + 87, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 226, this.topPos + 87, 56, 20, new TranslatableComponent(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 10, this.topPos + 168, 93, 20, new TextComponent("Previous page"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 10, this.topPos + 168, 93, 20, new TranslatableComponent("Previous page"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new ChoiseMagicStonesPage3ButtonMessage(13, x, y, z));
 				ChoiseMagicStonesPage3ButtonMessage.handleButtonAction(entity, 13, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 226, this.topPos + 114, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 226, this.topPos + 114, 56, 20, new TranslatableComponent(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 226, this.topPos + 141, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 226, this.topPos + 141, 56, 20, new TranslatableComponent(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 33, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 33, 56, 20, new TranslatableComponent(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 60, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 60, 56, 20, new TranslatableComponent(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 87, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 87, 56, 20, new TranslatableComponent(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 114, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 114, 56, 20, new TranslatableComponent(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 141, 56, 20, new TextComponent(" "), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 325, this.topPos + 141, 56, 20, new TranslatableComponent(" "), e -> {
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 316, this.topPos + 168, 72, 20, new TextComponent("Next page"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 316, this.topPos + 168, 72, 20, new TranslatableComponent("Next page"), e -> {
 		}));
 	}
 }

@@ -87,18 +87,18 @@ public class OrangePortalBlock extends Block implements SimpleWaterloggedBlock
 		builder.add(FACING, WATERLOGGED);
 	}
 
+	@Override
+	public BlockState getStateForPlacement(BlockPlaceContext context) {
+		boolean flag = context.getLevel().getFluidState(context.getClickedPos()).getType() == Fluids.WATER;
+		return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite()).setValue(WATERLOGGED, flag);
+	}
+
 	public BlockState rotate(BlockState state, Rotation rot) {
 		return state.setValue(FACING, rot.rotate(state.getValue(FACING)));
 	}
 
 	public BlockState mirror(BlockState state, Mirror mirrorIn) {
 		return state.rotate(mirrorIn.getRotation(state.getValue(FACING)));
-	}
-
-	@Override
-	public BlockState getStateForPlacement(BlockPlaceContext context) {
-		boolean flag = context.getLevel().getFluidState(context.getClickedPos()).getType() == Fluids.WATER;;
-		return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite()).setValue(WATERLOGGED, flag);
 	}
 
 	@Override

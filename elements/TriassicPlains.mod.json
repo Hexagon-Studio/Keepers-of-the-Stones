@@ -101,10 +101,10 @@
     "spawnEntries": [
       {
         "entity": {
-          "value": "EntityHoglin"
+          "value": "EntityPig"
         },
         "minGroup": 1,
-        "maxGroup": 2,
+        "maxGroup": 1,
         "weight": 20,
         "spawnType": "creature"
       }

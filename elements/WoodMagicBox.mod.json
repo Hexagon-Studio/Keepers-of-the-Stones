@@ -11,6 +11,7 @@
     "renderType": 2,
     "customModelName": "magic_box:default",
     "rotationMode": 0,
+    "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
