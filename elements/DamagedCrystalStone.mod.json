@@ -5,8 +5,6 @@
     "renderType": 0,
     "texture": "damaged_crystal_stone",
     "customModelName": "Normal",
-    "customProperties": {},
-    "modelsMap": {},
     "name": "Damaged Crystal Stone",
     "rarity": "COMMON",
     "creativeTab": {

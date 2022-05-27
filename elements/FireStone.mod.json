@@ -5,8 +5,6 @@
     "renderType": 0,
     "texture": "fire_stone",
     "customModelName": "Normal",
-    "customProperties": {},
-    "modelsMap": {},
     "name": "Fire stone",
     "rarity": "COMMON",
     "creativeTab": {
@@ -26,9 +24,7 @@
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
-    "specialInfo": [
-      "о"
-    ],
+    "specialInfo": [],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
@@ -40,9 +36,6 @@
     "isFood": false,
     "nutritionalValue": 0,
     "saturation": 0.30000001192092896,
-    "eatResultItem": {
-      "value": ""
-    },
     "isMeat": false,
     "isAlwaysEdible": false,
     "animation": "eat"

@@ -5,8 +5,6 @@
     "renderType": 0,
     "texture": "damaged_vacuum_stone",
     "customModelName": "Normal",
-    "customProperties": {},
-    "modelsMap": {},
     "name": "Damaged Vacuum Stone",
     "rarity": "COMMON",
     "creativeTab": {

@@ -107,6 +107,15 @@
         "maxGroup": 1,
         "weight": 20,
         "spawnType": "creature"
+      },
+      {
+        "entity": {
+          "value": "CUSTOM:Raptor"
+        },
+        "minGroup": 2,
+        "maxGroup": 4,
+        "weight": 20,
+        "spawnType": "creature"
       }
     ]
   }

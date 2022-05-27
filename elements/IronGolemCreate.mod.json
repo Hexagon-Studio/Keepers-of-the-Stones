@@ -5,8 +5,6 @@
     "renderType": 0,
     "texture": "iron_golem_create",
     "customModelName": "Normal",
-    "customProperties": {},
-    "modelsMap": {},
     "name": "Iron Golem Create",
     "rarity": "COMMON",
     "creativeTab": {

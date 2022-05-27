@@ -5,8 +5,6 @@
     "renderType": 0,
     "texture": "random_item",
     "customModelName": "Normal",
-    "customProperties": {},
-    "modelsMap": {},
     "name": "Random Item",
     "rarity": "COMMON",
     "creativeTab": {

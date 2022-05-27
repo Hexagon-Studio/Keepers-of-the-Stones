@@ -5,8 +5,6 @@
     "renderType": 0,
     "texture": "damaged_creation_stone",
     "customModelName": "Normal",
-    "customProperties": {},
-    "modelsMap": {},
     "name": "Damaged Creation Stone",
     "rarity": "COMMON",
     "creativeTab": {

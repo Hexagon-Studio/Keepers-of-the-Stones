@@ -5,8 +5,6 @@
     "renderType": 0,
     "texture": "explosion_stone",
     "customModelName": "Normal",
-    "customProperties": {},
-    "modelsMap": {},
     "name": "Explosion Stone",
     "rarity": "COMMON",
     "creativeTab": {

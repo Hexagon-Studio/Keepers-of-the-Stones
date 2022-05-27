@@ -20,7 +20,9 @@ import power.keepeersofthestones.entity.ShadowEntity;
 import power.keepeersofthestones.entity.ShadowBallEntity;
 import power.keepeersofthestones.entity.RaptorEntity;
 import power.keepeersofthestones.entity.RainBowEntity;
+import power.keepeersofthestones.entity.PterodactylEntity;
 import power.keepeersofthestones.entity.PortalBlastEntity;
+import power.keepeersofthestones.entity.PlesiosaurusEntity;
 import power.keepeersofthestones.entity.PlasmaBallEntity;
 import power.keepeersofthestones.entity.PieceOfEarthEntity;
 import power.keepeersofthestones.entity.MoonStonesEntity;
@@ -68,6 +70,21 @@ public class PowerModEntities {
 					.setTrackingRange(256).setUpdateInterval(3).setCustomClientFactory(TyrannosaurusRexEntity::new)
 
 					.sized(1.5f, 2.5f));
+	public static final RegistryObject<EntityType<RaptorEntity>> RAPTOR = register("raptor",
+			EntityType.Builder.<RaptorEntity>of(RaptorEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(3).setCustomClientFactory(RaptorEntity::new)
+
+					.sized(1.2f, 2f));
+	public static final RegistryObject<EntityType<PlesiosaurusEntity>> PLESIOSAURUS = register("plesiosaurus",
+			EntityType.Builder.<PlesiosaurusEntity>of(PlesiosaurusEntity::new, MobCategory.WATER_CREATURE).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PlesiosaurusEntity::new)
+
+					.sized(1.5f, 2.5f));
+	public static final RegistryObject<EntityType<PterodactylEntity>> PTERODACTYL = register("pterodactyl",
+			EntityType.Builder.<PterodactylEntity>of(PterodactylEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PterodactylEntity::new)
+
+					.sized(1.2f, 2f));
 	public static final RegistryObject<EntityType<MagicFireballEntity>> MAGIC_FIREBALL = register("projectile_magic_fireball",
 			EntityType.Builder.<MagicFireballEntity>of(MagicFireballEntity::new, MobCategory.MISC).setCustomClientFactory(MagicFireballEntity::new)
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
@@ -182,11 +199,6 @@ public class PowerModEntities {
 	public static final RegistryObject<EntityType<KunaiEntity>> KUNAI = register("projectile_kunai",
 			EntityType.Builder.<KunaiEntity>of(KunaiEntity::new, MobCategory.MISC).setCustomClientFactory(KunaiEntity::new)
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<RaptorEntity>> RAPTOR = register("raptor",
-			EntityType.Builder.<RaptorEntity>of(RaptorEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
-					.setUpdateInterval(3).setCustomClientFactory(RaptorEntity::new)
-
-					.sized(1.2f, 2f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -197,9 +209,11 @@ public class PowerModEntities {
 		event.enqueueWork(() -> {
 			TornadoEntityEntity.init();
 			TyrannosaurusRexEntity.init();
+			RaptorEntity.init();
+			PlesiosaurusEntity.init();
+			PterodactylEntity.init();
 			GlowEntity.init();
 			ShadowEntity.init();
-			RaptorEntity.init();
 		});
 	}
 
@@ -207,8 +221,10 @@ public class PowerModEntities {
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(TORNADO_ENTITY.get(), TornadoEntityEntity.createAttributes().build());
 		event.put(TYRANNOSAURUS_REX.get(), TyrannosaurusRexEntity.createAttributes().build());
+		event.put(RAPTOR.get(), RaptorEntity.createAttributes().build());
+		event.put(PLESIOSAURUS.get(), PlesiosaurusEntity.createAttributes().build());
+		event.put(PTERODACTYL.get(), PterodactylEntity.createAttributes().build());
 		event.put(GLOW.get(), GlowEntity.createAttributes().build());
 		event.put(SHADOW.get(), ShadowEntity.createAttributes().build());
-		event.put(RAPTOR.get(), RaptorEntity.createAttributes().build());
 	}
 }

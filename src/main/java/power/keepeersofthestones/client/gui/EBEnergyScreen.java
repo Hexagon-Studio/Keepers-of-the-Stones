@@ -9,7 +9,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
@@ -81,9 +81,9 @@ public class EBEnergyScreen extends AbstractContainerScreen<EBEnergyMenu> {
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, new TranslatableComponent("Class: Middle, Unique"), -162, -85, -12829636);
-		this.font.draw(poseStack, new TranslatableComponent("Element: Energy"), -162, -67, -12829636);
-		this.font.draw(poseStack, new TranslatableComponent("Force: Action"), -162, -49, -12829636);
+		this.font.draw(poseStack, "Class: Middle, Unique", -162, -85, -12829636);
+		this.font.draw(poseStack, "Element: Energy", -162, -67, -12829636);
+		this.font.draw(poseStack, "Force: Action", -162, -49, -12829636);
 	}
 
 	@Override
@@ -96,7 +96,7 @@ public class EBEnergyScreen extends AbstractContainerScreen<EBEnergyMenu> {
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20, new TranslatableComponent(">"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 152, this.topPos + 86, 30, 20, new TextComponent(">"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new EBEnergyButtonMessage(0, x, y, z));
 				EBEnergyButtonMessage.handleButtonAction(entity, 0, x, y, z);

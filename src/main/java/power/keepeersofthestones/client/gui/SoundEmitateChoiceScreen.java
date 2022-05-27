@@ -9,7 +9,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
@@ -72,7 +72,7 @@ public class SoundEmitateChoiceScreen extends AbstractContainerScreen<SoundEmita
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, new TranslatableComponent("Select the mob for emitate sound"), 6, 7, -12829636);
+		this.font.draw(poseStack, "Select the mob for emitate sound", 6, 7, -12829636);
 	}
 
 	@Override
@@ -85,19 +85,19 @@ public class SoundEmitateChoiceScreen extends AbstractContainerScreen<SoundEmita
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 51, this.topPos + 25, 60, 20, new TranslatableComponent("Creeper"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 51, this.topPos + 25, 60, 20, new TextComponent("Creeper"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new SoundEmitateChoiceButtonMessage(0, x, y, z));
 				SoundEmitateChoiceButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 51, this.topPos + 79, 55, 20, new TranslatableComponent("Zombie"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 51, this.topPos + 79, 55, 20, new TextComponent("Zombie"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new SoundEmitateChoiceButtonMessage(1, x, y, z));
 				SoundEmitateChoiceButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 51, this.topPos + 52, 65, 20, new TranslatableComponent("Skeleton"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 51, this.topPos + 52, 65, 20, new TextComponent("Skeleton"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new SoundEmitateChoiceButtonMessage(2, x, y, z));
 				SoundEmitateChoiceButtonMessage.handleButtonAction(entity, 2, x, y, z);

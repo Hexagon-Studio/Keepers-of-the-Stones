@@ -5,8 +5,6 @@
     "renderType": 0,
     "texture": "lava_hole",
     "customModelName": "Normal",
-    "customProperties": {},
-    "modelsMap": {},
     "name": "Lava Hole",
     "rarity": "COMMON",
     "creativeTab": {

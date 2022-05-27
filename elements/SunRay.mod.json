@@ -5,8 +5,6 @@
     "renderType": 0,
     "texture": "sun_ray",
     "customModelName": "Normal",
-    "customProperties": {},
-    "modelsMap": {},
     "name": "Sun Ray",
     "rarity": "COMMON",
     "creativeTab": {

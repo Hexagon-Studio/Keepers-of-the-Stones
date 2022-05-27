@@ -5,8 +5,6 @@
     "renderType": 0,
     "texture": "sound_emitate",
     "customModelName": "Normal",
-    "customProperties": {},
-    "modelsMap": {},
     "name": "Sound Emitate",
     "rarity": "COMMON",
     "creativeTab": {

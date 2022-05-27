@@ -5,8 +5,6 @@
     "renderType": 0,
     "texture": "damaged_light_stone",
     "customModelName": "Normal",
-    "customProperties": {},
-    "modelsMap": {},
     "name": "Damaged Light Stone",
     "rarity": "COMMON",
     "creativeTab": {

@@ -5,8 +5,6 @@
     "renderType": 0,
     "texture": "shadow_create",
     "customModelName": "Normal",
-    "customProperties": {},
-    "modelsMap": {},
     "name": "Create Shadow",
     "rarity": "COMMON",
     "creativeTab": {

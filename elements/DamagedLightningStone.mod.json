@@ -5,8 +5,6 @@
     "renderType": 0,
     "texture": "damaged_lightning_stone",
     "customModelName": "Normal",
-    "customProperties": {},
-    "modelsMap": {},
     "name": "Damaged Lightning Stone",
     "rarity": "COMMON",
     "creativeTab": {

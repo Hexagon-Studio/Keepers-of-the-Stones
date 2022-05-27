@@ -5,8 +5,6 @@
     "renderType": 0,
     "texture": "battery",
     "customModelName": "Normal",
-    "customProperties": {},
-    "modelsMap": {},
     "name": "Battery",
     "rarity": "COMMON",
     "creativeTab": {
@@ -27,7 +25,7 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [
-      "item.battery.mist"
+      "§5Mist"
     ],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",

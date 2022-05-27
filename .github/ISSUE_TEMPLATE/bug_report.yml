@@ -35,9 +35,8 @@ body:
      label: Mod Version
      description: Which version of the mod are you using?
      options:
-       - 2.1.11 (Release)
-       - 2.2.0.x (Beta)
-       - 2.1.11 (LTSR)
+       - 2.2.0 (Release)
+       - 2.3.0.x (Beta)
    validations:
      required: true
  - type: textarea

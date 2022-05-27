@@ -13,7 +13,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.Button;
@@ -104,12 +104,12 @@ public class LevelsAndSkillsPageScreen extends AbstractContainerScreen<LevelsAnd
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, new TranslatableComponent("Levels"), -108, -112, -13421773);
-		this.font.draw(poseStack, new TranslatableComponent("Level 2"), -163, -65, -13421773);
-		this.font.draw(poseStack, new TranslatableComponent("Level 3"), -163, -40, -13421773);
-		this.font.draw(poseStack, new TranslatableComponent("Skills"), 89, -112, -13421773);
-		this.font.draw(poseStack, new TranslatableComponent("Aqua Power"), 26, -90, -13421773);
-		this.font.draw(poseStack, new TranslatableComponent("Level 1"), -163, -90, -13421773);
+		this.font.draw(poseStack, "Levels", -108, -112, -13421773);
+		this.font.draw(poseStack, "Level 2", -163, -65, -13421773);
+		this.font.draw(poseStack, "Level 3", -163, -40, -13421773);
+		this.font.draw(poseStack, "Skills", 89, -112, -13421773);
+		this.font.draw(poseStack, "Aqua Power", 26, -90, -13421773);
+		this.font.draw(poseStack, "Level 1", -163, -90, -13421773);
 	}
 
 	@Override
@@ -122,7 +122,7 @@ public class LevelsAndSkillsPageScreen extends AbstractContainerScreen<LevelsAnd
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + -88, this.topPos + -70, 61, 20, new TranslatableComponent("4"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + -88, this.topPos + -70, 61, 20, new TextComponent("4"), e -> {
 			if (ReturnLevel1Procedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new LevelsAndSkillsPageButtonMessage(0, x, y, z));
 				LevelsAndSkillsPageButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -134,7 +134,7 @@ public class LevelsAndSkillsPageScreen extends AbstractContainerScreen<LevelsAnd
 					super.render(ms, gx, gy, ticks);
 			}
 		});
-		this.addRenderableWidget(new Button(this.leftPos + -88, this.topPos + -45, 61, 20, new TranslatableComponent("16"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + -88, this.topPos + -45, 61, 20, new TextComponent("16"), e -> {
 			if (ReturnLevel2Procedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new LevelsAndSkillsPageButtonMessage(1, x, y, z));
 				LevelsAndSkillsPageButtonMessage.handleButtonAction(entity, 1, x, y, z);
@@ -146,7 +146,7 @@ public class LevelsAndSkillsPageScreen extends AbstractContainerScreen<LevelsAnd
 					super.render(ms, gx, gy, ticks);
 			}
 		});
-		this.addRenderableWidget(new Button(this.leftPos + 111, this.topPos + -95, 61, 20, new TranslatableComponent("12"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 111, this.topPos + -95, 61, 20, new TextComponent("12"), e -> {
 			if (NonWaterPowerProcedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new LevelsAndSkillsPageButtonMessage(2, x, y, z));
 				LevelsAndSkillsPageButtonMessage.handleButtonAction(entity, 2, x, y, z);
@@ -158,7 +158,7 @@ public class LevelsAndSkillsPageScreen extends AbstractContainerScreen<LevelsAnd
 					super.render(ms, gx, gy, ticks);
 			}
 		});
-		this.addRenderableWidget(new Button(this.leftPos + -171, this.topPos + 86, 30, 20, new TranslatableComponent("<"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + -171, this.topPos + 86, 30, 20, new TextComponent("<"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new LevelsAndSkillsPageButtonMessage(3, x, y, z));
 				LevelsAndSkillsPageButtonMessage.handleButtonAction(entity, 3, x, y, z);

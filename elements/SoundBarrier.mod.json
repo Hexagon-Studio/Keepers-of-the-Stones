@@ -5,8 +5,6 @@
     "renderType": 0,
     "texture": "sound_barrier",
     "customModelName": "Normal",
-    "customProperties": {},
-    "modelsMap": {},
     "name": "Sound Barrier",
     "rarity": "COMMON",
     "creativeTab": {

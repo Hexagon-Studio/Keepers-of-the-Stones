@@ -5,8 +5,6 @@
     "renderType": 0,
     "texture": "fertilizer",
     "customModelName": "Normal",
-    "customProperties": {},
-    "modelsMap": {},
     "name": "Fertilizer",
     "rarity": "COMMON",
     "creativeTab": {

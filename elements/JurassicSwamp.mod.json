@@ -126,6 +126,15 @@
         "maxGroup": 1,
         "weight": 10,
         "spawnType": "creature"
+      },
+      {
+        "entity": {
+          "value": "CUSTOM:TyrannosaurusRex"
+        },
+        "minGroup": 1,
+        "maxGroup": 1,
+        "weight": 10,
+        "spawnType": "creature"
       }
     ]
   }

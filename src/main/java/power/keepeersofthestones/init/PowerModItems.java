@@ -308,6 +308,14 @@ public class PowerModItems {
 	public static final RegistryObject<Item> TYRANNOSAURUS_REX = REGISTRY.register("tyrannosaurus_rex_spawn_egg",
 			() -> new ForgeSpawnEggItem(PowerModEntities.TYRANNOSAURUS_REX, -52480, -39322,
 					new Item.Properties().tab(PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS)));
+	public static final RegistryObject<Item> RAPTOR = REGISTRY.register("raptor_spawn_egg", () -> new ForgeSpawnEggItem(PowerModEntities.RAPTOR,
+			-16738048, -6684775, new Item.Properties().tab(PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS)));
+	public static final RegistryObject<Item> PLESIOSAURUS = REGISTRY.register("plesiosaurus_spawn_egg",
+			() -> new ForgeSpawnEggItem(PowerModEntities.PLESIOSAURUS, -10092442, -3407668,
+					new Item.Properties().tab(PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS)));
+	public static final RegistryObject<Item> PTERODACTYL = REGISTRY.register("pterodactyl_spawn_egg",
+			() -> new ForgeSpawnEggItem(PowerModEntities.PTERODACTYL, -3355648, -103,
+					new Item.Properties().tab(PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS)));
 	public static final RegistryObject<Item> DINOERA = REGISTRY.register("dinoera", () -> new DinoeraItem());
 	public static final RegistryObject<Item> CRYSTALLIZED = REGISTRY.register("crystallized", () -> new CrystallizedItem());
 	public static final RegistryObject<Item> OBLIVION = REGISTRY.register("oblivion", () -> new OblivionItem());
@@ -648,8 +656,6 @@ public class PowerModItems {
 	public static final RegistryObject<Item> OBSCURITY = REGISTRY.register("obscurity", () -> new ObscurityItem());
 	public static final RegistryObject<Item> KUNAI = REGISTRY.register("kunai", () -> new KunaiItem());
 	public static final RegistryObject<Item> MISTY_FAN = REGISTRY.register("misty_fan", () -> new MistyFanItem());
-	public static final RegistryObject<Item> RAPTOR = REGISTRY.register("raptor_spawn_egg", () -> new ForgeSpawnEggItem(PowerModEntities.RAPTOR,
-			-16738048, -6684775, new Item.Properties().tab(PowerModTabs.TAB_TECHNOLOGIES_AND_ARTIFACTS)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

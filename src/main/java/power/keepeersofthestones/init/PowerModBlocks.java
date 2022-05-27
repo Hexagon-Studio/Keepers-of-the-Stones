@@ -10,7 +10,6 @@ import power.keepeersofthestones.block.UnmultiplicationMoonStonesBlock;
 import power.keepeersofthestones.block.TechnobarrierBlockBlock;
 import power.keepeersofthestones.block.StoneMagicBoxBlock;
 import power.keepeersofthestones.block.SoundBarrierBlockBlock;
-import power.keepeersofthestones.block.QuicksilverBlock;
 import power.keepeersofthestones.block.OrangePortalBlock;
 import power.keepeersofthestones.block.OblivionPortalBlock;
 import power.keepeersofthestones.block.MoonStonesBlockBlock;
@@ -40,7 +39,6 @@ import net.minecraft.world.level.block.Block;
 
 public class PowerModBlocks {
 	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, PowerMod.MODID);
-	public static final RegistryObject<Block> QUICKSILVER = REGISTRY.register("quicksilver", () -> new QuicksilverBlock());
 	public static final RegistryObject<Block> BATTERY_CHARGER = REGISTRY.register("battery_charger", () -> new BatteryChargerBlock());
 	public static final RegistryObject<Block> DINOERA_PORTAL = REGISTRY.register("dinoera_portal", () -> new DinoeraPortalBlock());
 	public static final RegistryObject<Block> CRYSTALLIZED_PORTAL = REGISTRY.register("crystallized_portal", () -> new CrystallizedPortalBlock());
