@@ -180,10 +180,13 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "Sand",
+          "onClick": {
+            "name": "SandGet"
+          },
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": "Sand",
           "x": 240,
           "y": 80
         }
@@ -191,10 +194,13 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": " Speed",
+          "onClick": {
+            "name": "SpeedGet"
+          },
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": " Speed",
           "x": 240,
           "y": 107
         }
@@ -435,6 +441,26 @@
           "name": "mist_master.png",
           "x": 222,
           "y": 53
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "sand_master.png",
+          "use1Xscale": false,
+          "name": "sand_master.png",
+          "x": 222,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "speed_master.png",
+          "use1Xscale": false,
+          "name": "speed_master.png",
+          "x": 222,
+          "y": 107
         }
       }
     ],

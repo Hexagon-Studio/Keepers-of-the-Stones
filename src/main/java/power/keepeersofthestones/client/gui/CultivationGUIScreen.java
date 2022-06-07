@@ -33,7 +33,7 @@ public class CultivationGUIScreen extends AbstractContainerScreen<CultivationGUI
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.imageWidth = 376;
+		this.imageWidth = 354;
 		this.imageHeight = 166;
 	}
 
@@ -72,7 +72,7 @@ public class CultivationGUIScreen extends AbstractContainerScreen<CultivationGUI
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Select a plant to get", 124, 6, -12829636);
+		this.font.draw(poseStack, "Select a plant to get", 113, 6, -12829636);
 	}
 
 	@Override
@@ -85,100 +85,94 @@ public class CultivationGUIScreen extends AbstractContainerScreen<CultivationGUI
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 250, this.topPos + 52, 77, 20, new TextComponent("Water lily"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 257, this.topPos + 133, 77, 20, new TextComponent("Water lily"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new CultivationGUIButtonMessage(0, x, y, z));
 				CultivationGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 7, this.topPos + 25, 77, 20, new TextComponent("Oak Sapling"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 5, this.topPos + 25, 77, 20, new TextComponent("Oak Sapling"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new CultivationGUIButtonMessage(1, x, y, z));
 				CultivationGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 169, this.topPos + 52, 77, 20, new TextComponent("Vine"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 131, this.topPos + 25, 77, 20, new TextComponent("Birch Sapling"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new CultivationGUIButtonMessage(2, x, y, z));
 				CultivationGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 88, this.topPos + 25, 77, 20, new TextComponent("Birch Sapling"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 131, this.topPos + 133, 77, 20, new TextComponent("Spruce Sapling"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new CultivationGUIButtonMessage(3, x, y, z));
 				CultivationGUIButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 250, this.topPos + 25, 77, 20, new TextComponent("Spruce Sapling"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 257, this.topPos + 25, 77, 20, new TextComponent("Acacia Sapling"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new CultivationGUIButtonMessage(4, x, y, z));
 				CultivationGUIButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 169, this.topPos + 25, 77, 20, new TextComponent("Acacia Sapling"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 5, this.topPos + 52, 77, 20, new TextComponent("Dark sapling"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new CultivationGUIButtonMessage(5, x, y, z));
 				CultivationGUIButtonMessage.handleButtonAction(entity, 5, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 7, this.topPos + 52, 77, 20, new TextComponent("Dark sapling"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 131, this.topPos + 52, 77, 20, new TextComponent("Jungle sapling"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new CultivationGUIButtonMessage(6, x, y, z));
 				CultivationGUIButtonMessage.handleButtonAction(entity, 6, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 88, this.topPos + 52, 77, 20, new TextComponent("Jungle sapling"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 5, this.topPos + 79, 77, 20, new TextComponent("Wheat"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new CultivationGUIButtonMessage(7, x, y, z));
 				CultivationGUIButtonMessage.handleButtonAction(entity, 7, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 7, this.topPos + 79, 77, 20, new TextComponent("Wheat"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 131, this.topPos + 79, 77, 20, new TextComponent("Potato"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new CultivationGUIButtonMessage(8, x, y, z));
 				CultivationGUIButtonMessage.handleButtonAction(entity, 8, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 88, this.topPos + 79, 77, 20, new TextComponent("Potato"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 257, this.topPos + 79, 77, 20, new TextComponent("Carrot"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new CultivationGUIButtonMessage(9, x, y, z));
 				CultivationGUIButtonMessage.handleButtonAction(entity, 9, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 169, this.topPos + 79, 77, 20, new TextComponent("Carrot"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 5, this.topPos + 133, 77, 20, new TextComponent("Beetroot"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new CultivationGUIButtonMessage(10, x, y, z));
 				CultivationGUIButtonMessage.handleButtonAction(entity, 10, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 250, this.topPos + 79, 77, 20, new TextComponent("Beetroot"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 5, this.topPos + 106, 77, 20, new TextComponent("Melon"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new CultivationGUIButtonMessage(11, x, y, z));
 				CultivationGUIButtonMessage.handleButtonAction(entity, 11, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 7, this.topPos + 106, 77, 20, new TextComponent("Melon"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 131, this.topPos + 106, 77, 20, new TextComponent("Pumpkin"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new CultivationGUIButtonMessage(12, x, y, z));
 				CultivationGUIButtonMessage.handleButtonAction(entity, 12, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 88, this.topPos + 106, 77, 20, new TextComponent("Pumpkin"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 257, this.topPos + 106, 77, 20, new TextComponent("Sugar Cane"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new CultivationGUIButtonMessage(13, x, y, z));
 				CultivationGUIButtonMessage.handleButtonAction(entity, 13, x, y, z);
 			}
 		}));
-		this.addRenderableWidget(new Button(this.leftPos + 169, this.topPos + 106, 77, 20, new TextComponent("Sugar Cane"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 257, this.topPos + 52, 77, 20, new TextComponent("Bamboo"), e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new CultivationGUIButtonMessage(14, x, y, z));
 				CultivationGUIButtonMessage.handleButtonAction(entity, 14, x, y, z);
-			}
-		}));
-		this.addRenderableWidget(new Button(this.leftPos + 250, this.topPos + 106, 77, 20, new TextComponent("Bamboo"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new CultivationGUIButtonMessage(15, x, y, z));
-				CultivationGUIButtonMessage.handleButtonAction(entity, 15, x, y, z);
 			}
 		}));
 	}

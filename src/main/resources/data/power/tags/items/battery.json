@@ -26,6 +26,7 @@
     "power:rain_battery",
     "power:lava_battery",
     "power:shadow_battery",
+    "power:speed_battery",
     "power:blood_battery",
     "power:sound_battery",
     "power:ice_battery"

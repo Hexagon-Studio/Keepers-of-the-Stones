@@ -6,7 +6,7 @@ package power.keepeersofthestones.init;
 
 import power.keepeersofthestones.client.gui.SpawnAnimalsGUIScreen;
 import power.keepeersofthestones.client.gui.SpaceAtlasGUIScreen;
-import power.keepeersofthestones.client.gui.SoundEmitateChoiceScreen;
+import power.keepeersofthestones.client.gui.SoundImitateChoiceScreen;
 import power.keepeersofthestones.client.gui.RedstoneBundleGUIScreen;
 import power.keepeersofthestones.client.gui.PointGUIScreen;
 import power.keepeersofthestones.client.gui.LevelsAndSkillsPageScreen;
@@ -20,6 +20,7 @@ import power.keepeersofthestones.client.gui.EBSunScreen;
 import power.keepeersofthestones.client.gui.EBSpaceScreen;
 import power.keepeersofthestones.client.gui.EBSoundScreen;
 import power.keepeersofthestones.client.gui.EBShadowScreen;
+import power.keepeersofthestones.client.gui.EBSandScreen;
 import power.keepeersofthestones.client.gui.EBRainScreen;
 import power.keepeersofthestones.client.gui.EBOceanScreen;
 import power.keepeersofthestones.client.gui.EBMoonScreen;
@@ -65,7 +66,6 @@ public class PowerModScreens {
 	@SubscribeEvent
 	public static void clientLoad(FMLClientSetupEvent event) {
 		event.enqueueWork(() -> {
-			MenuScreens.register(PowerModMenus.SOUND_EMITATE_CHOICE, SoundEmitateChoiceScreen::new);
 			MenuScreens.register(PowerModMenus.CULTIVATION_GUI, CultivationGUIScreen::new);
 			MenuScreens.register(PowerModMenus.SPAWN_ANIMALS_GUI, SpawnAnimalsGUIScreen::new);
 			MenuScreens.register(PowerModMenus.CHOISE_MAGIC_STONE_GUI, ChoiseMagicStoneGUIScreen::new);
@@ -113,6 +113,8 @@ public class PowerModScreens {
 			MenuScreens.register(PowerModMenus.BUY_LEVEL_3, BuyLevel3Screen::new);
 			MenuScreens.register(PowerModMenus.BUY_AQUA_POWER, BuyAquaPowerScreen::new);
 			MenuScreens.register(PowerModMenus.EB_MIST, EBMistScreen::new);
+			MenuScreens.register(PowerModMenus.SOUND_IMITATE_CHOICE, SoundImitateChoiceScreen::new);
+			MenuScreens.register(PowerModMenus.EB_SAND, EBSandScreen::new);
 		});
 	}
 }

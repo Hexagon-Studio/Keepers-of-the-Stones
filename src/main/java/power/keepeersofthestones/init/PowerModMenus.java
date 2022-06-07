@@ -6,7 +6,7 @@ package power.keepeersofthestones.init;
 
 import power.keepeersofthestones.world.inventory.SpawnAnimalsGUIMenu;
 import power.keepeersofthestones.world.inventory.SpaceAtlasGUIMenu;
-import power.keepeersofthestones.world.inventory.SoundEmitateChoiceMenu;
+import power.keepeersofthestones.world.inventory.SoundImitateChoiceMenu;
 import power.keepeersofthestones.world.inventory.RedstoneBundleGUIMenu;
 import power.keepeersofthestones.world.inventory.PointGUIMenu;
 import power.keepeersofthestones.world.inventory.LevelsAndSkillsPageMenu;
@@ -20,6 +20,7 @@ import power.keepeersofthestones.world.inventory.EBSunMenu;
 import power.keepeersofthestones.world.inventory.EBSpaceMenu;
 import power.keepeersofthestones.world.inventory.EBSoundMenu;
 import power.keepeersofthestones.world.inventory.EBShadowMenu;
+import power.keepeersofthestones.world.inventory.EBSandMenu;
 import power.keepeersofthestones.world.inventory.EBRainMenu;
 import power.keepeersofthestones.world.inventory.EBOceanMenu;
 import power.keepeersofthestones.world.inventory.EBMoonMenu;
@@ -67,8 +68,6 @@ import java.util.ArrayList;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class PowerModMenus {
 	private static final List<MenuType<?>> REGISTRY = new ArrayList<>();
-	public static final MenuType<SoundEmitateChoiceMenu> SOUND_EMITATE_CHOICE = register("sound_emitate_choice",
-			(id, inv, extraData) -> new SoundEmitateChoiceMenu(id, inv, extraData));
 	public static final MenuType<CultivationGUIMenu> CULTIVATION_GUI = register("cultivation_gui",
 			(id, inv, extraData) -> new CultivationGUIMenu(id, inv, extraData));
 	public static final MenuType<SpawnAnimalsGUIMenu> SPAWN_ANIMALS_GUI = register("spawn_animals_gui",
@@ -136,6 +135,9 @@ public class PowerModMenus {
 	public static final MenuType<BuyAquaPowerMenu> BUY_AQUA_POWER = register("buy_aqua_power",
 			(id, inv, extraData) -> new BuyAquaPowerMenu(id, inv, extraData));
 	public static final MenuType<EBMistMenu> EB_MIST = register("eb_mist", (id, inv, extraData) -> new EBMistMenu(id, inv, extraData));
+	public static final MenuType<SoundImitateChoiceMenu> SOUND_IMITATE_CHOICE = register("sound_imitate_choice",
+			(id, inv, extraData) -> new SoundImitateChoiceMenu(id, inv, extraData));
+	public static final MenuType<EBSandMenu> EB_SAND = register("eb_sand", (id, inv, extraData) -> new EBSandMenu(id, inv, extraData));
 
 	private static <T extends AbstractContainerMenu> MenuType<T> register(String registryname, IContainerFactory<T> containerFactory) {
 		MenuType<T> menuType = new MenuType<T>(containerFactory);

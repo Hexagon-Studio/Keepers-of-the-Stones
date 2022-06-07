@@ -12,6 +12,4 @@ import net.minecraft.world.level.GameRules;
 public class PowerModGameRules {
 	public static final GameRules.Key<GameRules.BooleanValue> GETTINGSTONESWHENENTERINGTHEGAME = GameRules
 			.register("gettingStonesWhenEnteringTheGame", GameRules.Category.PLAYER, GameRules.BooleanValue.create(true));
-	public static final GameRules.Key<GameRules.BooleanValue> STONEBREAKSDURINGREBIRTH = GameRules.register("stoneBreaksDuringRebirth",
-			GameRules.Category.PLAYER, GameRules.BooleanValue.create(false));
 }

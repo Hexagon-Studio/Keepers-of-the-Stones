@@ -104,10 +104,8 @@ public class LevelsAndSkillsPageScreen extends AbstractContainerScreen<LevelsAnd
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Levels", -108, -112, -13421773);
 		this.font.draw(poseStack, "Level 2", -163, -65, -13421773);
 		this.font.draw(poseStack, "Level 3", -163, -40, -13421773);
-		this.font.draw(poseStack, "Skills", 89, -112, -13421773);
 		this.font.draw(poseStack, "Aqua Power", 26, -90, -13421773);
 		this.font.draw(poseStack, "Level 1", -163, -90, -13421773);
 	}

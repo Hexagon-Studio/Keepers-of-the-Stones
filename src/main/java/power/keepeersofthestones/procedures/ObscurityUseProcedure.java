@@ -25,6 +25,11 @@ public class ObscurityUseProcedure {
 				Minecraft.getInstance().gameRenderer.displayItemActivation(itemstack);
 			if (sourceentity instanceof Player _player)
 				_player.getCooldowns().addCooldown(itemstack.getItem(), 400);
+			if (!(sourceentity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new PowerModVariables.PlayerVariables())).recharge_spell_mist) {
+				if (entity instanceof LivingEntity _entity)
+					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.FOG.get(), 200, 0, (false), (false)));
+			}
 			{
 				boolean _setval = true;
 				sourceentity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -63,11 +68,6 @@ public class ObscurityUseProcedure {
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
 			}.start(world, 400);
-			if (!(sourceentity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new PowerModVariables.PlayerVariables())).recharge_spell_mist) {
-				if (entity instanceof LivingEntity _entity)
-					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.FOG.get(), 200, 0, (false), (false)));
-			}
 		}
 	}
 }
