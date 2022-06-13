@@ -4,58 +4,11 @@
  */
 package power.keepeersofthestones.init;
 
-import power.keepeersofthestones.world.inventory.SpawnAnimalsGUIMenu;
-import power.keepeersofthestones.world.inventory.SpaceAtlasGUIMenu;
-import power.keepeersofthestones.world.inventory.SoundEmitateChoiceMenu;
-import power.keepeersofthestones.world.inventory.RedstoneBundleGUIMenu;
-import power.keepeersofthestones.world.inventory.PointGUIMenu;
-import power.keepeersofthestones.world.inventory.LevelsAndSkillsPageMenu;
-import power.keepeersofthestones.world.inventory.EBWaterMenu;
-import power.keepeersofthestones.world.inventory.EBVacuumMenu;
-import power.keepeersofthestones.world.inventory.EBTornadoMenu;
-import power.keepeersofthestones.world.inventory.EBTimeMenu;
-import power.keepeersofthestones.world.inventory.EBTeleportationMenu;
-import power.keepeersofthestones.world.inventory.EBTechnologyMenu;
-import power.keepeersofthestones.world.inventory.EBSunMenu;
-import power.keepeersofthestones.world.inventory.EBSpaceMenu;
-import power.keepeersofthestones.world.inventory.EBSoundMenu;
-import power.keepeersofthestones.world.inventory.EBShadowMenu;
-import power.keepeersofthestones.world.inventory.EBRainMenu;
-import power.keepeersofthestones.world.inventory.EBOceanMenu;
-import power.keepeersofthestones.world.inventory.EBMoonMenu;
-import power.keepeersofthestones.world.inventory.EBMetalMenu;
-import power.keepeersofthestones.world.inventory.EBLightningMenu;
-import power.keepeersofthestones.world.inventory.EBLightMenu;
-import power.keepeersofthestones.world.inventory.EBLavaMenu;
-import power.keepeersofthestones.world.inventory.EBIceMenu;
-import power.keepeersofthestones.world.inventory.EBGreeneryMenu;
-import power.keepeersofthestones.world.inventory.EBFireMenu;
-import power.keepeersofthestones.world.inventory.EBExplosionMenu;
-import power.keepeersofthestones.world.inventory.EBEnergyMenu;
-import power.keepeersofthestones.world.inventory.EBEarthMenu;
-import power.keepeersofthestones.world.inventory.EBDestructionMenu;
-import power.keepeersofthestones.world.inventory.EBCrystalMenu;
-import power.keepeersofthestones.world.inventory.EBCreationMenu;
-import power.keepeersofthestones.world.inventory.EBBloodMenu;
-import power.keepeersofthestones.world.inventory.EBAnimalsMenu;
-import power.keepeersofthestones.world.inventory.EBAmberMenu;
-import power.keepeersofthestones.world.inventory.EBAirMenu;
-import power.keepeersofthestones.world.inventory.CultivationGUIMenu;
-import power.keepeersofthestones.world.inventory.ChoiseMagicStonesPage3Menu;
-import power.keepeersofthestones.world.inventory.ChoiseMagicStonesPage2Menu;
-import power.keepeersofthestones.world.inventory.ChoiseMagicStoneGUIMenu;
-import power.keepeersofthestones.world.inventory.CheckpointGUIMenu;
-import power.keepeersofthestones.world.inventory.CheckPointTPMenu;
-import power.keepeersofthestones.world.inventory.BuyLevel3Menu;
-import power.keepeersofthestones.world.inventory.BuyLevel2Menu;
-import power.keepeersofthestones.world.inventory.BuyAquaPowerMenu;
-import power.keepeersofthestones.world.inventory.BuildingGUIMenu;
 import power.keepeersofthestones.world.inventory.BatteryCreateGUIMenu;
 
 import net.minecraftforge.network.IContainerFactory;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.RegistryEvent;
 
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -66,8 +19,6 @@ import java.util.ArrayList;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class PowerModMenus {
 	private static final List<MenuType<?>> REGISTRY = new ArrayList<>();
-	public static final MenuType<SoundEmitateChoiceMenu> SOUND_EMITATE_CHOICE = register("sound_emitate_choice",
-			(id, inv, extraData) -> new SoundEmitateChoiceMenu(id, inv, extraData));
 	public static final MenuType<CultivationGUIMenu> CULTIVATION_GUI = register("cultivation_gui",
 			(id, inv, extraData) -> new CultivationGUIMenu(id, inv, extraData));
 	public static final MenuType<SpawnAnimalsGUIMenu> SPAWN_ANIMALS_GUI = register("spawn_animals_gui",
@@ -134,6 +85,10 @@ public class PowerModMenus {
 	public static final MenuType<BuyLevel3Menu> BUY_LEVEL_3 = register("buy_level_3", (id, inv, extraData) -> new BuyLevel3Menu(id, inv, extraData));
 	public static final MenuType<BuyAquaPowerMenu> BUY_AQUA_POWER = register("buy_aqua_power",
 			(id, inv, extraData) -> new BuyAquaPowerMenu(id, inv, extraData));
+	public static final MenuType<EBMistMenu> EB_MIST = register("eb_mist", (id, inv, extraData) -> new EBMistMenu(id, inv, extraData));
+	public static final MenuType<SoundImitateChoiceMenu> SOUND_IMITATE_CHOICE = register("sound_imitate_choice",
+			(id, inv, extraData) -> new SoundImitateChoiceMenu(id, inv, extraData));
+	public static final MenuType<EBSandMenu> EB_SAND = register("eb_sand", (id, inv, extraData) -> new EBSandMenu(id, inv, extraData));
 
 	private static <T extends AbstractContainerMenu> MenuType<T> register(String registryname, IContainerFactory<T> containerFactory) {
 		MenuType<T> menuType = new MenuType<T>(containerFactory);

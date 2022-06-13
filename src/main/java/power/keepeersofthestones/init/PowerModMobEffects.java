@@ -12,9 +12,11 @@ import power.keepeersofthestones.potion.TimeMasterEffectMobEffect;
 import power.keepeersofthestones.potion.TeleportationMasterMobEffect;
 import power.keepeersofthestones.potion.TechnologyMasterMobEffect;
 import power.keepeersofthestones.potion.SunMasterMobEffect;
+import power.keepeersofthestones.potion.SpeedMasterMobEffect;
 import power.keepeersofthestones.potion.SpaceMasterMobEffect;
 import power.keepeersofthestones.potion.SoundMasterMobEffect;
 import power.keepeersofthestones.potion.ShadowMasterMobEffect;
+import power.keepeersofthestones.potion.SandMasterMobEffect;
 import power.keepeersofthestones.potion.RechargeWaterStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeVacuumStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeTornadoStoneMobEffect;
@@ -22,12 +24,15 @@ import power.keepeersofthestones.potion.RechargeTimeStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeTeleportationStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeTechnologyStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeSunStoneMobEffect;
+import power.keepeersofthestones.potion.RechargeSpeedStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeSpaceStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeSoundStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeShadowStoneMobEffect;
+import power.keepeersofthestones.potion.RechargeSandStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeRainStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeOceanStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeMoonStoneMobEffect;
+import power.keepeersofthestones.potion.RechargeMistStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeMetalStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeMagnetStoneMobEffect;
 import power.keepeersofthestones.potion.RechargeLightningStoneMobEffect;
@@ -50,8 +55,8 @@ import power.keepeersofthestones.potion.RainMasterMobEffect;
 import power.keepeersofthestones.potion.RainFlyMobEffect;
 import power.keepeersofthestones.potion.OceanMasterMobEffect;
 import power.keepeersofthestones.potion.MoonMasterMobEffect;
+import power.keepeersofthestones.potion.MistMasterMobEffect;
 import power.keepeersofthestones.potion.MetalMasterMobEffect;
-import power.keepeersofthestones.potion.MagnetMasterMobEffect;
 import power.keepeersofthestones.potion.LightningMasterMobEffect;
 import power.keepeersofthestones.potion.LightMasterMobEffect;
 import power.keepeersofthestones.potion.LavaMasterMobEffect;
@@ -178,7 +183,15 @@ public class PowerModMobEffects {
 			() -> new RechargeAmberStoneMobEffect());
 	public static final RegistryObject<MobEffect> AMBER_MASTER = REGISTRY.register("amber_master", () -> new AmberMasterMobEffect());
 	public static final RegistryObject<MobEffect> FOG = REGISTRY.register("fog", () -> new FogMobEffect());
-	public static final RegistryObject<MobEffect> MAGNET_MASTER = REGISTRY.register("magnet_master", () -> new MagnetMasterMobEffect());
 	public static final RegistryObject<MobEffect> RECHARGE_MAGNET_STONE = REGISTRY.register("recharge_magnet_stone",
 			() -> new RechargeMagnetStoneMobEffect());
+	public static final RegistryObject<MobEffect> RECHARGE_MIST_STONE = REGISTRY.register("recharge_mist_stone",
+			() -> new RechargeMistStoneMobEffect());
+	public static final RegistryObject<MobEffect> MIST_MASTER = REGISTRY.register("mist_master", () -> new MistMasterMobEffect());
+	public static final RegistryObject<MobEffect> SAND_MASTER = REGISTRY.register("sand_master", () -> new SandMasterMobEffect());
+	public static final RegistryObject<MobEffect> RECHARGE_SAND_STONE = REGISTRY.register("recharge_sand_stone",
+			() -> new RechargeSandStoneMobEffect());
+	public static final RegistryObject<MobEffect> RECHARGE_SPEED_STONE = REGISTRY.register("recharge_speed_stone",
+			() -> new RechargeSpeedStoneMobEffect());
+	public static final RegistryObject<MobEffect> SPEED_MASTER = REGISTRY.register("speed_master", () -> new SpeedMasterMobEffect());
 }

@@ -114,9 +114,18 @@
           "value": "EntityCaveSpider"
         },
         "minGroup": 1,
-        "maxGroup": 2,
-        "weight": 20,
+        "maxGroup": 1,
+        "weight": 3,
         "spawnType": "monster"
+      },
+      {
+        "entity": {
+          "value": "CUSTOM:TyrannosaurusRex"
+        },
+        "minGroup": 1,
+        "maxGroup": 1,
+        "weight": 10,
+        "spawnType": "creature"
       }
     ]
   }

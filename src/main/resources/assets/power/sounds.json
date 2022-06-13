@@ -56,20 +56,20 @@
       }
     ]
   },
-  "tyrannosaurus_rex.attack": {
+  "raptor.dead": {
     "category": "neutral",
     "sounds": [
       {
-        "name": "power:tyrannosaurus_rex.attack",
+        "name": "power:raptor.dead",
         "stream": false
       }
     ]
   },
-  "tyrannosaurus_rex.ambient": {
+  "raptor.hurt": {
     "category": "neutral",
     "sounds": [
       {
-        "name": "power:tyrannosaurus_rex.ambient",
+        "name": "power:raptor.hurt",
         "stream": false
       }
     ]

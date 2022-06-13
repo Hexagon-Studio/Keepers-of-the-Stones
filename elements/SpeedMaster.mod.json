@@ -1,0 +1,26 @@
+{
+  "_fv": 29,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Master of Speed",
+    "icon": "speed_master.png",
+    "color": {
+      "value": -16711732,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": true,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "SpeedMasterEffectStart"
+    },
+    "onActiveTick": {
+      "name": "SpeedMasterEffects"
+    },
+    "onExpired": {
+      "name": "SpeedMasterEffectEnd"
+    }
+  }
+}

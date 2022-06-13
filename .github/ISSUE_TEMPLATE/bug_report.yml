@@ -24,6 +24,7 @@ body:
      label: Minecraft Version
      description: On which version of Minecraft is the mod installed?
      options:
+       - 1.19 (Development)
        - 1.18.2 (Main)
        - 1.17.1
        - 1.16.5 (LTS)
@@ -34,10 +35,8 @@ body:
      label: Mod Version
      description: Which version of the mod are you using?
      options:
-       - 2.1.2 (Release)
-       - 2.1.10.x (Beta)
-       - 1.4.5 (LTSR)
-       - 2.0.2.1 (LTSB)
+       - 2.3.2 (Release)
+       - 2.4.0.x (Beta)
    validations:
      required: true
  - type: textarea

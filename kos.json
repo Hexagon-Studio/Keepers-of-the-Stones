@@ -1,14 +1,14 @@
 {
   "homepage": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
   "promos": {
-    "1.16.5-latest": "1.4.5",
-    "1.16.5-recommended": "1.4.5",
+    "1.16.5-latest": "2.3.2",
+    "1.16.5-recommended": "2.3.2",
     "1.17.1-latest": "1.4.1",
     "1.17.1-recommended": "1.4.1",
     "1.18.1-latest": "1.6.1",
     "1.18.1-recommended": "1.6.1",
-    "1.18.2-latest": "2.1.10",
-    "1.18.2-recommended": "2.1.10"
+    "1.18.2-latest": "2.3.2",
+    "1.18.2-recommended": "2.3.2"
   },
   "1.16.5": {
    "1.1.18": "
@@ -76,6 +76,55 @@ You can download the mod by following the link: https://www.curseforge.com/minec
 - [Bugfix] Fixed a recharge bug that remained with some stones after the player went to bed with an activated stone
 - [Bugfix] Fixed a bug with infinite levitation when calling a tornado
 - [Bugfix] Fixed translations into Russian
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+ "2.0.2": "
+- Porting changes from the main branch of version 2.0.2
+- [Bugfix] Fixed a lot of bugs
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+ "2.1.11": "
+- Transfer of changes from the main branch of version 2.1.11
+- Some functions have been specially adapted for MC 1.16.5
+- [Bugfix] Fixed generation of Dinoera
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+"2.2.0": "
+- Added a new element - mist
+- Added new dinosaurs
+- Added damaged stones
+- Now, when a player with an activated stone dies, the stone will be damaged
+- The stone can be repaired in the blacksmith's table with a single nether star
+- Added a game rule - Can a stone break at death if it has been activated?
+- The ability to split stones is disabled by default by the game rule
+- Removed the stone re-selection rule
+- Now force replication copies the element only for 5 minutes
+- A random item now gives out a nether star instead of an end's chest
+- Updated the texture of the shadow wizard effect
+- Improved Tyrannosaurus model and texture
+- Small behavior improvements for Tyrannosaurus
+- No more beef falls out of the Tyrannosaurus Rex
+- Improved the appearance of mobs in the Dinoera
+- Removed the French language
+- [Bugfix] Fixed a bug when opening a book with a technology stone opened the sound wizard interface
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+ "2.2.1": "
+- [Bugfix] Fixed a bug where some Destruction Wizard spells could remain in inventory
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+ "2.3.0": "
+- Added a new element - sand
+- Changed the mechanics of cultivation, now instead of giving out plants with it, you need to plant them
+- Removed unnecessary headers in the levels and skills interface
+- The stone damage function has been completely removed
+- [Bugfix] Fixed the id of the sound imitator.
+- [Bugfix] Fixed a bug where some Destruction master spells could remain in the inventory. 
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+ "2.3.1": "
+- [Bugfix] Fixed a bug where the purchase interface opened when using quicksand (#58)
+- [Bugfix] Fixed a bug where it was possible to endlessly summon entities using some spells (for 1.16.5)
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+ "2.3.2": "
+- Increased damage and attack speed of lava and blood masters
+- [Bugfix] Fixed a bug when the master of animals died, he was given the effect of the master of fire
+- [Bugfix] Fixed a bug when the tame remained in the inventory of players without master effects
+- [Bugfix] Fixed a bug that caused the ambiguity effect not to be issued
 You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones"
   },
   "1.17.1": {
@@ -455,6 +504,47 @@ You can download the mod by following the link: https://www.curseforge.com/minec
 - Added a dark dimension - Oblivion
 - The feather of time has been replaced with the flint for portal to dinoera 
 - Now a flint and an element battery are required to craft flint for portal
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+"2.1.11": "
+- Added a warning that the stone is occupied by another player
+- Updated the mod logo
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+"2.2.0": "
+- Added a new element - mist
+- Added new dinosaurs
+- Added damaged stones
+- Now, when a player with an activated stone dies, the stone will be damaged
+- The stone can be repaired in the blacksmith's table with a single nether star
+- Added a game rule - Can a stone break at death if it has been activated?
+- The ability to split stones is disabled by default by the game rule
+- Removed the stone re-selection rule
+- Now force replication copies the element only for 5 minutes
+- A random item now gives out a nether star instead of an end's chest
+- Updated the texture of the shadow wizard effect
+- Improved Tyrannosaurus model and texture
+- Small behavior improvements for Tyrannosaurus
+- No more beef falls out of the Tyrannosaurus Rex
+- Improved the appearance of mobs in the Dinoera
+- Removed the French language
+- [Bugfix] Fixed a bug when opening a book with a technology stone opened the sound wizard interface
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+ "2.3.0": "
+- Added a new element - sand
+- Changed the mechanics of cultivation, now instead of giving out plants with it, you need to plant them
+- Removed unnecessary headers in the levels and skills interface
+- The stone damage function has been completely removed
+- [Bugfix] Fixed the id of the sound imitator.
+- [Bugfix] Fixed a bug where some Destruction master spells could remain in the inventory. 
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+ "2.3.1": "
+- [Bugfix] Fixed a bug where the purchase interface opened when using quicksand (#58)
+- [Bugfix] Fixed a bug where it was possible to endlessly summon entities using some spells (for 1.16.5)
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+ "2.3.2": "
+- Increased damage and attack speed of lava and blood masters
+- [Bugfix] Fixed a bug when the master of animals died, he was given the effect of the master of fire
+- [Bugfix] Fixed a bug when the tame remained in the inventory of players without master effects
+- [Bugfix] Fixed a bug that caused the ambiguity effect not to be issued
 You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones"
   }
 }

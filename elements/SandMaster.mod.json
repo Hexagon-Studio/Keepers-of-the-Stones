@@ -1,0 +1,26 @@
+{
+  "_fv": 29,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Master of Sand",
+    "icon": "sand_master.png",
+    "color": {
+      "value": -13159,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": true,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "SandMasterEffectStart"
+    },
+    "onActiveTick": {
+      "name": "SandMasterEffects"
+    },
+    "onExpired": {
+      "name": "SandMasterEffectEnd"
+    }
+  }
+}

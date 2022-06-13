@@ -21,19 +21,6 @@
         }
       },
       {
-        "type": "label",
-        "data": {
-          "text": "Levels",
-          "color": {
-            "value": -13421773,
-            "falpha": 0.0
-          },
-          "name": "Levels",
-          "x": 105,
-          "y": 8
-        }
-      },
-      {
         "type": "button",
         "data": {
           "text": "4",
@@ -117,19 +104,6 @@
           "name": "16",
           "x": 125,
           "y": 75
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "text": "Skills",
-          "color": {
-            "value": -13421773,
-            "falpha": 0.0
-          },
-          "name": "Skills",
-          "x": 303,
-          "y": 8
         }
       },
       {

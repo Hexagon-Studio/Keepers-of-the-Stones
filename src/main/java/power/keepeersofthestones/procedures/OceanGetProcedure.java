@@ -47,6 +47,10 @@ public class OceanGetProcedure {
 							_player.getAdvancements().award(_adv, (String) _iterator.next());
 					}
 				}
+			} else {
+				if (entity instanceof Player _player && !_player.level.isClientSide())
+					_player.displayClientMessage(
+							new TextComponent("\u00A74This stone is occupied by another player, but you can choose another one."), (false));
 			}
 		}
 	}

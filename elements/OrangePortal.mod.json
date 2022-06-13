@@ -11,6 +11,7 @@
     "renderType": 2,
     "customModelName": "portal:orange",
     "rotationMode": 1,
+    "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",

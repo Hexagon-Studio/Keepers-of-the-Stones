@@ -1,35 +1,5 @@
 package power.keepeersofthestones.procedures;
 
-import power.keepeersofthestones.world.inventory.SoundEmitateChoiceMenu;
-import power.keepeersofthestones.world.inventory.EBWaterMenu;
-import power.keepeersofthestones.world.inventory.EBVacuumMenu;
-import power.keepeersofthestones.world.inventory.EBTornadoMenu;
-import power.keepeersofthestones.world.inventory.EBTimeMenu;
-import power.keepeersofthestones.world.inventory.EBTeleportationMenu;
-import power.keepeersofthestones.world.inventory.EBSunMenu;
-import power.keepeersofthestones.world.inventory.EBSpaceMenu;
-import power.keepeersofthestones.world.inventory.EBSoundMenu;
-import power.keepeersofthestones.world.inventory.EBShadowMenu;
-import power.keepeersofthestones.world.inventory.EBRainMenu;
-import power.keepeersofthestones.world.inventory.EBOceanMenu;
-import power.keepeersofthestones.world.inventory.EBMoonMenu;
-import power.keepeersofthestones.world.inventory.EBMetalMenu;
-import power.keepeersofthestones.world.inventory.EBLightningMenu;
-import power.keepeersofthestones.world.inventory.EBLightMenu;
-import power.keepeersofthestones.world.inventory.EBLavaMenu;
-import power.keepeersofthestones.world.inventory.EBIceMenu;
-import power.keepeersofthestones.world.inventory.EBGreeneryMenu;
-import power.keepeersofthestones.world.inventory.EBFireMenu;
-import power.keepeersofthestones.world.inventory.EBExplosionMenu;
-import power.keepeersofthestones.world.inventory.EBEnergyMenu;
-import power.keepeersofthestones.world.inventory.EBEarthMenu;
-import power.keepeersofthestones.world.inventory.EBDestructionMenu;
-import power.keepeersofthestones.world.inventory.EBCrystalMenu;
-import power.keepeersofthestones.world.inventory.EBCreationMenu;
-import power.keepeersofthestones.world.inventory.EBBloodMenu;
-import power.keepeersofthestones.world.inventory.EBAnimalsMenu;
-import power.keepeersofthestones.world.inventory.EBAmberMenu;
-import power.keepeersofthestones.world.inventory.EBAirMenu;
 import power.keepeersofthestones.init.PowerModItems;
 
 import net.minecraftforge.network.NetworkHooks;
@@ -42,7 +12,6 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
@@ -566,12 +535,12 @@ public class OpenBookProcedure {
 					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return new TextComponent("SoundEmitateChoice");
+							return new TextComponent("EBTechnology");
 						}
 
 						@Override
 						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new SoundEmitateChoiceMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+							return new EBTechnologyMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}
@@ -632,6 +601,42 @@ public class OpenBookProcedure {
 						@Override
 						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
 							return new EBAmberMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		}
+		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.MIST_STONE.get())) : false) {
+			{
+				if (entity instanceof ServerPlayer _ent) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+						@Override
+						public Component getDisplayName() {
+							return new TextComponent("EBMist");
+						}
+
+						@Override
+						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+							return new EBMistMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		}
+		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.SAND_STONE.get())) : false) {
+			{
+				if (entity instanceof ServerPlayer _ent) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openGui((ServerPlayer) _ent, new MenuProvider() {
+						@Override
+						public Component getDisplayName() {
+							return new TextComponent("EBSand");
+						}
+
+						@Override
+						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+							return new EBSandMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}

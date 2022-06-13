@@ -4,10 +4,10 @@ license="GNU General Public License version 3 (GPLv3)"
 
 [[mods]]
 modId="power"
-version="2.1.11"
+version="2.3.10"
 displayName="Keepers of the Stones"
-credits="Created by Magicalexey, with the support of Chiffon Medal, FixEnd, as well as many other contributors."
-displayURL="https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones"
+credits="Created by MagicalAlexey, with the support of Chiffon Medal, FixEnd, 7ZLBeka, Superlexaan as well as many other contributors."
+displayURL="https://github.com/Hexagon-Studio/Keepers-of-the-Stones/wiki"
 updateJSONURL="https://raw.githubusercontent.com/MagicalAlexey/Keepers-of-the-Stones/main/kos.json"
 logoFile="logo.png"
 authors="Hexagon Studio"

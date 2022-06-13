@@ -1,0 +1,17 @@
+{
+  "_fv": 29,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Recharge",
+    "icon": "recharge_mist_stone.png",
+    "color": {
+      "value": -13434778,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": false,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true
+  }
+}

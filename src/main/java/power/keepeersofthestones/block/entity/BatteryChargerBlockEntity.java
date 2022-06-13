@@ -17,7 +17,6 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.WorldlyContainer;
 import net.minecraft.world.ContainerHelper;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.nbt.CompoundTag;
@@ -80,7 +79,7 @@ public class BatteryChargerBlockEntity extends RandomizableContainerBlockEntity 
 
 	@Override
 	public Component getDefaultName() {
-		return new TextComponent("battery_charger");
+		return new Component.literal("battery_charger");
 	}
 
 	@Override
@@ -95,7 +94,7 @@ public class BatteryChargerBlockEntity extends RandomizableContainerBlockEntity 
 
 	@Override
 	public Component getDisplayName() {
-		return new TextComponent("Battery Charger");
+		return new Component.literal("Battery Charger");
 	}
 
 	@Override

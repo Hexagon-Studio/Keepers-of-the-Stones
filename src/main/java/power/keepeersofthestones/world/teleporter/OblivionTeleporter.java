@@ -6,7 +6,6 @@ import power.keepeersofthestones.init.PowerModBlocks;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.common.util.ITeleporter;
 
 import net.minecraft.world.phys.Vec3;
@@ -19,6 +18,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.NetherPortalBlock;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.ChunkPos;
+import net.minecraft.world.entity.ai.village.poi.PoiTypes;
 import net.minecraft.world.entity.ai.village.poi.PoiType;
 import net.minecraft.world.entity.ai.village.poi.PoiRecord;
 import net.minecraft.world.entity.ai.village.poi.PoiManager;
@@ -64,8 +64,8 @@ public class OblivionTeleporter implements ITeleporter {
 		PoiManager poimanager = this.level.getPoiManager();
 		int i = p_192987_ ? 16 : 128;
 		poimanager.ensureLoadedAndValid(this.level, p_192986_, i);
-		Optional<PoiRecord> optional = poimanager.getInSquare((p_77654_) -> {
-			return p_77654_ == poi;
+		Optional<PoiRecord> optional = poimanager.getInSquare((p_230634_) -> {
+			return p_230634_.is(PoiTypes.NETHER_PORTAL);
 		}, p_192986_, i, PoiManager.Occupancy.ANY).filter((p_192981_) -> {
 			return p_192988_.isWithinBounds(p_192981_.getPos());
 		}).sorted(Comparator.<PoiRecord>comparingDouble((p_192984_) -> {

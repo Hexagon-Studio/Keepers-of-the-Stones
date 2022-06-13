@@ -87,6 +87,9 @@
       },
       {
         "value": "CUSTOM:ExplosionBattery"
+      },
+      {
+        "value": "CUSTOM:SpeedBattery"
       }
     ],
     "blocks": [],
