@@ -4,15 +4,11 @@
  */
 package power.keepeersofthestones.init;
 
-import power.keepeersofthestones.world.biome.VenusLandBiome;
-import power.keepeersofthestones.world.biome.VenusDesertBiome;
 import power.keepeersofthestones.world.biome.TriassicPlainsBiome;
 import power.keepeersofthestones.world.biome.TriassicDesertBiome;
 import power.keepeersofthestones.world.biome.OblivionPlainsBiome;
 import power.keepeersofthestones.world.biome.OblivionForestBiome;
 import power.keepeersofthestones.world.biome.OblivionDesertBiome;
-import power.keepeersofthestones.world.biome.MoonLandBiome;
-import power.keepeersofthestones.world.biome.MarsLandBiome;
 import power.keepeersofthestones.world.biome.JurassicSwampBiome;
 import power.keepeersofthestones.world.biome.JurassicJungleBiome;
 import power.keepeersofthestones.world.biome.EnceladusIceDesertBiome;

@@ -3,8 +3,6 @@ package power.keepeersofthestones.world.biome;
 
 import power.keepeersofthestones.init.PowerModBiomes;
 
-import net.minecraftforge.common.BiomeDictionary;
-
 import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.biome.BiomeSpecialEffects;
 import net.minecraft.world.level.biome.BiomeGenerationSettings;
