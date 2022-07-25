@@ -1,6 +1,5 @@
 package power.keepeersofthestones.procedures;
 
-import power.keepeersofthestones.network.PowerModVariables;
 import power.keepeersofthestones.init.PowerModMobEffects;
 
 import net.minecraft.world.entity.LivingEntity;
@@ -22,10 +21,6 @@ public class TimeMasterEffectsProcedure {
 		} else {
 			if (entity instanceof LivingEntity _entity)
 				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 20, 1, (false), (false)));
-		}
-		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).water_power) {
-			if (entity instanceof LivingEntity _entity)
-				_entity.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 20, 0, (false), (false)));
 		}
 	}
 }

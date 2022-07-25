@@ -1,5 +1,5 @@
 {
-  "_fv": 29,
+  "_fv": 32,
   "_type": "tag",
   "definition": {
     "type": "Items",
@@ -90,6 +90,15 @@
       },
       {
         "value": "CUSTOM:SpeedBattery"
+      },
+      {
+        "value": "CUSTOM:PoisonBattery"
+      },
+      {
+        "value": "CUSTOM:MagnetBattery"
+      },
+      {
+        "value": "CUSTOM:MushroomsBattery"
       }
     ],
     "blocks": [],

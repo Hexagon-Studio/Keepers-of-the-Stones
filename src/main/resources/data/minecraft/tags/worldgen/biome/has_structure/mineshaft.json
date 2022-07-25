@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "power:crystallized_lands"
+    "power:crystallized_lands",
+    "power:crystallized_forest"
   ]
 }

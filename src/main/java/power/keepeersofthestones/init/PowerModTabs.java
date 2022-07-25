@@ -17,7 +17,6 @@ public class PowerModTabs {
 	public static CreativeModeTab TAB_GREAT_GROUP;
 	public static CreativeModeTab TAB_BATTERIES;
 	public static CreativeModeTab TAB_TECHNOLOGIES_AND_ARTIFACTS;
-	public static CreativeModeTab TAB_MAGIC_BOXES;
 
 	public static void load() {
 		TAB_BASIC_GROUP = new CreativeModeTab("tabbasic_group") {
@@ -79,17 +78,6 @@ public class PowerModTabs {
 			@Override
 			public ItemStack makeIcon() {
 				return new ItemStack(PowerModItems.BOOK_OF_ELEMENTS.get());
-			}
-
-			@OnlyIn(Dist.CLIENT)
-			public boolean hasSearchBar() {
-				return false;
-			}
-		};
-		TAB_MAGIC_BOXES = new CreativeModeTab("tabmagic_boxes") {
-			@Override
-			public ItemStack makeIcon() {
-				return new ItemStack(PowerModBlocks.WOOD_MAGIC_BOX.get());
 			}
 
 			@OnlyIn(Dist.CLIENT)

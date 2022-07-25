@@ -1,5 +1,5 @@
 {
-  "_fv": 29,
+  "_fv": 32,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -292,10 +292,13 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": " Poison",
+          "onClick": {
+            "name": "PoisonGet"
+          },
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": " Poison",
           "x": 240,
           "y": 134
         }
@@ -303,10 +306,13 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "Magnet",
+          "onClick": {
+            "name": "MagnetGet"
+          },
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": "Magnet",
           "x": 240,
           "y": 161
         }
@@ -314,10 +320,10 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "Mushrooms",
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": "Mushrooms",
           "x": 339,
           "y": 53
         }
@@ -325,10 +331,13 @@
       {
         "type": "button",
         "data": {
-          "text": " ",
+          "text": "Mercury",
+          "onClick": {
+            "name": "MercuryGet"
+          },
           "width": 56,
           "height": 20,
-          "name": " ",
+          "name": "Mercury",
           "x": 339,
           "y": 80
         }
@@ -461,6 +470,46 @@
           "name": "speed_master.png",
           "x": 222,
           "y": 107
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "poison_master.png",
+          "use1Xscale": false,
+          "name": "poison_master.png",
+          "x": 222,
+          "y": 134
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "magnet_master.png",
+          "use1Xscale": false,
+          "name": "magnet_master.png",
+          "x": 222,
+          "y": 161
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "mushrooms_master.png",
+          "use1Xscale": false,
+          "name": "mushrooms_master.png",
+          "x": 321,
+          "y": 53
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "mercury_master.png",
+          "use1Xscale": false,
+          "name": "mercury_master.png",
+          "x": 321,
+          "y": 80
         }
       }
     ],

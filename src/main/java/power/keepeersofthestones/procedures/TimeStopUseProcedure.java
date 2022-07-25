@@ -27,12 +27,6 @@ public class TimeStopUseProcedure {
 					Minecraft.getInstance().gameRenderer.displayItemActivation(itemstack);
 				if (entity instanceof Player _player)
 					_player.getCooldowns().addCooldown(itemstack.getItem(), 800);
-				{
-					Entity _ent = entity;
-					if (!_ent.level.isClientSide() && _ent.getServer() != null)
-						_ent.getServer().getCommands().performCommand(_ent.createCommandSourceStack().withSuppressedOutput().withPermission(4),
-								"effect give @e minecraft:slowness 20 255");
-				}
 				if (entity instanceof LivingEntity _entity)
 					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.TIME_STOP_EFFECT.get(), 400, 0, (false), (false)));
 				if (world instanceof Level _level) {

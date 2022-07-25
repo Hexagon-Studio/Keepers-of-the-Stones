@@ -15,12 +15,5 @@ public class ResetSkillsAndLevelsProcedure {
 				capability.syncPlayerVariables(entity);
 			});
 		}
-		{
-			boolean _setval = false;
-			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.water_power = _setval;
-				capability.syncPlayerVariables(entity);
-			});
-		}
 	}
 }

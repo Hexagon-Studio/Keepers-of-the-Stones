@@ -1,0 +1,30 @@
+{
+  "_fv": 32,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "magnetic_fishing_rod",
+    "customModelName": "Normal",
+    "name": "Magnetic Fishing Rod",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "No creative tab entry"
+    },
+    "toolType": "Fishing rod",
+    "harvestLevel": 1,
+    "efficiency": 4.0,
+    "attackSpeed": 1.0,
+    "enchantability": 2,
+    "damageVsEntity": 4.0,
+    "usageCount": 5000,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onRightClickedInAir": {
+      "name": "MagneticPowerUse"
+    }
+  }
+}

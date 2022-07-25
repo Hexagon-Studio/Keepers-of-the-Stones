@@ -1,0 +1,50 @@
+{
+  "_fv": 32,
+  "_type": "fluid",
+  "definition": {
+    "name": "Quicksand Block",
+    "bucketName": "Quicksand Block Bucket",
+    "textureStill": "sand",
+    "textureFlowing": "sand",
+    "tintType": "No tint",
+    "canMultiply": false,
+    "flowRate": 100,
+    "levelDecrease": 8,
+    "slopeFindDistance": 16,
+    "spawnParticles": false,
+    "dripParticle": {
+      "value": "NOTE"
+    },
+    "flowStrength": 0.0,
+    "luminosity": 0,
+    "density": 100000,
+    "viscosity": 100000,
+    "isGas": false,
+    "temperature": 300,
+    "type": "WATER",
+    "generateBucket": false,
+    "textureBucket": "",
+    "creativeTab": {
+      "value": "No creative tab entry"
+    },
+    "emptySound": {
+      "value": ""
+    },
+    "rarity": "COMMON",
+    "specialInfo": [],
+    "resistance": 10000.0,
+    "luminance": 0,
+    "lightOpacity": 15,
+    "emissiveRendering": false,
+    "tickRate": 10,
+    "flammability": 0,
+    "fireSpreadSpeed": 0,
+    "colorOnMap": "DEFAULT",
+    "frequencyOnChunks": 5,
+    "spawnWorldTypes": [],
+    "restrictionBiomes": [],
+    "onEntityCollides": {
+      "name": "DamagedQuicksand"
+    }
+  }
+}

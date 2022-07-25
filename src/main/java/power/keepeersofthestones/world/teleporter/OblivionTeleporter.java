@@ -149,7 +149,7 @@ public class OblivionTeleporter implements ITeleporter {
 			for (int i3 = -1; i3 < 2; ++i3) {
 				for (int j3 = 0; j3 < 2; ++j3) {
 					for (int k3 = -1; k3 < 3; ++k3) {
-						BlockState blockstate1 = k3 < 0 ? Blocks.DEEPSLATE.defaultBlockState() : Blocks.AIR.defaultBlockState();
+						BlockState blockstate1 = k3 < 0 ? Blocks.OBSIDIAN.defaultBlockState() : Blocks.AIR.defaultBlockState();
 						blockpos$mutableblockpos.setWithOffset(blockpos, j3 * direction.getStepX() + i3 * direction1.getStepX(), k3,
 								j3 * direction.getStepZ() + i3 * direction1.getStepZ());
 						this.level.setBlockAndUpdate(blockpos$mutableblockpos, blockstate1);
@@ -161,7 +161,7 @@ public class OblivionTeleporter implements ITeleporter {
 			for (int j2 = -1; j2 < 4; ++j2) {
 				if (l1 == -1 || l1 == 2 || j2 == -1 || j2 == 3) {
 					blockpos$mutableblockpos.setWithOffset(blockpos, l1 * direction.getStepX(), j2, l1 * direction.getStepZ());
-					this.level.setBlock(blockpos$mutableblockpos, Blocks.DEEPSLATE.defaultBlockState(), 3);
+					this.level.setBlock(blockpos$mutableblockpos, Blocks.OBSIDIAN.defaultBlockState(), 3);
 				}
 			}
 		}

@@ -21,14 +21,14 @@ public class EarthGetProcedure {
 		if (entity == null)
 			return;
 		if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).selected) {
-			if (!PowerModVariables.WorldVariables.get(world).earth_stone) {
+			if (!PowerModVariables.MapVariables.get(world).earth_stone) {
 				if (entity instanceof Player _player) {
 					ItemStack _setstack = new ItemStack(PowerModItems.EARTH_STONE.get());
 					_setstack.setCount(1);
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
-				PowerModVariables.WorldVariables.get(world).earth_stone = true;
-				PowerModVariables.WorldVariables.get(world).syncData(world);
+				PowerModVariables.MapVariables.get(world).earth_stone = true;
+				PowerModVariables.MapVariables.get(world).syncData(world);
 				{
 					boolean _setval = true;
 					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

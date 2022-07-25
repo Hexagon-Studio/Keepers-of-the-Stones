@@ -1,8 +1,9 @@
 {
-  "_fv": 29,
+  "_fv": 32,
   "_type": "command",
   "definition": {
     "commandName": "planet",
-    "permissionLevel": "4"
+    "permissionLevel": "4",
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"literal\"><field name=\"name\">earth</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">EarthOnMe</field></block></statement><next><block type=\"literal\"><field name=\"name\">moon</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">MoonOnMe</field></block></statement><next><block type=\"literal\"><field name=\"name\">venus</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">VenusOnMe</field></block></statement><next><block type=\"literal\"><field name=\"name\">mars</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">MarsOnMe</field></block></statement><next><block type=\"literal\"><field name=\"name\">enceladus</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">EnceladusOnMe</field></block></statement></block></next></block></next></block></next></block></next></block></next></block></xml>"
   }
 }

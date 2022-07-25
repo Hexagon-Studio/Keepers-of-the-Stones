@@ -113,6 +113,7 @@ public class RaptorEntity extends Monster {
 		builder = builder.add(Attributes.MAX_HEALTH, 70);
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 8);
+		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1);
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 1.5);
 		return builder;

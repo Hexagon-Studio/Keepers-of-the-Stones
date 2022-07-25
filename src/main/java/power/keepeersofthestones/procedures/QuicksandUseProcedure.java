@@ -52,22 +52,7 @@ public class QuicksandUseProcedure {
 						_level.getServer().getCommands().performCommand(
 								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
 										_level.getServer(), null).withSuppressedOutput(),
-								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 power:fake_sand replace minecraft:stone");
-					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performCommand(
-								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
-										_level.getServer(), null).withSuppressedOutput(),
-								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 power:fake_sand replace minecraft:grass_block");
-					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performCommand(
-								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
-										_level.getServer(), null).withSuppressedOutput(),
-								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 power:fake_sand replace minecraft:dirt");
-					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performCommand(
-								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
-										_level.getServer(), null).withSuppressedOutput(),
-								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 power:fake_sand replace minecraft:sand");
+								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 power:quicksand_block[] replace minecraft:sand");
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
 			}.start(world, 3);
@@ -96,7 +81,7 @@ public class QuicksandUseProcedure {
 						_level.getServer().getCommands().performCommand(
 								new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", new TextComponent(""),
 										_level.getServer(), null).withSuppressedOutput(),
-								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 minecraft:sand replace power:fake_sand");
+								"fill ~-2 ~-4 ~-2 ~2 ~ ~2 minecraft:sand replace power:quicksand_block");
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
 			}.start(world, 400);

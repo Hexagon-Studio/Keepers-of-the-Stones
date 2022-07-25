@@ -1,0 +1,26 @@
+{
+  "_fv": 32,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Master of Mercury",
+    "icon": "mercury_master.png",
+    "color": {
+      "value": -3355444,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": true,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": false,
+    "onStarted": {
+      "name": "MercuryMasterEffectStart"
+    },
+    "onActiveTick": {
+      "name": "MercuryMasterEffects"
+    },
+    "onExpired": {
+      "name": "MercuryMasterEffectEnd"
+    }
+  }
+}

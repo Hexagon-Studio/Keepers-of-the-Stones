@@ -1,0 +1,26 @@
+{
+  "_fv": 32,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Master of Mushrooms",
+    "icon": "mushrooms_master.png",
+    "color": {
+      "value": -6750055,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": true,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "MushroomsMasterEffectStart"
+    },
+    "onActiveTick": {
+      "name": "MushroomsMasterEffects"
+    },
+    "onExpired": {
+      "name": "MushroomsMasterEffectEnd"
+    }
+  }
+}

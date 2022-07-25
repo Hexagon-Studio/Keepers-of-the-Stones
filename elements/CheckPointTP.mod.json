@@ -1,5 +1,5 @@
 {
-  "_fv": 29,
+  "_fv": 32,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -24,31 +24,113 @@
         }
       },
       {
-        "type": "button",
+        "type": "label",
         "data": {
-          "text": "Checkpoint",
-          "onClick": {
-            "name": "ReturnCheckpoint"
+          "text": "Checkpoints:",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
           },
-          "width": 126,
-          "height": 20,
-          "name": "Checkpoint",
-          "x": 150,
+          "name": "Checkpoints:",
+          "x": 141,
           "y": 62
         }
       },
       {
         "type": "button",
         "data": {
-          "text": "Set checkpoint",
+          "text": "1",
           "onClick": {
-            "name": "TimeCheckpoint"
+            "name": "FirstPointTP"
           },
-          "width": 126,
+          "width": 30,
           "height": 20,
-          "name": "Set checkpoint",
-          "x": 150,
-          "y": 143
+          "name": "1",
+          "x": 141,
+          "y": 80
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "2",
+          "onClick": {
+            "name": "SecondPointTP"
+          },
+          "width": 30,
+          "height": 20,
+          "name": "2",
+          "x": 186,
+          "y": 80
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "3",
+          "onClick": {
+            "name": "ThirdPointTP"
+          },
+          "width": 30,
+          "height": 20,
+          "name": "3",
+          "x": 231,
+          "y": 80
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Set checkpoint:",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Set checkpoint:",
+          "x": 141,
+          "y": 116
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "1",
+          "onClick": {
+            "name": "FirstPointSet"
+          },
+          "width": 30,
+          "height": 20,
+          "name": "1",
+          "x": 141,
+          "y": 134
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "2",
+          "onClick": {
+            "name": "SecondPointSet"
+          },
+          "width": 30,
+          "height": 20,
+          "name": "2",
+          "x": 186,
+          "y": 134
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "3",
+          "onClick": {
+            "name": "ThirdPointSet"
+          },
+          "width": 30,
+          "height": 20,
+          "name": "3",
+          "x": 231,
+          "y": 134
         }
       }
     ],

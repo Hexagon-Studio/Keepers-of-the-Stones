@@ -1,0 +1,52 @@
+{
+  "_fv": 32,
+  "_type": "fluid",
+  "definition": {
+    "name": "Mercury Liquid",
+    "bucketName": "Mercury Liquid Bucket",
+    "textureStill": "mercury_liquid",
+    "textureFlowing": "mercury_liquid",
+    "tintType": "No tint",
+    "canMultiply": false,
+    "flowRate": 1,
+    "levelDecrease": 8,
+    "slopeFindDistance": 16,
+    "spawnParticles": false,
+    "dripParticle": {
+      "value": "EXPLOSION_NORMAL"
+    },
+    "flowStrength": 0.1,
+    "luminosity": 0,
+    "density": 100000,
+    "viscosity": 100000,
+    "isGas": false,
+    "temperature": 0,
+    "type": "WATER",
+    "generateBucket": false,
+    "textureBucket": "",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "emptySound": {
+      "value": ""
+    },
+    "rarity": "COMMON",
+    "specialInfo": [],
+    "resistance": 1000000.0,
+    "luminance": 0,
+    "lightOpacity": 15,
+    "emissiveRendering": false,
+    "tickRate": 0,
+    "flammability": 0,
+    "fireSpreadSpeed": 0,
+    "colorOnMap": "DEFAULT",
+    "frequencyOnChunks": 5,
+    "spawnWorldTypes": [
+      "Surface"
+    ],
+    "restrictionBiomes": [],
+    "onEntityCollides": {
+      "name": "MercuryLiquidWaitingCrush"
+    }
+  }
+}

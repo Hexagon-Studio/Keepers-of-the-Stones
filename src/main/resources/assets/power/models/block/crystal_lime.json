@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "power:blocks/crystal_block_lime",
+    "up": "power:blocks/crystal_block_lime",
+    "north": "power:blocks/crystal_block_lime",
+    "east": "power:blocks/crystal_block_lime",
+    "south": "power:blocks/crystal_block_lime",
+    "west": "power:blocks/crystal_block_lime",
+    "particle": "power:blocks/crystal_block_lime"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "_fv": 29,
+  "_fv": 32,
   "_type": "dimension",
   "definition": {
     "biomesInDimension": [
@@ -41,7 +41,7 @@
     "hasSkyLight": true,
     "imitateOverworldBehaviour": true,
     "portalFrame": {
-      "value": "Blocks.BONE_BLOCK"
+      "value": "Blocks.OBSIDIAN"
     },
     "portalParticles": {
       "value": "WHITE_ASH"

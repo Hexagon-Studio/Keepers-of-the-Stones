@@ -27,9 +27,11 @@ public class CrystallizedDimension {
 		@SubscribeEvent
 		public static void registerFillerBlocks(FMLCommonSetupEvent event) {
 			Set<Block> replaceableBlocks = new HashSet<>();
-			replaceableBlocks.add(Blocks.SANDSTONE);
-			replaceableBlocks.add(Blocks.BUDDING_AMETHYST);
-			replaceableBlocks.add(Blocks.AMETHYST_BLOCK);
+			replaceableBlocks.add(Blocks.DEEPSLATE);
+			replaceableBlocks.add(Blocks.GRASS_BLOCK);
+			replaceableBlocks.add(Blocks.DIRT);
+			replaceableBlocks.add(Blocks.GRASS_BLOCK);
+			replaceableBlocks.add(Blocks.DIRT);
 			event.enqueueWork(() -> {
 				WorldCarver.CAVE.replaceableBlocks = new ImmutableSet.Builder<Block>().addAll(WorldCarver.CAVE.replaceableBlocks)
 						.addAll(replaceableBlocks).build();
@@ -44,7 +46,7 @@ public class CrystallizedDimension {
 			DimensionSpecialEffects customEffect = new DimensionSpecialEffects(Float.NaN, true, DimensionSpecialEffects.SkyType.NONE, false, false) {
 				@Override
 				public Vec3 getBrightnessDependentFogColor(Vec3 color, float sunHeight) {
-					return new Vec3(0.6, 0, 0.6);
+					return new Vec3(0, 0.6, 0.6);
 				}
 
 				@Override

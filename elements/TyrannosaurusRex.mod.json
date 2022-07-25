@@ -1,5 +1,5 @@
 {
-  "_fv": 29,
+  "_fv": 32,
   "_type": "livingentity",
   "definition": {
     "mobName": "Tyrannosaurus Rex",
@@ -52,6 +52,7 @@
     "movementSpeed": 0.30000000000000004,
     "armorBaseValue": 0.0,
     "trackingRange": 256,
+    "followRange": 16,
     "health": 150,
     "xpAmount": 0,
     "waterMob": false,

@@ -1,21 +1,24 @@
 {
-  "_fv": 29,
+  "_fv": 32,
   "_type": "dimension",
   "definition": {
     "biomesInDimension": [
       {
         "value": "CUSTOM:CrystallizedLands"
+      },
+      {
+        "value": "CUSTOM:CrystallizedForest"
       }
     ],
-    "worldGenType": "Nether like gen",
+    "worldGenType": "Normal world gen",
     "mainFillerBlock": {
-      "value": "Blocks.SANDSTONE#0"
+      "value": "Blocks.DEEPSLATE"
     },
     "fluidBlock": {
       "value": "Blocks.FLOWING_WATER"
     },
     "airColor": {
-      "value": -6750055,
+      "value": -16737895,
       "falpha": 0.0
     },
     "canRespawnHere": true,
@@ -26,7 +29,7 @@
     "hasSkyLight": false,
     "imitateOverworldBehaviour": false,
     "portalFrame": {
-      "value": "Blocks.AMETHYST_BLOCK"
+      "value": "Blocks.OBSIDIAN"
     },
     "portalParticles": {
       "value": "GLOW"

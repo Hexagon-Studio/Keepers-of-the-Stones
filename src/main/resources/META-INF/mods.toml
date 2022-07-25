@@ -4,10 +4,10 @@ license="GNU General Public License version 3 (GPLv3)"
 
 [[mods]]
 modId="power"
-version="2.3.10"
+version="2.5.0.2"
 displayName="Keepers of the Stones"
 credits="Created by MagicalAlexey, with the support of Chiffon Medal, FixEnd, 7ZLBeka, Superlexaan as well as many other contributors."
-displayURL="https://github.com/Hexagon-Studio/Keepers-of-the-Stones/wiki"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones"
 updateJSONURL="https://raw.githubusercontent.com/MagicalAlexey/Keepers-of-the-Stones/main/kos.json"
 logoFile="logo.png"
 authors="Hexagon Studio"
@@ -23,5 +23,17 @@ This mod will add new sources of energy to the world with which you can transfor
     side="BOTH"
 
 
+[[dependencies.power]]
+    modId="pehkui"
+    mandatory=true
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 
+[[dependencies.power]]
+    modId="allmods"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 

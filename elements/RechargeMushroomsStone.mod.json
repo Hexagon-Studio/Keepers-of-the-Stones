@@ -1,0 +1,17 @@
+{
+  "_fv": 32,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Recharge",
+    "icon": "recharge_mushrooms_stone.png",
+    "color": {
+      "value": -6750055,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": false,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true
+  }
+}

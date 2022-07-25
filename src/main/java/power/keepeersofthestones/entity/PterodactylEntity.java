@@ -173,6 +173,7 @@ public class PterodactylEntity extends Monster {
 		builder = builder.add(Attributes.MAX_HEALTH, 65);
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 11);
+		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1);
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 1.5);
 		builder = builder.add(Attributes.FLYING_SPEED, 0.6);

@@ -55,6 +55,12 @@ public class BatteryCreateGUIScreen extends AbstractContainerScreen<BatteryCreat
 		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/acceleration_time.png"));
 		this.blit(ms, this.leftPos + 78, this.topPos + 34, 0, 0, 16, 16, 16, 16);
 
+		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/slot_for_stone.png"));
+		this.blit(ms, this.leftPos + 24, this.topPos + 35, 0, 0, 16, 16, 16, 16);
+
+		RenderSystem.setShaderTexture(0, new ResourceLocation("power:textures/screens/slot_for_battery.png"));
+		this.blit(ms, this.leftPos + 52, this.topPos + 35, 0, 0, 16, 16, 16, 16);
+
 		RenderSystem.disableBlend();
 	}
 

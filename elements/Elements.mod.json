@@ -1,5 +1,5 @@
 {
-  "_fv": 29,
+  "_fv": 32,
   "_type": "tag",
   "definition": {
     "type": "Items",
@@ -129,6 +129,9 @@
       },
       {
         "value": "CUSTOM:GoldenDustStone"
+      },
+      {
+        "value": "CUSTOM:MusicStone"
       }
     ],
     "blocks": [],

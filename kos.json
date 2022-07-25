@@ -1,14 +1,14 @@
 {
   "homepage": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
   "promos": {
-    "1.16.5-latest": "2.3.2",
-    "1.16.5-recommended": "2.3.2",
+    "1.16.5-latest": "2.4.1",
+    "1.16.5-recommended": "2.4.1",
     "1.17.1-latest": "1.4.1",
     "1.17.1-recommended": "1.4.1",
     "1.18.1-latest": "1.6.1",
     "1.18.1-recommended": "1.6.1",
-    "1.18.2-latest": "2.3.2",
-    "1.18.2-recommended": "2.3.2"
+    "1.18.2-latest": "2.4.1",
+    "1.18.2-recommended": "2.4.1"
   },
   "1.16.5": {
    "1.1.18": "
@@ -125,6 +125,31 @@ You can download the mod by following the link: https://www.curseforge.com/minec
 - [Bugfix] Fixed a bug when the master of animals died, he was given the effect of the master of fire
 - [Bugfix] Fixed a bug when the tame remained in the inventory of players without master effects
 - [Bugfix] Fixed a bug that caused the ambiguity effect not to be issued
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+ "2.4.0": "
+- Added new elements - speed, poison, magnet and mushrooms
+- Redesigned generation of the entire Crystallized world
+- Added crystal blocks from Forest X
+- Now all portals are made from obsidian
+- Added the possibility of teleportation with the installation of several control points
+- Changed the texture of the sand dagger
+- Now quicksand is a liquid and can only be created on sand
+- The player will take damage when drowning in quicksand
+- Added designations in the battery charger interface
+- Added the ability to refuse to receive a stone
+- Added a link to the wiki when entering the minecraft world
+- Skills removed
+- Removed magic boxes, because they are not used
+- [Bugfix] Fixed a bug that caused elemental flint to have a shaped recipe
+- [Bugfix] Fixed /confstone and /planet commands (for 1.16.5)
+- [Bugfix] Fixed cretaceous taiga generation (for 1.16.5)
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+ "2.4.1": "
+- Added missing batteries to the tag
+- Added support for the crystallized world in 1.16.5
+- Now ore appears in the crystallized world
+- Musical record elements can now be bought from a traveling merchant
+- [Bugfix] Minor bugs fixed
 You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones"
   },
   "1.17.1": {
@@ -545,6 +570,31 @@ You can download the mod by following the link: https://www.curseforge.com/minec
 - [Bugfix] Fixed a bug when the master of animals died, he was given the effect of the master of fire
 - [Bugfix] Fixed a bug when the tame remained in the inventory of players without master effects
 - [Bugfix] Fixed a bug that caused the ambiguity effect not to be issued
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+ "2.4.0": "
+- Added new elements - speed, poison, magnet and mushrooms
+- Redesigned generation of the entire Crystallized world
+- Added crystal blocks from Forest X
+- Now all portals are made from obsidian
+- Added the possibility of teleportation with the installation of several control points
+- Changed the texture of the sand dagger
+- Now quicksand is a liquid and can only be created on sand
+- The player will take damage when drowning in quicksand
+- Added designations in the battery charger interface
+- Added the ability to refuse to receive a stone
+- Added a link to the wiki when entering the minecraft world
+- Skills removed
+- Removed magic boxes, because they are not used
+- [Bugfix] Fixed a bug that caused elemental flint to have a shaped recipe
+- [Bugfix] Fixed /confstone and /planet commands (for 1.16.5)
+- [Bugfix] Fixed cretaceous taiga generation (for 1.16.5)
+You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+ "2.4.1": "
+- Added missing batteries to the tag
+- Added support for the crystallized world in 1.16.5
+- Now ore appears in the crystallized world
+- Musical record elements can now be bought from a traveling merchant
+- [Bugfix] Minor bugs fixed
 You can download the mod by following the link: https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones"
   }
 }

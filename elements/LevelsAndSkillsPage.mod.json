@@ -1,5 +1,5 @@
 {
-  "_fv": 29,
+  "_fv": 32,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -107,49 +107,6 @@
         }
       },
       {
-        "type": "label",
-        "data": {
-          "text": "Aqua Power",
-          "color": {
-            "value": -13421773,
-            "falpha": 0.0
-          },
-          "name": "Aqua Power",
-          "x": 240,
-          "y": 30
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "elemental_coin.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "NonWaterPower"
-          },
-          "name": "elemental_coin.png",
-          "x": 300,
-          "y": 25
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": "12",
-          "onClick": {
-            "name": "OpenBuyAquaPower"
-          },
-          "displayCondition": {
-            "name": "NonWaterPower"
-          },
-          "width": 61,
-          "height": 20,
-          "name": "12",
-          "x": 325,
-          "y": 25
-        }
-      },
-      {
         "type": "image",
         "data": {
           "image": "level_checked.png",
@@ -176,16 +133,6 @@
         }
       },
       {
-        "type": "image",
-        "data": {
-          "image": "level_checked.png",
-          "use1Xscale": false,
-          "name": "level_checked.png",
-          "x": 350,
-          "y": 25
-        }
-      },
-      {
         "type": "button",
         "data": {
           "text": "<",
@@ -195,7 +142,7 @@
           "width": 30,
           "height": 20,
           "name": "<",
-          "x": 42,
+          "x": 33,
           "y": 206
         }
       },
@@ -223,6 +170,17 @@
           "name": "level_checked.png",
           "x": 150,
           "y": 25
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": ">",
+          "width": 30,
+          "height": 20,
+          "name": ">",
+          "x": 366,
+          "y": 206
         }
       }
     ],

@@ -1,5 +1,5 @@
 {
-  "_fv": 29,
+  "_fv": 32,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -32,7 +32,6 @@
     "onRightClickedInAir": {
       "name": "AmberShieldUse"
     },
-    "hasDispenseBehavior": false,
     "isFood": false,
     "nutritionalValue": 4,
     "saturation": 0.3,

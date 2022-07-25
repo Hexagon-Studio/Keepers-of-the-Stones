@@ -1,5 +1,5 @@
 {
-  "_fv": 29,
+  "_fv": 32,
   "_type": "gui",
   "definition": {
     "type": 1,
@@ -94,6 +94,26 @@
           "name": "<BNBT:integer:fuelRemaining>",
           "x": 209,
           "y": 88
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "slot_for_stone.png",
+          "use1Xscale": false,
+          "name": "slot_for_stone.png",
+          "x": 150,
+          "y": 72
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "slot_for_battery.png",
+          "use1Xscale": false,
+          "name": "slot_for_battery.png",
+          "x": 178,
+          "y": 72
         }
       }
     ],
